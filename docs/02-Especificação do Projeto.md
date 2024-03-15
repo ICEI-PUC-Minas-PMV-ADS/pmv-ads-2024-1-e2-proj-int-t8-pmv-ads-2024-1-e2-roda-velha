@@ -1,26 +1,62 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+### Entusiasta casual
+<table>
+  <tr>
+    <th>Descrição</th>
+    <td>Indivíduos que possuem interesse em carros clássicos, mas ainda não estão profundamente envolvidos na comunidade. Eles gostam de admirar esses veículos em exposições e eventos, mas não têm tempo ou recursos para se tornarem colecionadores ativos.</td>
+  </tr>
+  <tr>
+    <th>Necessidades</th>
+    <td>
+      Encontrar eventos de carros clássicos próximos à sua localização para participar ocasionalmente. Desejam informações sobre os tipos de carros exibidos e a atmosfera geral do evento para decidir se vale a pena comparecer. 
+    </td>
+  </tr>
+</table>
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+### Colecionador entusiasta 
+<table>
+  <tr>
+    <th>Descrição</th>
+    <td>Indivíduos apaixonados por carros clássicos que dedicam tempo e recursos significativos à sua coleção. Eles participam ativamente de eventos, leilões e encontros de carros clássicos, e estão sempre em busca de oportunidades para expandir sua coleção e interagir com outros entusiastas.</td>
+  </tr>
+  <tr>
+    <th>Necessidades</th>
+    <td>
+      Encontrar eventos de alto nível que apresentem carros raros e exclusivos. Além disso, desejam saber detalhes sobre os organizadores, expositores e qualquer programa especial oferecido durante o evento. 
+    </td>
+  </tr>
+</table>
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+### Organizador de eventos
+<table>
+  <tr>
+    <th>Descrição</th>
+    <td>Indivíduos ou empresas que planejam e promovem exposições, leilões e outros eventos relacionados a carros clássicos. Eles estão focados em atrair participantes e expositores de qualidade para garantir o sucesso do evento.</td>
+  </tr>
+  <tr>
+    <th>Necessidades</th>
+    <td>
+      Divulgar seu evento para atrair um público amplo e qualificado. Eles buscam uma plataforma confiável para listar seu evento, gostariam de um mecanismo de likes nos eventos criados. 
+    </td>
+  </tr>
+</table>
+
+### Colecionador entusiasta 
+<table>
+  <tr>
+    <th>Descrição</th>
+    <td>Empresas ou indivíduos que compram, vendem e negociam carros clássicos. Eles estão sempre em busca de novos compradores e oportunidades para promover seu estoque.</td>
+  </tr>
+  <tr>
+    <th>Necessidades</th>
+    <td>
+      Encontrar eventos de carros clássicos onde possam exibir seus veículos para um público interessado e potencialmente fechar negócios.   
+    </td>
+  </tr>
+</table>
 
 ## Histórias de Usuários
 
