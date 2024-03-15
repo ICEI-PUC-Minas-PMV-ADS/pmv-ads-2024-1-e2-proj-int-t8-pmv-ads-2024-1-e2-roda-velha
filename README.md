@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Roda Velha
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`DISCIPLINA`
+`Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`1º semestre/2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo deste projeto é criação de uma plataforma centralizada e intuitiva que una entusiastas e devotos de carros clássicos, proporcionando uma jornada de descoberta e participação em eventos especializados. 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Aleksander Cunha Garcia Romero
+* Anderson da Silva Gomes
+* Arthur de Andrade Simões
+* Átila Eduardo de Pádua Ribeiro
+* Gabriela Aparecida de Araújo
+* Víctor Ballestrini 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Neil Paiva Tizzo 
 
 ## Instruções de utilização
 
