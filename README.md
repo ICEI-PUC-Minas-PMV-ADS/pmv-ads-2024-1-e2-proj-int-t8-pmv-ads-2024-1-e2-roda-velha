@@ -4,7 +4,7 @@
 
 `Desenvolvimento de uma Aplicação Interativa`
 
-`1º semestre/2023`
+`1º semestre/2024`
 
 O objetivo deste projeto é criação de uma plataforma centralizada e intuitiva que una entusiastas e devotos de carros clássicos, proporcionando uma jornada de descoberta e participação em eventos especializados. 
 
