@@ -105,8 +105,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |03| Não poder ser utilizado uma linguagem de programação diferente de javascript no desenvolvimento do fron-end        |
 |04| Não poder ser utilizado uma linguagem de programação diferente de C# no desenvolvimento do back-end        |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
 ## Diagrama de Casos de Uso
 
 <img width="285" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-projxxx/assets/84386289/44adccfc-2844-4a57-bb95-686687cace90">
