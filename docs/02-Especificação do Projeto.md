@@ -101,8 +101,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
+|02| Não pode ser utilizado bibliotecas de desenvolvimento de interfaces de usuário (UIs) para aplicações web como react, angular e vue.        |
+|03| Não poder ser utilizado uma linguagem de programação diferente de javascript no desenvolvimento do fron-end        |
+|04| Não poder ser utilizado uma linguagem de programação diferente de C# no desenvolvimento do back-end        |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
