@@ -82,7 +82,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-03| O usuário poderá visualizar todos os eventos disponíveis ativos.    | ALTA |
 |RF-04| O usuário poderá buscar por eventos de forma segmentada.    | ALTA |
 |RF-05| O usuário poderá cadastrar, editar e excluir eventos no sistema.    | ALTA |
-|RF-06| Os usuários poderão dar “like” nos eventos.    | MÉDIA |
+|RF-06| Os usuários poderão dar “like” nos eventos.    | ALTO |
 |RF-07| O usuário poderá gerar um relatório com todos os eventos que já foram publicados por ele.   | ALTA |
 |RF-08| Possuir um mecanismo de chat.  | BAIXA |
 
@@ -101,8 +101,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser utilizado bibliotecas de desenvolvimento de interfaces de usuário (UIs) para aplicações web como react, angular e vue.        |
-|03| Não poder ser utilizado uma linguagem de programação diferente de javascript no desenvolvimento do fron-end        |
+|02| O framework ou biblioteca utilizado deverá ser apenas o BootStrap |
+|03| Deverá ser utilizado html, css e javascript         |
 |04| Não poder ser utilizado uma linguagem de programação diferente de C# no desenvolvimento do back-end        |
 
 ## Diagrama de Casos de Uso
