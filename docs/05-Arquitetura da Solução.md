@@ -33,6 +33,10 @@ Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, 
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+A tecnologia de banco de dados para armazenamento será utilizado o PostgreeSQL, que é um banco de dados relacional já consagrado no mercado, rodando em plataformas Linux, Windows e Mac.
+A codificação do site será feito com as linguagens de marcação HTML, CSS e para interatividade o JavaScript.
+Para a manipulação dos dados do lado do servidor, ou seja o back-end, será adotado a linguagem C# que é uma linguagem fortemente tipada e orientada a objetos além de contar com excelente performance em vários cenários de aplicação.
+
 ## Hospedagem
 
 Explique como a hospedagem e o lançamento da plataforma foi feita.
