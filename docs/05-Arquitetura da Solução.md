@@ -29,17 +29,16 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
 A tecnologia de banco de dados para armazenamento será utilizado o PostgreeSQL, que é um banco de dados relacional já consagrado no mercado, rodando em plataformas Linux, Windows e Mac.
-A codificação do site será feito com as linguagens de marcação HTML, CSS e para interatividade o JavaScript.
+A codificação do site (front-end) será feito com as linguagens de marcação HTML5, CSS e o framework BootStrap. Para interatividade será usado o JavaScript.
 Para a manipulação dos dados do lado do servidor, ou seja o back-end, será adotado a linguagem C# que é uma linguagem fortemente tipada e orientada a objetos além de contar com excelente performance em vários cenários de aplicação.
 
 ## Hospedagem
 
 Explique como a hospedagem e o lançamento da plataforma foi feita.
+
+A hospedagem do site será feita na plataforma de Cloud Azure da microsoft. Será usado o serviço de Máquinas Virtuais na versão Linux, usando a instância B2ats v2, com 2 vCPU, 1GB de RAMe para armazenamento o Azure Managed DIsks, com 30GB de espaço em disco.
+O servidor integrado com o ASP.NET CORE será o Kestrel.
 
 > **Links Úteis**:
 >
