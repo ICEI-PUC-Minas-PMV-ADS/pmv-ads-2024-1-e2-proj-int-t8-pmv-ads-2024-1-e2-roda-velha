@@ -22,15 +22,12 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+As telas do sistema apresentam uma estrutura comum. Nesta estrutura existem 3 grandes blocos, descritos a seguir. Sendo eles:
+<ul>
+  <li>Cabeçalho (Header) - Local onde estão dispostos o nome da aplicação web e navegação principal do site;</li>
+  <li>Conteúdo (Main) - Apresenta o conteúdo da tela em questão;</li>
+  <li>Rodapé (Footer) - Apresenta informações sobre os direitos autorais, mapa do site e contatos.</li>
+</ul>
+
+![ccr](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/cd23cc95-b720-4e70-bbaf-4fd6c2173806)
