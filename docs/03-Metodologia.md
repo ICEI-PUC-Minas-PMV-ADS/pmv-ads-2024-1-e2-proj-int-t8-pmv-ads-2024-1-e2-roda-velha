@@ -49,8 +49,8 @@ A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para defi
  
 - **Equipe de Desenvolvimento:**
   - Arthur Simões
-  - Aleksander Cunha Garcia Romero
-  - Anderson da Silva Gomes
+  - Aleksander Romero
+  - Anderson Gomes
 
 - **Equipe de UI/UX:**
   - Atila Ribeiro
