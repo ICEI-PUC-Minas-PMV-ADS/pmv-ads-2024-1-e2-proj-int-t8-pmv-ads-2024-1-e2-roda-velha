@@ -32,17 +32,11 @@ A equipe está organizada da seguinte maneira:
 
 ### Divisão de Papéis
 
-- **Product Manager:**
-  - Víctor Ballestrini
+- **Product Manager:** Víctor Ballestrini
  
-- **Equipe de Desenvolvimento:**
-  - Arthur Simões
-  - Aleksander Romero
-  - Anderson Gomes
+- **Equipe de Desenvolvimento:** [Arthur Simões](https://github.com/ArthurSimoess) / [Aleksander Romero](https://github.com/AleksanderRomero) / [Anderson Gomes](https://github.com/Dinhoop)
 
-- **Equipe de UI/UX:**
-  - Atila Ribeiro
-  - Gabriela Araujo
+- **Equipe de UI/UX:** [Átila Ribeiro](https://github.com/atilaedu1) / [Gabriela Araújo](https://github.com/araujogabrielaa)
 
 ---
 ### Processo
