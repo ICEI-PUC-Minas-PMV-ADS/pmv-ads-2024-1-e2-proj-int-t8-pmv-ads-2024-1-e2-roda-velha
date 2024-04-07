@@ -45,16 +45,16 @@ A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para defi
 ### Divisão de Papéis
 
 - **Product Manager:**
-  - Víctor Ballestrini
+  > Víctor Ballestrini
  
 - **Equipe de Desenvolvimento:**
-  - Arthur Simões
-  - Aleksander Cunha Garcia Romero
-  - Anderson da Silva Gomes
-   
+  > Arthur Simões
+  > Aleksander Cunha Garcia Romero
+  > Anderson da Silva Gomes
+
 - **Equipe de UI/UX:**
-  - Atila Ribeiro
-  - Gabriela Araujo
+  > Atila Ribeiro
+  > Gabriela Araujo
 
 
 > **Links Úteis**:
@@ -65,7 +65,8 @@ A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para defi
 ### Processo
 
 Para organizar e distribuir as tarefas do projeto, a equipe está empregando o Miro com um quadro Kanban. O quadro está configurado com as seguintes listas:
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/145074016/b473c8d4-c63f-4661-9b09-d5b3f89a0c6e)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/145074016/592291f0-ea15-44b3-b70f-25db1a54d85a)
 
 - `Backlog`: Representa lista de tarefas ou requisitos a serem realizados.
 - `To Do`: Representa todas as tarefas que ainda não foram iniciadas.
@@ -83,15 +84,13 @@ Para organizar e distribuir as tarefas do projeto, a equipe está empregando o M
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código: Visual Studio.
+- Ferramentas de comunicação: Whatsapp, Teams e Discord.
+- Ferramentas de desenho de tela (wireframing): Miro.
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
+> 1. O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. 
+> 2. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas.
+> 3. Para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução e pela versatilidade em construir de maneira conjunta a interface do projeto.
 
 Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
  
