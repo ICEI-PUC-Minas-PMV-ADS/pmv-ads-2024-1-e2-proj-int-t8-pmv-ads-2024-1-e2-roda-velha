@@ -48,13 +48,10 @@ A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para defi
   > Víctor Ballestrini
  
 - **Equipe de Desenvolvimento:**
-  > Arthur Simões
-  > Aleksander Cunha Garcia Romero
-  > Anderson da Silva Gomes
+  > Arthur Simões | Aleksander Cunha Garcia Romero | Anderson da Silva Gomes
 
 - **Equipe de UI/UX:**
-  > Atila Ribeiro
-  > Gabriela Araujo
+  > Atila Ribeiro | Gabriela Araujo
 
 
 > **Links Úteis**:
