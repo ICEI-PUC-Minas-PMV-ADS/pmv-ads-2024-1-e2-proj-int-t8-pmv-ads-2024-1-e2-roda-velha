@@ -26,7 +26,6 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
----
 
 ## Gerenciamento de Projeto
 A equipe está organizada da seguinte maneira:
