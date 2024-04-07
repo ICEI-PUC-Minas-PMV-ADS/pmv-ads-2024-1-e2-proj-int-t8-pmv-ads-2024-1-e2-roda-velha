@@ -3,7 +3,10 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+
+Nós delineamos o processo completo relacionado ao desenvolvimento do projeto "Roda Velha", abordando a metodologia utilizada para organizar e gerenciar as atribuições da nossa equipe.
+
+Exploramos todas as ferramentas, ambientes e componentes estruturais envolvidos no trabalho, bem como a linguagem de programação escolhida pela nossa equipe para a execução do projeto.
 
 ## Controle de Versão
 
@@ -37,9 +40,22 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ## Gerenciamento de Projeto
 
+A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para definir o processo de desenvolvimento.
+
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+- **Product Manager:**
+  - Víctor Ballestrini
+ 
+- **Equipe de Desenvolvimento:**
+  - Arthur Simões
+  - Aleksander Cunha Garcia Romero
+  - Anderson da Silva Gomes
+   
+- **Equipe de UI/UX:**
+  - Atila Ribeiro
+  - Gabriela Araujo
+
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
@@ -48,7 +64,14 @@ Apresente a divisão de papéis entre os membros do grupo.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+Para organizar e distribuir as tarefas do projeto, a equipe está empregando o Miro com um quadro Kanban. O quadro está configurado com as seguintes listas:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/145074016/b473c8d4-c63f-4661-9b09-d5b3f89a0c6e)
+
+ `Backlog`: Representa lista de tarefas ou requisitos a serem realizados.
+ `To Do`: Representa todas as tarefas que ainda não foram iniciadas.
+ `In progress`: Representa tarefas que estão atualmente em andamento, ou seja, aquelas que já foram iniciadas, mas ainda não foram concluídas.
+ `Test review`: Representa a etapa onde os resultados dos testes são revisados para garantir a qualidade do trabalho antes de ser considerado concluído.
+ `Done`: Representa as tarefas que passaram pelos testes e controle de qualidade e estão prontas para o deploy, ou seja, lista de tarefas completadas.
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
