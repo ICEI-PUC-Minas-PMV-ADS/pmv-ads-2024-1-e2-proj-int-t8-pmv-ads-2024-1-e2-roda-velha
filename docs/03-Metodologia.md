@@ -67,11 +67,11 @@ A equipe adota metodologias ágeis e optou pelo Kanban como fundamento para defi
 Para organizar e distribuir as tarefas do projeto, a equipe está empregando o Miro com um quadro Kanban. O quadro está configurado com as seguintes listas:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/145074016/b473c8d4-c63f-4661-9b09-d5b3f89a0c6e)
 
- `Backlog`: Representa lista de tarefas ou requisitos a serem realizados.
- `To Do`: Representa todas as tarefas que ainda não foram iniciadas.
- `In progress`: Representa tarefas que estão atualmente em andamento, ou seja, aquelas que já foram iniciadas, mas ainda não foram concluídas.
- `Test review`: Representa a etapa onde os resultados dos testes são revisados para garantir a qualidade do trabalho antes de ser considerado concluído.
- `Done`: Representa as tarefas que passaram pelos testes e controle de qualidade e estão prontas para o deploy, ou seja, lista de tarefas completadas.
+- `Backlog`: Representa lista de tarefas ou requisitos a serem realizados.
+- `To Do`: Representa todas as tarefas que ainda não foram iniciadas.
+- `In progress`: Representa tarefas que estão atualmente em andamento, ou seja, aquelas que já foram iniciadas, mas ainda não foram concluídas.
+- `Test review`: Representa a etapa onde os resultados dos testes são revisados para garantir a qualidade do trabalho antes de ser considerado concluído.
+- `Done`: Representa as tarefas que passaram pelos testes e controle de qualidade e estão prontas para o deploy, ou seja, lista de tarefas completadas.
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
