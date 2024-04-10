@@ -79,12 +79,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-01| O usuário poderá se cadastrar no sistema.  | ALTA | 
 |RF-02| O usuário poderá fazer a autenticação (login).    | ALTA |
-|RF-03| O usuário poderá visualizar todos os eventos disponíveis ativos.    | ALTA |
-|RF-04| O usuário poderá buscar por eventos de forma segmentada.    | ALTA |
-|RF-05| O usuário poderá cadastrar, editar e excluir eventos no sistema.    | ALTA |
-|RF-06| Os usuários poderão dar “like” nos eventos.    | ALTO |
-|RF-07| O usuário poderá gerar um relatório com todos os eventos que já foram publicados por ele.   | ALTA |
-|RF-08| Possuir um mecanismo de chat.  | BAIXA |
+|RF-03| O usuário poderá editar seu perfil.    | ALTA |
+|RF-04| O usuário poderá deletar seu perfil.    | ALTA |
+|RF-05| O usuário poderá visualizar todos os eventos disponíveis ativos.    | ALTA |
+|RF-06| O usuário poderá buscar por eventos de forma segmentada.    | ALTA |
+|RF-07| O usuário cadastrado no sistema poderá criar, editar e excluir eventos.    | ALTA |
+|RF-08| Os usuários poderão dar “like” nos eventos.    | ALTO |
+|RF-09| O usuário poderá gerar um relatório com todos os eventos que já foram publicados por ele.   | ALTA |
+|RF-10| Possuir um mecanismo de chat.  | BAIXA |
 
 ### Requisitos não Funcionais
 
