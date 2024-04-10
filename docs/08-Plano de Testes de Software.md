@@ -39,7 +39,7 @@
 |  	|  	|
 | Caso de Teste 	| CT-07  – Criar eventos	|
 |Requisito Associado | RF-07	- O usuário cadastrado no sistema poderá criar, editar e excluir eventos |
-| Objetivo do Teste 	| Verificar se o usuário consegue criar enventos. |
+| Objetivo do Teste 	| Verificar se o usuário cadastrado consegue criar enventos. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "+ CRIAR EVENTO" <br> - Preencher os campos obrigatórios(nome do evento, local, data, imagem do evento e descerição) <br> - Clicar em "Salvar" |
 |Critério de Êxito | - O evento foi criado com sucesso. |
 |  	|  	|
