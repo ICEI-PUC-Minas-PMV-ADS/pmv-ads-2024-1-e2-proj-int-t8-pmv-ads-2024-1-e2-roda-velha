@@ -23,7 +23,7 @@
 |Requisito Associado | RF-04	- A aplicação deve possuir opção de apagar o perfil do usuário. |
 | Objetivo do Teste 	| Verificar se o usuário consegue apagar seu próprio perfil. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "EDITAR PERFIL" <br> - Clicar em "Excluir perfil" |
-|Critério de Êxito | - O perfil foi ex cluído com sucesso. |
+|Critério de Êxito | - O perfil foi excluído com sucesso. |
 |  	|  	|
 | Caso de Teste 	| CT-05    –  Visualizar eventos	|
 |Requisito Associado | RF-05	- O usuário poderá visualizar todos os eventos disponíveis ativos |
