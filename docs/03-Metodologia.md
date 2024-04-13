@@ -4,7 +4,6 @@
 Nós delineamos o processo completo relacionado ao desenvolvimento do projeto "Roda Velha", abordando a metodologia utilizada para organizar e gerenciar as atribuições da nossa equipe.
 Exploramos todas as ferramentas, ambientes e componentes estruturais envolvidos no trabalho, bem como a linguagem de programação escolhida pela nossa equipe para a execução do projeto.
 
-
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
@@ -26,20 +25,22 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-
 ## Gerenciamento de Projeto
+
 A equipe está organizada da seguinte maneira:
 
 ### Divisão de Papéis
 
 - **Product Manager:** Víctor Ballestrini
- 
+
 - **Equipe de Desenvolvimento:** [Arthur Simões](https://github.com/ArthurSimoess) / [Aleksander Romero](https://github.com/AleksanderRomero) / [Anderson Gomes](https://github.com/Dinhoop)
 
 - **Equipe de UI/UX:** [Átila Ribeiro](https://github.com/atilaedu1) / [Gabriela Araújo](https://github.com/araujogabrielaa)
 
 ---
+
 ### Processo
+
 Para organizar e distribuir as tarefas do projeto, a equipe está empregando o Miro com um quadro Kanban. O quadro está configurado com as seguintes listas:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/145074016/592291f0-ea15-44b3-b70f-25db1a54d85a)
@@ -51,13 +52,15 @@ Para organizar e distribuir as tarefas do projeto, a equipe está empregando o M
 > - `Done`: Tarefas que passaram pelos testes e controle de qualidade e estão prontas para o deploy, ou seja, lista de tarefas completadas.
 
 ---
+
 ### Ferramentas
+
 As ferramentas empregadas no projeto são:
 
 - Editor de código: Visual Studio.
 - Ferramentas de comunicação: Whatsapp, Teams e Discord.
 - Ferramentas de desenho de tela (wireframing): Miro.
 
-> 1. O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. 
+> 1. O editor de código foi escolhido porque ele possui uma integração com o sistema de versão.
 > 2. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas.
 > 3. Para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução e pela versatilidade em construir de maneira conjunta a interface do projeto.

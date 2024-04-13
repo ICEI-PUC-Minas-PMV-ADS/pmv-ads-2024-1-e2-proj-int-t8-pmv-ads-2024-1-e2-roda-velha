@@ -3,6 +3,7 @@
 ## Personas
 
 ### Entusiasta casual
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -11,12 +12,13 @@
   <tr>
     <th>Necessidades</th>
     <td>
-      Encontrar eventos de carros clássicos próximos à sua localização para participar ocasionalmente. Desejam informações sobre os tipos de carros exibidos e a atmosfera geral do evento para decidir se vale a pena comparecer. 
+      Encontrar eventos de carros clássicos próximos à sua localização para participar ocasionalmente. Desejam informações sobre os tipos de carros exibidos e a atmosfera geral do evento para decidir se vale a pena comparecer.
     </td>
   </tr>
 </table>
 
-### Colecionador entusiasta 
+### Colecionador entusiasta
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -25,12 +27,13 @@
   <tr>
     <th>Necessidades</th>
     <td>
-      Encontrar eventos de alto nível que apresentem carros raros e exclusivos. Além disso, desejam saber detalhes sobre os organizadores, expositores e qualquer programa especial oferecido durante o evento. 
+      Encontrar eventos de alto nível que apresentem carros raros e exclusivos. Além disso, desejam saber detalhes sobre os organizadores, expositores e qualquer programa especial oferecido durante o evento.
     </td>
   </tr>
 </table>
 
 ### Organizador de eventos
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -39,12 +42,13 @@
   <tr>
     <th>Necessidades</th>
     <td>
-      Divulgar seu evento para atrair um público amplo e qualificado. Eles buscam uma plataforma confiável para listar seu evento, gostariam de um mecanismo de likes nos eventos criados. 
+      Divulgar seu evento para atrair um público amplo e qualificado. Eles buscam uma plataforma confiável para listar seu evento, gostariam de um mecanismo de likes nos eventos criados.
     </td>
   </tr>
 </table>
 
-### Colecionador entusiasta 
+### Colecionador entusiasta
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -53,7 +57,7 @@
   <tr>
     <th>Necessidades</th>
     <td>
-      Encontrar eventos de carros clássicos onde possam exibir seus veículos para um público interessado e potencialmente fechar negócios.   
+      Encontrar eventos de carros clássicos onde possam exibir seus veículos para um público interessado e potencialmente fechar negócios.
     </td>
   </tr>
 </table>
@@ -77,7 +81,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-01| O usuário poderá se cadastrar no sistema.  | ALTA | 
+|RF-01| O usuário poderá se cadastrar no sistema.  | ALTA |
 |RF-02| O usuário poderá fazer a autenticação (login).    | ALTA |
 |RF-03| O usuário poderá editar seu perfil.    | ALTA |
 |RF-04| O usuário poderá deletar seu perfil.    | ALTA |
@@ -92,8 +96,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-01| Design responsivo. | ALTA | 
-|RNF-02| A plataforma deve ser compatível com uma variedade de navegadores modernos, como Chrome, Firefox, Safari e Edge, para garantir que a experiência do usuário seja consistente em diferentes ambientes |  ALTA | 
+|RNF-01| Design responsivo. | ALTA |
+|RNF-02| A plataforma deve ser compatível com uma variedade de navegadores modernos, como Chrome, Firefox, Safari e Edge, para garantir que a experiência do usuário seja consistente em diferentes ambientes |  ALTA |
 |RNF-03| A interface da plataforma deve ser intuitiva, de fácil uso, para acomodar tanto usuários experientes quanto aqueles menos familiarizados com tecnologia. |  ALTA |
 
 ## Restrições
@@ -110,5 +114,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 ## Diagrama de Casos de Uso
 
 <img width="600" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/9d1ca2f3-4727-4746-9fb3-9bf89f7fbd8d">
-
-
