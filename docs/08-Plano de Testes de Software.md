@@ -27,7 +27,7 @@
 |   |   |
 | Caso de Teste  | CT-05    –  Visualizar eventos |
 |Requisito Associado | RF-05 - O usuário poderá visualizar todos os eventos disponíveis ativos |
-| Objetivo do Teste  | Verificar se o usuário consegue visualizar os enventos. |
+| Objetivo do Teste  | Verificar se o usuário consegue visualizar os eventos. |
 | Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Rolar a scrollbar para baixo - Visualizar eventos ativos
 |Critério de Êxito | - Os eventos aparecerem para o usuário visualizar. |
 |   |   |
@@ -39,19 +39,19 @@
 |   |   |
 | Caso de Teste  | CT-07  – Criar eventos |
 |Requisito Associado | RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos |
-| Objetivo do Teste  | Verificar se o usuário cadastrado consegue criar enventos. |
-| Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "+ CRIAR EVENTO" <br> - Preencher os campos obrigatórios(nome do evento, local, data, imagem do evento e descerição) <br> - Clicar em "Salvar" |
+| Objetivo do Teste  | Verificar se o usuário cadastrado consegue criar eventos. |
+| Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "+ CRIAR EVENTO" <br> - Preencher os campos obrigatórios(nome do evento, local, data, imagem do evento e descrição) <br> - Clicar em "Salvar" |
 |Critério de Êxito | - O evento foi criado com sucesso. |
 |   |   |
 | Caso de Teste  | CT-08    – Editar eventos |
 |Requisito Associado | RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos |
-| Objetivo do Teste  | Verificar se o usuário consegue editar os enventos criados por ele. |
-| Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "EDITAR" <br> - Alterar um ou mais campos obrigatórios(nome do evento, local, data, imagem do evento e descerição) <br> - Clicar em "EDITAR" |
+| Objetivo do Teste  | Verificar se o usuário consegue editar os eventos criados por ele. |
+| Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no botão "EDITAR" <br> - Alterar um ou mais campos obrigatórios(nome do evento, local, data, imagem do evento e descrição) <br> - Clicar em "EDITAR" |
 |Critério de Êxito | - O evento foi editado com sucesso.
 |   |   |
 | Caso de Teste  | CT-09    – Apagar eventos |
 |Requisito Associado | RF-07  - O usuário cadastrado no sistema poderá criar, editar e excluir eventos. |
-| Objetivo do Teste  | Verificar se o usuário consegue apagar os enventos criados por ele. |
+| Objetivo do Teste  | Verificar se o usuário consegue apagar os eventos criados por ele. |
 | Passos  | - Acessar o navegador <br> - Informar o endereço do site https://*******<br> - Clicar no ícone de lixeira do lado superior direito do card de evento <br> - <br> - Clicar em "CONFIRMAR" |
 |Critério de Êxito | - O evento foi apagado com sucesso. |
 |   |   |

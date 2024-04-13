@@ -47,7 +47,7 @@
   </tr>
 </table>
 
-### Colecionador entusiasta
+### Revendedor de carros clássicos
 
 <table>
   <tr>

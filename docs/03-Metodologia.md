@@ -31,7 +31,7 @@ A equipe está organizada da seguinte maneira:
 
 ### Divisão de Papéis
 
-- **Product Manager:** Víctor Ballestrini
+- **Product Manager:** [Víctor Ballestrini](https://github.com/vballestrini)
 
 - **Equipe de Desenvolvimento:** [Arthur Simões](https://github.com/ArthurSimoess) / [Aleksander Romero](https://github.com/AleksanderRomero) / [Anderson Gomes](https://github.com/Dinhoop)
 
