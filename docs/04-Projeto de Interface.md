@@ -11,7 +11,8 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 O diagrama de fluxo apresentado ilustra a sequência de interações do usuário pelas telas do sistema. Cada uma dessas telas é detalhada na seção de Wireframes a seguir.
 
-![Projeto - Roda Velha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/543db3f6-7771-4dc7-be0e-2b275286d366)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/487c39db-cb80-4184-8dbd-67178408d642)
+
 
 <br>
 <hr>
