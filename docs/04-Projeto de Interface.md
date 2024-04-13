@@ -76,6 +76,8 @@ O modal de cadastro de evento possibilita aos usuários inserirem informações 
     
 <img width="185" alt="cadastrar evento" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/ff191f18-db39-467f-8adb-95a47b581647">
 
+
+
 <br>
 <hr>
 
