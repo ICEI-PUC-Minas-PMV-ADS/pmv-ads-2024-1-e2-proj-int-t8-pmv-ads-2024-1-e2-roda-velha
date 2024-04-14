@@ -25,7 +25,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ## Tecnologias Utilizadas
 
-A tecnologia de banco de dados para armazenamento será utilizado o PostgreeSQL, que é um banco de dados relacional já consagrado no mercado, rodando em plataformas Linux, Windows e Mac.
+A tecnologia de banco de dados para armazenamento será utilizado o PostgreeSQL ou o MySQL, que é um banco de dados relacional já consagrado no mercado, rodando em plataformas Linux, Windows e Mac.
 A codificação do site (front-end) será feito com as linguagens de marcação HTML5, CSS e o framework BootStrap. Para interatividade será usado o JavaScript.
 Para a manipulação dos dados do lado do servidor, ou seja o back-end, será adotado a linguagem C# que é uma linguagem fortemente tipada e orientada a objetos além de contar com excelente performance em vários cenários de aplicação.
 
