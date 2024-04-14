@@ -31,7 +31,8 @@ As telas do sistema apresentam uma estrutura comum. Nesta estrutura existem 3 gr
 
 A página inicial apresenta um banner rotativo, uma breve descrição do site e, mais significativamente, oferece a navegação pelos eventos cadastrados por todos os usuários.
 
-<img width="139" alt="home" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/60a7677a-2ca5-40b3-8f90-ff736c1d7fb4">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/031402bd-32af-4460-bae4-7c08dcfd290d)
+
 
 <br>
 <hr>
