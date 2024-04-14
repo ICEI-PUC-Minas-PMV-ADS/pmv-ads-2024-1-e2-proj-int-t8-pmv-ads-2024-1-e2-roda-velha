@@ -58,7 +58,7 @@ Na tela de cadastro, os usuários podem criar uma conta fornecendo seu nome, end
 
 Na tela de perfil, os usuários podem acessar e editar suas informações pessoais, bem como visualizar os eventos que publicaram e os eventos que curtiram.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/3c43bfe2-ae57-4ce5-bd2b-df5849aa8c46)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/adc617f8-faca-4774-8948-d9ebf031b985)
 
 <br>
 <hr>
