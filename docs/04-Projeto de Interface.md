@@ -31,7 +31,8 @@ As telas do sistema apresentam uma estrutura comum. Nesta estrutura existem 3 gr
 
 A página inicial apresenta um banner rotativo, uma breve descrição do site e, mais significativamente, oferece a navegação pelos eventos cadastrados por todos os usuários.
 
-<img width="139" alt="home" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/60a7677a-2ca5-40b3-8f90-ff736c1d7fb4">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/031402bd-32af-4460-bae4-7c08dcfd290d)
+
 
 <br>
 <hr>
@@ -58,7 +59,8 @@ Na tela de cadastro, os usuários podem criar uma conta fornecendo seu nome, end
 
 Na tela de perfil, os usuários podem acessar e editar suas informações pessoais, bem como visualizar os eventos que publicaram e os eventos que curtiram.
 
-<img width="184" alt="perfil" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/245b5ef4-69f0-412b-ba21-f0907add4b66">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/77323f13-dc6d-4dba-ae61-760cda3d9156)
+
 
 <br>
 <hr>
@@ -76,7 +78,10 @@ O modal de edição de perfil oferece aos usuários a possibilidade de atualizar
 
 O modal de cadastro de evento possibilita aos usuários inserirem informações como o nome do evento, local, data, imagem e uma descrição detalhada.
 
-<img width="185" alt="cadastrar evento" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/ff191f18-db39-467f-8adb-95a47b581647">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/ebc0b2a8-c013-45a9-8624-63611102f70f)
+
+
+
 
 <br>
 <hr>
@@ -85,7 +90,8 @@ O modal de cadastro de evento possibilita aos usuários inserirem informações 
 
 O modal de edição de evento permite aos usuários alterarem informações como nome, local, data, imagem e descrição do evento.
 
-<img width="184" alt="editar evento" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/202baeba-a78c-4ed2-ace8-45a5b8c92e6d">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/edd08a4d-d72f-435a-b25b-b48dc2cff22e)
+
 
 <br>
 <hr>
