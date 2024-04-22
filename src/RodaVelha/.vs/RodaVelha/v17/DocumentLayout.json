@@ -3,40 +3,63 @@
   "WorkspaceRootPath": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\obj\\Debug\\net8.0\\ikx30baz.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\ikx30baz.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\migrations\\20240418011502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:migrations\\20240418011502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\data\\rodavelhacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:data\\rodavelhacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\data\\rodavelhacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:data\\rodavelhacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\migrations\\rodavelhacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:migrations\\rodavelhacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\migrations\\20240418011502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:migrations\\20240418011502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|c:\\projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\rodavelha\\models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F6989CA-FE39-45C0-8227-555AF55BF569}|RodaVelha.csproj|solutionrelative:models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\obj\\Debug\\net8.0\\ikx30baz.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\ikx30baz.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/RodaVelhaContext_3c82292e_94e3_4e46_9e3d_e7f7d6be59c4/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,43 +69,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ikx30baz.sql ",
-              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\obj\\Debug\\net8.0\\ikx30baz.sql",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\ikx30baz.sql",
-              "ToolTip": "ikx30baz.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-22T00:08:27.699Z",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Events\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Events\\Index.cshtml",
+              "RelativeToolTip": "Views\\Events\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T23:10:05.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T23:09:55.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAACEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T23:08:45.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RodaVelhaContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Migrations\\RodaVelhaContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\RodaVelhaContextModelSnapshot.cs",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Migrations\\RodaVelhaContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\RodaVelhaContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T23:08:23.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T23:03:51.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAvwA8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T23:03:38.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAAwIkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T22:54:45.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/RodaVelhaContext_3c82292e_94e3_4e46_9e3d_e7f7d6be59c4/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-22T22:35:08.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "20240418011502_InitialCreate.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Migrations\\20240418011502_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20240418011502_InitialCreate.cs",
               "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Migrations\\20240418011502_InitialCreate.cs",
               "RelativeToolTip": "Migrations\\20240418011502_InitialCreate.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCYAAABcAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAgwCYAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T01:15:02.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:10:34.306Z"
+              "WhenOpened": "2024-04-18T01:10:34.306Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -94,23 +208,25 @@
               "RelativeToolTip": "Data\\RodaVelhaContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:09:21.79Z"
+              "WhenOpened": "2024-04-18T01:09:21.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Models\\Event.cs",
               "RelativeDocumentMoniker": "Models\\Event.cs",
               "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Models\\Event.cs",
               "RelativeToolTip": "Models\\Event.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:08:23.884Z"
+              "WhenOpened": "2024-04-18T01:08:23.884Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Like.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Models\\Like.cs",
               "RelativeDocumentMoniker": "Models\\Like.cs",
@@ -118,31 +234,34 @@
               "RelativeToolTip": "Models\\Like.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:08:12.198Z"
+              "WhenOpened": "2024-04-18T01:08:12.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAArAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAmwDkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:07:43.453Z"
+              "WhenOpened": "2024-04-18T01:07:43.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Projects\\pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha\\src\\RodaVelha\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T01:06:17.291Z"
+              "WhenOpened": "2024-04-18T01:06:17.291Z",
+              "EditorCaption": ""
             }
           ]
         }
