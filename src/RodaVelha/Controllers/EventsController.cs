@@ -22,7 +22,7 @@ namespace RodaVelha.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
-            var rodaVelhaContext = _context.Events.Include(e => e.User);
+            var rodaVelhaContext = _context.Event.Include(e => e.User);
             return View(await rodaVelhaContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var @event = await _context.Events
+            var @event = await _context.Event
                 .Include(e => e.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (@event == null)
@@ -48,7 +48,7 @@ namespace RodaVelha.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "ID");
+            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace RodaVelha.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "ID", @event.UserId);
+            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID", @event.UserId);
             return View(@event);
         }
 
@@ -77,12 +77,12 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var @event = await _context.Events.FindAsync(id);
+            var @event = await _context.Event.FindAsync(id);
             if (@event == null)
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "ID", @event.UserId);
+            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID", @event.UserId);
             return View(@event);
         }
 
@@ -118,7 +118,7 @@ namespace RodaVelha.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "ID", @event.UserId);
+            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID", @event.UserId);
             return View(@event);
         }
 
@@ -130,7 +130,7 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var @event = await _context.Events
+            var @event = await _context.Event
                 .Include(e => e.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (@event == null)
@@ -146,10 +146,10 @@ namespace RodaVelha.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var @event = await _context.Events.FindAsync(id);
+            var @event = await _context.Event.FindAsync(id);
             if (@event != null)
             {
-                _context.Events.Remove(@event);
+                _context.Event.Remove(@event);
             }
 
             await _context.SaveChangesAsync();
@@ -158,7 +158,7 @@ namespace RodaVelha.Controllers
 
         private bool EventExists(int id)
         {
-            return _context.Events.Any(e => e.Id == id);
+            return _context.Event.Any(e => e.Id == id);
         }
     }
 }

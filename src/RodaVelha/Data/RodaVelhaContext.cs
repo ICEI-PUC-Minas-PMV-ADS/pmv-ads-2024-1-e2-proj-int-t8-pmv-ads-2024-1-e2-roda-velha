@@ -14,8 +14,7 @@ namespace RodaVelha.Data
         {
         }
 
-        public DbSet<RodaVelha.Models.User> Users { get; set; } = default!;
-        public DbSet<RodaVelha.Models.Event> Events { get; set; } = default!;
-        public DbSet<RodaVelha.Models.Like> Likes { get; set; } = default!;
+        public DbSet<RodaVelha.Models.User> User { get; set; } = default!;
+        public DbSet<RodaVelha.Models.Event> Event { get; set; } = default!;
     }
 }

@@ -68,7 +68,7 @@ namespace RodaVelha.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Events");
+                    b.ToTable("Event");
                 });
 
             modelBuilder.Entity("RodaVelha.Models.Like", b =>
@@ -91,7 +91,7 @@ namespace RodaVelha.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Likes");
+                    b.ToTable("Like");
                 });
 
             modelBuilder.Entity("RodaVelha.Models.User", b =>
@@ -119,7 +119,7 @@ namespace RodaVelha.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("RodaVelha.Models.Event", b =>
