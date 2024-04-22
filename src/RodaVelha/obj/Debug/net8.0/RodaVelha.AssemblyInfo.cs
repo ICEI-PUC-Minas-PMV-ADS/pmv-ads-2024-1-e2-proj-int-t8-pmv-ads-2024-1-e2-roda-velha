@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RodaVelha")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04be2c974ed7b74b0525d6ed70626471ea9b6153")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02e5fcad4858d2d1456100ace4199310c7933ec6")]
 [assembly: System.Reflection.AssemblyProductAttribute("RodaVelha")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RodaVelha")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
