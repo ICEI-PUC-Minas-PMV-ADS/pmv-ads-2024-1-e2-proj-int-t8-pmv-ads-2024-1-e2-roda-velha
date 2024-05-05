@@ -5,19 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RodaVelha.Data;
 using RodaVelha.Models;
 
 namespace RodaVelha.Controllers
 {
-    public class EventsController : Controller
+    public class EventsController(RodaVelhaContext context) : Controller
     {
-        private readonly RodaVelhaContext _context;
-
-        public EventsController(RodaVelhaContext context)
-        {
-            _context = context;
-        }
+        private readonly RodaVelhaContext _context = context;
 
         // GET: Events
         public async Task<IActionResult> Index()
@@ -48,7 +44,7 @@ namespace RodaVelha.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID");
+            ViewData["UserId"] = new SelectList(_context.User, "ID", "Name");
             return View();
         }
 
@@ -59,14 +55,16 @@ namespace RodaVelha.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Likes,Photo,Phone,UserId")] Event @event)
         {
-            if (ModelState.IsValid)
+            try
             {
                 _context.Add(@event);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            } catch (Exception ex) {
+                ViewData["ErrorMessage"] = "There was an error saving the event. Please try again. [" + ex.Message + "]";
+                ViewData["UserId"] = new SelectList(_context.User, "ID", "Name", @event.UserId);
+                return View(@event);
             }
-            ViewData["UserId"] = new SelectList(_context.User, "ID", "ID", @event.UserId);
-            return View(@event);
         }
 
         // GET: Events/Edit/5
