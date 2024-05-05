@@ -7,12 +7,60 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\assets\images\logo.png" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlack.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlackItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBold.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBoldItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikExtralight.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikExtralightItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikLight.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikLightItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikMedium.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikMediumItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikRegular.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikRegularItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikSemibold.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikSemiboldItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikSuper.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikSuperItalic.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikThin.otf" />
+    <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikThinItalic.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\images\logo.png" />
+    <None Include="wwwroot\assets\images\wfb.png" />
+    <None Include="wwwroot\assets\images\winsta.png" />
+    <None Include="wwwroot\assets\images\wwpp.png" />
+    <None Include="wwwroot\assets\images\wx.png" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlack.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlackItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBold.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBoldItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikExtralight.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikExtralightItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikLight.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikLightItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikMedium.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikMediumItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikRegular.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikRegularItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikSemibold.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikSemiboldItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikSuper.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikSuperItalic.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikThin.otf" />
+    <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikThinItalic.otf" />
   </ItemGroup>
 
 </Project>

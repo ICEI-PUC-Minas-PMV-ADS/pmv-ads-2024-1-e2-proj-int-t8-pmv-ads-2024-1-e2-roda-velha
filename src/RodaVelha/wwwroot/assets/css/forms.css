@@ -1,0 +1,41 @@
+﻿
+
+form {
+    display: inline-block;
+    width: 50%;
+}
+
+.form-group label,
+.form-group input,
+.form-group span {
+    width: 100%;
+}
+
+form > input {
+    width: 300px !important;
+    height: 23px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    border: 2px solid #412f26;
+    transition: border-color 0.3s ease;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #5d2510;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6a6f4c;
+    color: white;
+}
