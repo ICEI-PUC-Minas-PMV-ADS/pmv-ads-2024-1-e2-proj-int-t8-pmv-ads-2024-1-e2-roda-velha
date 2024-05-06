@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RodaVelha.Data;
 using RodaVelha.Models;
+using RodaVelha.ViewModels;
 
 namespace RodaVelha.Controllers
 {
@@ -22,7 +23,25 @@ namespace RodaVelha.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.User.ToListAsync());
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if(usuarioLogadoId == null)
+                return NotFound();
+            var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
+            var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+
+            var viewModel = new UserPageViewModel
+            {
+                eventos = eventos,
+                likes = likes,
+                userData = user,
+            };
+            return View(viewModel);
+
+        }
+        public int obterUsuarioLogadoId()
+        {
+            return 1; //Valor temporario
         }
 
         // GET: Users/Details/5
@@ -154,4 +173,5 @@ namespace RodaVelha.Controllers
             return _context.User.Any(e => e.ID == id);
         }
     }
+
 }
