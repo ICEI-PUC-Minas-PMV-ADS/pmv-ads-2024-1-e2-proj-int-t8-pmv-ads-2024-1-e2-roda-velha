@@ -7,5 +7,7 @@ namespace RodaVelha.ViewModels{
     {
         public List<Event> eventos { get; set; }
         public List<Like> likes { get; set; }
+
+        public User userData {get; set;}
     }
 }

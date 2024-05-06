@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RodaVelha.Data;
 using RodaVelha.Models;
+using RodaVelha.ViewModels;
 
 namespace RodaVelha.Controllers
 {
@@ -27,11 +28,13 @@ namespace RodaVelha.Controllers
                 return NotFound();
             var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
             var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 
             var viewModel = new UserPageViewModel
             {
                 eventos = eventos,
-                likes = likes
+                likes = likes,
+                userData = user,
             };
             return View(viewModel);
 

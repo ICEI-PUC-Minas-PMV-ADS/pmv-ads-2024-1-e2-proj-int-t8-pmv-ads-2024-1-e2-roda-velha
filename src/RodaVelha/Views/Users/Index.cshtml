@@ -16,55 +16,19 @@
 </head>
 <body>
 
-    <h1>Users</h1>
+    <h1>Perfil</h1>
 
     <p>
         <a asp-action="Create">Create New</a>
     </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Photo)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Photo)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+
 
     <section class="card-section">
         <div class="card" style="width: 18rem;">
             <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top" alt="Imagem do perfil do usuário" style="width: 150px;"/>
             <div class="card-body">
-                <h5 class="card-title">Nome: José Silva</h5>
-                <h5 class="card-title">E-mail: josesilva@gmail.com</h5>
+                <h5 class="card-title">Nome: @Model.userData.Name</h5>
+                <h5 class="card-title">E-mail: @Model.userData.Email</h5>
                 <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
             </div>
         </div>
