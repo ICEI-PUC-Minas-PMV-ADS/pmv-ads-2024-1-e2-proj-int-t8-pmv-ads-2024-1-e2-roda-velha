@@ -1,0 +1,18 @@
+.card-section{
+    display: flex;
+}
+.icon-remove{
+    position: absolute;
+    right: 0px;
+    top: -8px;
+
+}
+.card-completo{
+    position: relative;
+}
+.custom-card{
+    border-radius: 20px;
+}
+.custom-card img{
+    border-radius: 20px;
+}
