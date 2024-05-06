@@ -27,9 +27,17 @@
         <div class="card" style="width: 18rem;">
             <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top" alt="Imagem do perfil do usuário" style="width: 150px;"/>
             <div class="card-body">
+                @if (Model.userData != null){
                 <h5 class="card-title">Nome: @Model.userData.Name</h5>
                 <h5 class="card-title">E-mail: @Model.userData.Email</h5>
-                <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
+                    <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
+                }
+                else
+                {
+                    <h5 class="card-title">Nome: [ Não Logado ]</h5>
+                    <h5 class="card-title">E-mail: [ Não Logado ]</h5>
+                    <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
+                }
             </div>
         </div>
     </section>
