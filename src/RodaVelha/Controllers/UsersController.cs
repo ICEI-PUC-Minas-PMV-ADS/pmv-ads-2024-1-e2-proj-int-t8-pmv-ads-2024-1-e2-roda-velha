@@ -22,7 +22,23 @@ namespace RodaVelha.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if(usuarioLogadoId == null)
+                return NotFound();
+            var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
+            var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                eventos = eventos,
+                likes = likes
+            };
+            return View(viewModel);
+
+        }
+        public int obterUsuarioLogadoId()
+        {
+            return 1; //Valor temporario
         }
 
         // GET: Users/Details/5
