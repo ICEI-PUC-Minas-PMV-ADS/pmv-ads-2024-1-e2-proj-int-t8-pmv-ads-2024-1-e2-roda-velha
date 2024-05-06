@@ -63,4 +63,8 @@
     <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikThinItalic.otf" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot/assets/css/EventsEdit.css/" />
+  </ItemGroup>
+
 </Project>
