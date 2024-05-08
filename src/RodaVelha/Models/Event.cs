@@ -1,6 +1,6 @@
 ﻿namespace RodaVelha.Models;
 
-public class Event
+public class Events
 {
     public int Id { get; set; }
     public required string Name { get; set; }

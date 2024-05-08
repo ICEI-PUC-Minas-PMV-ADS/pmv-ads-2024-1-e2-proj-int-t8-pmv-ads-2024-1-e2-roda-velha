@@ -9,14 +9,14 @@ public class User
     public string? Photo { get; set; }
 
     public virtual ICollection<Like> Likes { get; set; }
-    public virtual ICollection<Event> Events { get; set; }
+    public virtual ICollection<Events> Events { get; set; }
 
 
     // Constructor to initialize the collections
     public User()
     {
         Likes = new HashSet<Like>();
-        Events = new HashSet<Event>();
+        Events = new HashSet<Events>();
     }
 
 }

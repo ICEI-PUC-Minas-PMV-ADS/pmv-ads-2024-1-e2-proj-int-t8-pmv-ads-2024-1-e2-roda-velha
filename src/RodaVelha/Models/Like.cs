@@ -8,5 +8,5 @@ public class Like
 
     // Navigation property for the relationship
     public virtual required User User { get; set; }
-    public virtual required Event Event { get; set; }
+    public virtual required Events Event { get; set; }
 }
