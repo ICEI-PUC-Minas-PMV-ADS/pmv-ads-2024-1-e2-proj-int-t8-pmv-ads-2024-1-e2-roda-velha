@@ -21,28 +21,28 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users
-        public async Task<IActionResult> Index()
-        {
-            var usuarioLogadoId = obterUsuarioLogadoId();
-            if(usuarioLogadoId == null)
-                return NotFound();
-            var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
-            var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
-            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+        // public async Task<IActionResult> Index()
+        // {
+        //     var usuarioLogadoId = obterUsuarioLogadoId();
+        //     if(usuarioLogadoId == null)
+        //         return NotFound();
+        //     var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
+        //     var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+        //     var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 
-            var viewModel = new UserPageViewModel
-            {
-                eventos = eventos,
-                likes = likes,
-                userData = user,
-            };
-            return View(viewModel);
+        //     var viewModel = new UserPageViewModel
+        //     {
+        //         eventos = eventos,
+        //         likes = likes,
+        //         userData = user,
+        //     };
+        //     return View(viewModel);
 
-        }
-        public int obterUsuarioLogadoId()
-        {
-            return 1; //Valor temporario
-        }
+        // }
+        // public int obterUsuarioLogadoId()
+        // {
+        //     return 1; //Valor temporario
+        // }
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -52,7 +52,7 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var user = await _context.User
+            var user = await _context.Users
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (user == null)
             {
@@ -92,7 +92,7 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var user = await _context.User.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -143,7 +143,7 @@ namespace RodaVelha.Controllers
                 return NotFound();
             }
 
-            var user = await _context.User
+            var user = await _context.Users
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (user == null)
             {
@@ -158,10 +158,10 @@ namespace RodaVelha.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var user = await _context.User.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
             if (user != null)
             {
-                _context.User.Remove(user);
+                _context.Users.Remove(user);
             }
 
             await _context.SaveChangesAsync();
@@ -170,7 +170,7 @@ namespace RodaVelha.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.User.Any(e => e.ID == id);
+            return _context.Users.Any(e => e.ID == id);
         }
     }
 
