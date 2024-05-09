@@ -12,8 +12,8 @@ using RodaVelha.Data;
 namespace RodaVelha.Migrations
 {
     [DbContext(typeof(RodaVelhaContext))]
-    [Migration("20240424225856_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240509110626_create1")]
+    partial class create1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace RodaVelha.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("RodaVelha.Models.Event", b =>
+            modelBuilder.Entity("RodaVelha.Models.Events", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -71,7 +71,7 @@ namespace RodaVelha.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Event");
+                    b.ToTable("Events");
                 });
 
             modelBuilder.Entity("RodaVelha.Models.Like", b =>
@@ -94,7 +94,7 @@ namespace RodaVelha.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Like");
+                    b.ToTable("Likes");
                 });
 
             modelBuilder.Entity("RodaVelha.Models.User", b =>
@@ -122,10 +122,10 @@ namespace RodaVelha.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RodaVelha.Models.Event", b =>
+            modelBuilder.Entity("RodaVelha.Models.Events", b =>
                 {
                     b.HasOne("RodaVelha.Models.User", "User")
                         .WithMany("Events")
@@ -138,7 +138,7 @@ namespace RodaVelha.Migrations
 
             modelBuilder.Entity("RodaVelha.Models.Like", b =>
                 {
-                    b.HasOne("RodaVelha.Models.Event", "Event")
+                    b.HasOne("RodaVelha.Models.Events", "Event")
                         .WithMany()
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)

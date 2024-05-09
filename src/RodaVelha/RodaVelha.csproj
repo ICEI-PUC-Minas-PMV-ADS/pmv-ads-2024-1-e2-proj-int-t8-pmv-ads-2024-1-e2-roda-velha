@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20240509105654_Create.cs" />
+    <Compile Remove="Migrations\20240509105654_Create.Designer.cs" />
+    <Compile Remove="Migrations\20240509110626_create1.cs" />
+    <Compile Remove="Migrations\20240509110626_create1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\assets\images\logo.png" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlack.otf" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlackItalic.otf" />
@@ -64,6 +71,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot/assets/css/EventsEdit.css/" />
   </ItemGroup>
 

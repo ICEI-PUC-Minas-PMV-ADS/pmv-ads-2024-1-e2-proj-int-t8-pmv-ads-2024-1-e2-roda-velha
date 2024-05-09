@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RodaVelha.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initialcreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -24,11 +24,11 @@ namespace RodaVelha.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.ID);
+                    table.PrimaryKey("PK_Users", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Event",
+                name: "Events",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -46,17 +46,17 @@ namespace RodaVelha.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Event", x => x.Id);
+                    table.PrimaryKey("PK_Events", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Event_User_UserId",
+                        name: "FK_Events_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Like",
+                name: "Likes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -66,34 +66,34 @@ namespace RodaVelha.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Like", x => x.Id);
+                    table.PrimaryKey("PK_Likes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Like_Event_EventId",
+                        name: "FK_Likes_Events_EventId",
                         column: x => x.EventId,
-                        principalTable: "Event",
+                        principalTable: "Events",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Like_User_UserId",
+                        name: "FK_Likes_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Event_UserId",
-                table: "Event",
+                name: "IX_Events_UserId",
+                table: "Events",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Like_EventId",
-                table: "Like",
+                name: "IX_Likes_EventId",
+                table: "Likes",
                 column: "EventId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Like_UserId",
-                table: "Like",
+                name: "IX_Likes_UserId",
+                table: "Likes",
                 column: "UserId");
         }
 
@@ -101,13 +101,13 @@ namespace RodaVelha.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Like");
+                name: "Likes");
 
             migrationBuilder.DropTable(
-                name: "Event");
+                name: "Events");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
         }
     }
 }
