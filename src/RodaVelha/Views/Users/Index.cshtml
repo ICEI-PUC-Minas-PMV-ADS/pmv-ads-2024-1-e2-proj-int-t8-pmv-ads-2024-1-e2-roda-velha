@@ -1,7 +1,7 @@
 ﻿@model RodaVelha.ViewModels.UserPageViewModel
 
 @{
-    ViewData["Title"] = "Users";
+    ViewData["Title"] = "Perfil";
 }
 
 
@@ -13,7 +13,7 @@
 
 
     <section class="card-section">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
             <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top" alt="Imagem do perfil do usuário" style="width: 150px;"/>
             <div class="card-body">
                 @if (Model.userData != null){
@@ -32,7 +32,7 @@
     </section>
     <section class="eventos-publicados container text-center">
         <h1>Eventos Publicados</h1>
-       <div class="row row-cols-3">
+       <div class="row row-cols-2">
         
         <div class="card-completo">
             <i class="icon-remove fa-solid fa-trash-can"></i>
@@ -50,7 +50,7 @@
 
     <section class="eventos-publicados container text-center">
         <h1>Eventos que você curtiu</h1>
-        <div class="row row-cols-3">
+        <div class="row row-cols-2">
 
             <div class="card-completo">
                 <i class="icon-remove fa-solid fa-trash-can"></i>
