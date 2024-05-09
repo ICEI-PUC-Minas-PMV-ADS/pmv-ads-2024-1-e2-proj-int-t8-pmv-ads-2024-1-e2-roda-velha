@@ -21,28 +21,28 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users
-        // public async Task<IActionResult> Index()
-        // {
-        //     var usuarioLogadoId = obterUsuarioLogadoId();
-        //     if(usuarioLogadoId == null)
-        //         return NotFound();
-        //     var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
-        //     var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
-        //     var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+         public async Task<IActionResult> Index()
+         {
+             var usuarioLogadoId = obterUsuarioLogadoId();
+             if(usuarioLogadoId == null)
+                 return NotFound();
+             var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
+             var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+             var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 
-        //     var viewModel = new UserPageViewModel
-        //     {
-        //         eventos = eventos,
-        //         likes = likes,
-        //         userData = user,
-        //     };
-        //     return View(viewModel);
+             var viewModel = new UserPageViewModel
+             {
+                 eventos = eventos,
+                 likes = likes,
+                 userData = user,
+             };
+             return View(viewModel);
 
-        // }
-        // public int obterUsuarioLogadoId()
-        // {
-        //     return 1; //Valor temporario
-        // }
+         }
+         public int obterUsuarioLogadoId()
+         {
+             return 1; //Valor temporario
+         }
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
