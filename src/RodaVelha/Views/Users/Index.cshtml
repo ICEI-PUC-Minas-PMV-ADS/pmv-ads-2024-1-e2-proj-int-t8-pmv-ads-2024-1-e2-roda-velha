@@ -7,9 +7,8 @@
 
     <h1>Perfil</h1>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+    <p><a asp-action="Create">Criar novo usuário</a></p>
+    <p><a asp-action="Details" asp-route-id="1">Detalhes do usuário</a></p>
 
 
     <section class="card-section">
@@ -19,7 +18,7 @@
                 @if (Model.userData != null){
                 <h5 class="card-title">Nome: @Model.userData.Name</h5>
                 <h5 class="card-title">E-mail: @Model.userData.Email</h5>
-                    <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
                 }
                 else
                 {
@@ -34,13 +33,21 @@
         <h1>Eventos Publicados</h1>
        <div class="row row-cols-2">
         
-        <div class="card-completo">
-            <i class="icon-remove fa-solid fa-trash-can"></i>
-            <div class="card custom-card border-secondary" style="width: 18rem">
-                <img src="https://www.hotcustoms.com.br/wp-content/uploads/2021/11/belair-hardtop-big-block-1957-23-CAPA.jpg" class="card-img-top" alt="Imagem do perfil do usuário"/>
-            </div>
-            <a class="btn btn-primary ">EDITAR</a>
-        </div>
+        @if (Model.events != null)
+        {
+            Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+            foreach(var item in Model.events)
+             {
+                    <div class="card-completo">
+                    <i class="icon-remove fa-solid fa-trash-can"></i>
+                    <div class="card custom-card border-secondary" style="width: 18rem">
+                        <img src="@item.Photo" class="card-img-top" alt="Imagem do perfil do usuário"/>
+                    </div>
+                    <a class="btn btn-primary" asp-controller="Events" asp-action="Edit" asp-route-id="@Model.userData.ID">EDITAR</a>
+                    </div>
+            }
+        }
+        
 
            
 
@@ -51,15 +58,19 @@
     <section class="eventos-publicados container text-center">
         <h1>Eventos que você curtiu</h1>
         <div class="row row-cols-2">
-
-            <div class="card-completo">
-                <i class="icon-remove fa-solid fa-trash-can"></i>
+        @if(Model.likes != null)
+        {
+            foreach (var item in Model.likes)
+            {
+                <div class="card-completo">
+                    <i class="icon-remove fa-solid fa-trash-can"></i>
             <div class="card custom-card border-secondary" style="width: 18rem">
-                    <img src="https://www.hotcustoms.com.br/wp-content/uploads/2021/11/belair-hardtop-big-block-1957-23-CAPA.jpg" class="card-img-top" alt="Imagem do perfil do usuário" />
+                    <img src="@item.Event.Photo" class="card-img-top" alt="Imagem do perfil do usuário" />
                 </div>
                 <a class="btn btn-primary ">EDITAR</a>
             </div>
-
+            }
+        }
             
         </div>
     </section>

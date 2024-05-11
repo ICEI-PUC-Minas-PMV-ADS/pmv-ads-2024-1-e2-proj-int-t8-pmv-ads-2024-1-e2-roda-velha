@@ -78,6 +78,7 @@
   <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="wwwroot/assets/css/EventsEdit.css/" />
+    <Folder Include="wwwroot\assets\images\events\" />
   </ItemGroup>
 
 </Project>

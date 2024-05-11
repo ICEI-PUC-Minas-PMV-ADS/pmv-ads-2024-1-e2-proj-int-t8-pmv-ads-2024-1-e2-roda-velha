@@ -26,13 +26,13 @@ namespace RodaVelha.Controllers
              var usuarioLogadoId = obterUsuarioLogadoId();
              if(usuarioLogadoId == null)
                  return NotFound();
-             var eventos = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
+             var events = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
              var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
              var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 
              var viewModel = new UserPageViewModel
              {
-                 eventos = eventos,
+                 events = events,
                  likes = likes,
                  userData = user,
              };
