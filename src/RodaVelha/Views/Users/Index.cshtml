@@ -11,7 +11,7 @@
     <p><a asp-action="Details" asp-route-id="1">Detalhes do usuário</a></p>
 
 
-    <section class="card-section">
+    <section class="card-section text-center" >
         <div class="card" style="width:18rem">
             <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top" alt="Imagem do perfil do usuário" style="width: 150px;"/>
             <div class="card-body">
@@ -35,7 +35,6 @@
         
         @if (Model.events != null)
         {
-            Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
             foreach(var item in Model.events)
              {
                     <div class="card-completo">
