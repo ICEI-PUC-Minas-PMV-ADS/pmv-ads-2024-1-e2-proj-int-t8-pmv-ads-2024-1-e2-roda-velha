@@ -4,9 +4,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Faça cadastro</h1>
 
-<h4>User</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,19 +27,14 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Photo" class="control-label"></label>
-                <input asp-for="Photo" class="form-control" />
-                <span asp-validation-for="Photo" class="text-danger"></span>
+                <a asp-action="Login" class="text-decoration-none float-start mt-2" asp-route-returnurl="@ViewData["ReturnUrl"]">Já tem conta?</a>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+    <h6 class="text-danger">@ViewBag.Message</h6>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {
