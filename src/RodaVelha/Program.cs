@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RodaVelha.Data;
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,18 @@ builder.Services.AddDbContext<RodaVelhaContext>(options =>
                 errorNumbersToAdd: null); // Lista de erros adicionais considerados como falhas transitórias
         }
     ));
+
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+  options.CheckConsentNeeded = context => true;
+  options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+  .AddCookie(options => {
+    options.AccessDeniedPath = "/Users/AccesDenied/";
+    options.LoginPath = "/Users/Login";
+  });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -42,6 +55,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
