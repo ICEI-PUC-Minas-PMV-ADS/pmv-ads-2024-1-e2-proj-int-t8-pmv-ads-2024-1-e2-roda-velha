@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using BCrypt.Net;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +47,7 @@ namespace RodaVelha.Controllers
             var viewModel = new UserPageViewModel
             {
                 events = events,
-                user = user,
+                user = user!,
                 eventsLike = eventlist,
             };
 
@@ -57,6 +60,62 @@ namespace RodaVelha.Controllers
          {
              return 1; //Valor temporario
          }
+
+         public IActionResult Login()
+         {
+          return View();
+         }
+
+         [HttpPost]
+        public async Task<IActionResult> Login(User user)
+         {
+           var userData = _context.Users.FirstOrDefault(u => u.Email == user.Email);
+
+          if (userData == null)
+          {
+            ViewBag.Message = "Usuário e/ou senha inválidos!";
+            return View();
+          }
+
+          bool passwordOk = BCrypt.Net.BCrypt.Verify(user.Password, userData.Password);
+
+          if (passwordOk && userData != null)
+          {
+            var claims = new List<Claim>
+            {
+              new Claim(ClaimTypes.Name, userData.Name),
+              new Claim(ClaimTypes.NameIdentifier, userData.ID.ToString()),
+              new Claim(ClaimTypes.Email, userData.Email),
+            };
+
+            var userIdentity = new ClaimsIdentity(claims, "login");
+            ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+            var props = new AuthenticationProperties
+            {
+              AllowRefresh = true,
+              ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+              IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(principal, props);
+
+            return Redirect("/");
+          }
+          else
+          {
+             ViewBag.Message = "Usuário e/ou senha inválidos!";
+          }
+
+          return View();
+         }
+
+      public async Task<IActionResult> Logout()
+      {
+        await HttpContext.SignOutAsync();
+
+        return RedirectToAction("Login", "Users");
+      }
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -89,11 +148,19 @@ namespace RodaVelha.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,Name,Email,Password,Photo")] User user)
         {
+            var userData = _context.Users.FirstOrDefault(u => u.Email == user.Email);
+
+            if (userData != null) {
+              ViewBag.Message = "Email já cadastrado no sistema";
+             return View();
+            }
+
             if (ModelState.IsValid)
             {
+                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login", "Users");
             }
             return View(user);
         }
@@ -187,5 +254,5 @@ namespace RodaVelha.Controllers
             return _context.Users.Any(e => e.ID == id);
         }
     }
-
 }
+
