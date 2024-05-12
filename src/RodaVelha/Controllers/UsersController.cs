@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -26,17 +27,30 @@ namespace RodaVelha.Controllers
              var usuarioLogadoId = obterUsuarioLogadoId();
              if(usuarioLogadoId == null)
                  return NotFound();
-             var events = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList();
-             var likes = _context.Likes.Where(l => l.Id == usuarioLogadoId).ToList();
+
+             
+             var events = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList(); 
+            
              var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 
-             var viewModel = new UserPageViewModel
-             {
-                 events = events,
-                 likes = likes,
-                 userData = user,
-             };
-             return View(viewModel);
+            var query = from eventos in _context.Events
+                        join like in _context.Likes on eventos.Id equals like.EventId
+                        where like.UserId == usuarioLogadoId
+                        select eventos;
+
+
+            var eventlist = query.ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                events = events,
+                user = user,
+                eventsLike = eventlist,
+            };
+
+
+            return View(viewModel);
+
 
          }
          public int obterUsuarioLogadoId()
