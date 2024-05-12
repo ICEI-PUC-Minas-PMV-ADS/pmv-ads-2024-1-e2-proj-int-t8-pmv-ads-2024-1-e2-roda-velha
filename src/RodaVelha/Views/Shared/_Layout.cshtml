@@ -38,10 +38,19 @@
                 <li>
                     <a asp-area="" asp-controller="Events" asp-action="Index">EVENTOS</a>
                 </li>
-
-                <li>
-                    <a href="">ENTRAR</a>
-                </li>
+                
+                @if (User.Identity.IsAuthenticated)
+                {
+                  <li>
+                    <a asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
+                  </li>
+                }
+                else
+                {
+                  <li>
+                    <a asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                  </li>
+                }
             </ul>
         </nav>
     </header>
