@@ -1,0 +1,97 @@
+@model RodaVelha.Models.User
+
+@{
+    ViewData["Title"] = "LoginRegister";
+}
+
+<link rel="stylesheet" href="~/css/loginRegister.css" />
+
+  <div class="container-image-card">
+    <div class="flip-image">
+      <div class="flip-image-inner">
+        <div class="flip-image-front">
+          <img
+            src="~/assets/images/loginRegister/login.png"
+            alt="Avatar"
+            style="width: 500px; height: 400px"
+          />
+        </div>
+        <div class="flip-image-back">
+          <img
+            src="~/assets/images/loginRegister/register.png"
+            alt="Avatar"
+            style="width: 500px; height: 400px"
+          />
+        </div>
+      </div>
+    </div>
+    <section class="section-switch-card">
+      <div class="c-switch">
+        <span class="switch-text-login" role="button">Entrar</span>
+        <label class="switch">
+          <input type="checkbox" class="switch-checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <span class="switch-text-register" role="button">Registro</span>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1 class="card-front-title">Entrar</h1>
+            <img
+              src="~/assets/images/loginRegister/login-icon.svg"
+              alt="Imagem representando uma mulher fazendo login em um site"
+              class="image-sign-in"
+            />
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+            </form>
+          </div>
+          <div class="flip-card-back">
+            <h1 class="card-back-title">Registro</h1>
+            <form asp-action="Create">
+              <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+              <div class="form-group">
+                  <label asp-for="Name" class="control-label"></label>
+                  <input asp-for="Name" class="form-control" />
+                  <span asp-validation-for="Name" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                  <label asp-for="Email" class="control-label"></label>
+                  <input asp-for="Email" class="form-control" />
+                  <span asp-validation-for="Email" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                  <label asp-for="Password" class="control-label"></label>
+                  <input asp-for="Password" class="form-control" />
+                  <span asp-validation-for="Password" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                  <input type="submit" value="Create" class="btn btn-primary" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <h6 class="text-danger">@ViewBag.Message</h6>
+
+@section Scripts {
+  <script src="~/js/loginRegister.js"></script>
+  
+  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
