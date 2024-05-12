@@ -13,19 +13,19 @@
 
 
     <section class="card-section text-center" >
-        <div class="card" style="width:18rem">
-            <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top" alt="Imagem do perfil do usuário" style="width: 150px;"/>
-            <div class="card-body">
+    <div class="card " style="width:18rem">
+        <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top " alt="Imagem do perfil do usuário" style="width: 150px;" />
+        <div class="card-body  ">
                 @if (Model.user != null){
                 <h5 class="card-title">Nome: @Model.user.Name</h5>
                 <h5 class="card-title">E-mail: @Model.user.Email</h5>
-                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
+                <a class="btn btn-custom" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
                 }
                 else
                 {
                     <h5 class="card-title">Nome: [ Não Logado ]</h5>
                     <h5 class="card-title">E-mail: [ Não Logado ]</h5>
-                    <a href="#" class="btn btn-primary">EDITAR PERFIL</a>
+                    <a href="#" class="btn btn-custom">EDITAR PERFIL</a>
                 }
             </div>
         </div>
@@ -38,12 +38,12 @@
         {
             foreach(var item in Model.events)
              {
-                    <div class="card-completo">
+                <div class="card-completo " >
                     <i class="icon-remove fa-solid fa-trash-can"></i>
-                    <div class="card custom-card border-secondary" style="width: 18rem">
-                        <img src="@item.Photo" class="card-img-top" alt="Imagem do perfil do usuário"/>
+                    <div class="card custom-card border-secondary shadow p3 mb-5 bg-white border-0" style="width: 18rem">
+                        <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário"/>
                     </div>
-                    <a class="btn btn-primary" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
+                    <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
                     </div>
             }
         }
@@ -62,10 +62,9 @@
         {
             foreach (var item in Model.eventsLike)
             {
-                <div class="card-completo">
-                    <i class="icon-remove fa-solid fa-trash-can"></i>
-                <div class="card custom-card border-secondary" style="width: 18rem">
-                    <img src="@item.Photo" class="card-img-top" alt="Imagem do perfil do usuário" />
+                <div class="card-completo col-md-4">
+                    <div class="card custom-card border-secondary border-0" style="width: 18rem">
+                        <img src="@item.Photo" class="card-img-top shadow p3 mb-5 bg-white " alt="Imagem do perfil do usuário" />
                     <p>ID Evento: @item.Id</p>
                 </div>
                 

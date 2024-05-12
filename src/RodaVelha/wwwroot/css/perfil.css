@@ -3,8 +3,8 @@
 }
 .icon-remove{
     position: absolute;
-    right: 0px;
-    top: -8px;
+    right: -5px;
+    top: -15px;
 
 }
 .card-completo{
@@ -15,4 +15,11 @@
 }
 .custom-card img{
     border-radius: 20px;
+}
+.card-completo img:hover {
+    transform: translateY(-5px); /* Move o card para cima quando o mouse passa por cima */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 2rem
 }

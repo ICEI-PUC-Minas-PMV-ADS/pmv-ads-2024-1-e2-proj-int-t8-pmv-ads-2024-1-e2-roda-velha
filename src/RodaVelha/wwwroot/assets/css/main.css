@@ -222,3 +222,14 @@ footer .container a:hover {
 }
 /*end-resposivo*/
 
+.btn-custom {
+    color: white; /* Cor do texto */
+    background-color: saddlebrown; /* Cor de fundo */
+    border-color: black; /* Cor da borda */
+}
+
+    .btn-custom:hover {
+        color: white;
+        background-color: #6a6f4c; /* Cor de fundo mais escura */
+        border-color: none; /* Cor da borda mais escura */
+    }
