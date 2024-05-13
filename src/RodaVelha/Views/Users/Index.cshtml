@@ -1,7 +1,11 @@
 ﻿@model RodaVelha.ViewModels.UserPageViewModel
+@using System.Security.Claims
 
 @{
     ViewData["Title"] = "Perfil";
+    var name = User.FindFirstValue(ClaimTypes.Name);
+    var email = User.FindFirstValue(ClaimTypes.Email);
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 }
 
 
@@ -17,8 +21,8 @@
         <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top " alt="Imagem do perfil do usuário" style="width: 150px;" />
         <div class="card-body  ">
                 @if (Model.user != null){
-                <h5 class="card-title">Nome: @Model.user.Name</h5>
-                <h5 class="card-title">E-mail: @Model.user.Email</h5>
+                <h5 class="card-title">Nome: @name</h5>
+                <h5 class="card-title">E-mail: @email</h5>
                 <a class="btn btn-custom" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
                 }
                 else
