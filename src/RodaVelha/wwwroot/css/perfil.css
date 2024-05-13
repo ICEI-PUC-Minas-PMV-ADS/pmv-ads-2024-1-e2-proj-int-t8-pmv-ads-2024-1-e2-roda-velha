@@ -20,6 +20,14 @@
     transform: translateY(-5px); /* Move o card para cima quando o mouse passa por cima */
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
+.card{
+    background-color: #CBB89D;
+    border-radius: 20px;
+    align-items: center;
+}
 h1{
     font-size: 2rem
+}
+.icon-remove{
+    cursor:pointer;
 }
