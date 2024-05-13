@@ -100,7 +100,7 @@ body {
 
 .eye-slash-icon {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.75rem;
   right: 0.5rem;
   cursor: pointer;
 }

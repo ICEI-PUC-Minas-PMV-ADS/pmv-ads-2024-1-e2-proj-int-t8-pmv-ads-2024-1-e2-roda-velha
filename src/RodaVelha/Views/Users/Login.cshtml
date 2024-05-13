@@ -25,14 +25,19 @@
         <form asp-action="Login" class="container-form">
           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
           <div class="container-label-input">
-              <label asp-for="Email" class="label-default"></label>
-              <input asp-for="Email" class="input-default" />
-              <span asp-validation-for="Email" class="text-danger"></span>
+            <label asp-for="Email" class="label-default"></label>
+            <input asp-for="Email" class="input-default" />
+            <span asp-validation-for="Email" class="text-danger"></span>
           </div>
           <div class="container-label-input">
-              <label asp-for="Password" class="label-default"></label>
-              <input asp-for="Password" class="input-default" />
-              <span asp-validation-for="Password" class="text-danger"></span>
+            <label asp-for="Password" class="label-default"></label>
+            <input asp-for="Password" type="password" class="input-default" id="password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <i class="fa-solid fa-eye eye-icon" id="eye"></i>
+            <i
+              class="fa-solid fa-eye-slash eye-slash-icon"
+              id="slash-eye"
+            ></i>
           </div>
           <div class="form-group">
             <a asp-action="Create" class="text-decoration-none float-start mt-2" asp-route-returnurl="@ViewData["ReturnUrl"]">Cadastre aqui</a>
@@ -46,5 +51,7 @@
   </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+  <script src="~/js/login.js"></script>
+  
+  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
