@@ -69,10 +69,10 @@ body {
 .container-label-input {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
   padding-bottom: 0.1rem;
   position: relative;
   width: 15rem;
+  gap: 0.2rem;
 }
 
 .label-default {
@@ -80,6 +80,7 @@ body {
   color: var(--login-color);
   font-weight: 500;
   font-weight: bold;
+  margin-bottom: 0.1rem;
 }
 
 .input-default {
