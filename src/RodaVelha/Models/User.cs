@@ -13,7 +13,6 @@ public class User
     [Display(Name ="Email")]
     public required string Email { get; set; }
     [Required(ErrorMessage = "A senha é obrigatória.")]
-    [DataType(DataType.Password)]
     [Display(Name ="Senha")]
     public required string Password { get; set; }
     public string? Photo { get; set; }
