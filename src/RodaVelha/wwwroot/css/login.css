@@ -1,0 +1,135 @@
+/* CSS usado em todo o arquivo: */
+:root {
+  --login-color: #5d2510;
+  --register-color: #5d2510;
+  --background-color: #ede1d2;
+}
+
+* {
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--background-color) !important;
+}
+
+.container-image-form {
+  display: flex;
+  flex-direction: row;
+  gap: 9rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40rem;
+}
+
+.image-auth {
+  background-color: transparent;
+  width: 450px;
+  height: 400px;
+}
+
+@media (max-width: 920px) {
+  .flip-image {
+    display: none;
+  }
+}
+
+.container-card {
+  align-items: center;
+  background-color: #b3a48d;
+  border-radius: 1rem;
+  border: 0.4rem solid var(--login-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30rem;
+  width: 20rem;
+}
+
+.container-title {
+  color: #ffffff;
+  margin: 0;
+  padding-top: 0.4rem;
+}
+
+.container-form {
+  width: 15rem;
+}
+
+.container-label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-bottom: 0.1rem;
+  position: relative;
+  width: 15rem;
+}
+
+.label-default {
+  align-self: flex-start;
+  color: var(--login-color);
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.input-default {
+  border-radius: 0.4rem;
+  border: 0.15rem var(--login-color) solid;
+  height: 2rem;
+  padding-left: 0.5rem;
+  width: 15rem;
+}
+
+.eye-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.eye-slash-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-default {
+  align-items: center;
+  background-color: var(--login-color);
+  border-radius: 2rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  height: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  width: 10rem;
+}
+
+.btn-default:hover {
+  opacity: 0.7;
+  scale: 1.1;
+}
+
+/* Seção de estilização do card de login */
+
+.image-sign-in {
+  width: 10rem;
+  height: 8rem;
+  padding-bottom: 0.3rem;
+}
