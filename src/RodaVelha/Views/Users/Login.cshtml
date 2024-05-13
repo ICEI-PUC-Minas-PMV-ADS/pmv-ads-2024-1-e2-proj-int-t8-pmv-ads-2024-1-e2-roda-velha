@@ -39,8 +39,8 @@
             ></i>
           </div>
           <span asp-validation-for="Password" class="text-danger"></span>
-          <div class="form-group">
-            <a asp-action="Create" class="text-decoration-none float-start mt-2" asp-route-returnurl="@ViewData["ReturnUrl"]">Cadastre aqui</a>
+          <div class="form-group mt-1">
+            <a asp-action="Create" class="text-decoration-none float-start" asp-route-returnurl="@ViewData["ReturnUrl"]">Cadastre aqui</a>
           </div>
             <h6 class="text-danger text-center">@ViewBag.Message</h6>
           <div class="form-group">
