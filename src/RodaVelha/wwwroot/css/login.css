@@ -92,7 +92,7 @@ body {
 
 .eye-icon {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.75rem;
   right: 0.5rem;
   visibility: hidden;
   cursor: pointer;
