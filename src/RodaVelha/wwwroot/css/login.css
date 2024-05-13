@@ -92,7 +92,7 @@ body {
 
 .eye-icon {
   position: absolute;
-  bottom: 0.75rem;
+  bottom: 0.6rem;
   right: 0.5rem;
   visibility: hidden;
   cursor: pointer;
@@ -100,7 +100,7 @@ body {
 
 .eye-slash-icon {
   position: absolute;
-  bottom: 0.75rem;
+  bottom: 0.6rem;
   right: 0.5rem;
   cursor: pointer;
 }
