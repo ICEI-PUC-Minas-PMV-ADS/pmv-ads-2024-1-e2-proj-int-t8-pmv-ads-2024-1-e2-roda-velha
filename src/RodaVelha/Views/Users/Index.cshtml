@@ -16,14 +16,14 @@
     <p><a asp-action="Details" asp-route-id="1">Detalhes do usuário</a></p>
 
 
-    <section class="card-section text-center" >
+<section class="card-section d-flex justify-content-center align-items-center">
     <div class="card " style="width:18rem">
-        <img src="https://as1.ftcdn.net/v2/jpg/01/21/93/74/1000_F_121937450_E3o8jRG3mKbMaAFprSuNOlyrLraSVVua.jpg" class="card-img-top " alt="Imagem do perfil do usuário" style="width: 150px;" />
-        <div class="card-body  ">
+        <img src="@Model.user.Photo" class="card-img-top " alt="Imagem do perfil do usuário" style="width: 150px;" />
+        <div class="card-body">
                 @if (Model.user != null){
                 <h5 class="card-title">Nome: @name</h5>
                 <h5 class="card-title">E-mail: @email</h5>
-                <a class="btn btn-custom" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
+                <a class="btn btn-custom btn-text" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
                 }
                 else
                 {
@@ -43,7 +43,7 @@
             foreach(var item in Model.events)
              {
                 <div class="card-completo " >
-                    <i class="icon-remove fa-solid fa-trash-can"></i>
+                    <i class="icon-remove fa-solid fa-trash-can" asp-controller="Events" asp-action="Delete" asp-route-id="0"></i>
                     <div class="card custom-card border-secondary shadow p3 mb-5 bg-white border-0" style="width: 18rem">
                         <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário"/>
                     </div>
@@ -80,8 +80,6 @@
     </section>
 
     <script src="https://kit.fontawesome.com/9e6a074965.js" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 @section Scripts {

@@ -224,12 +224,15 @@ footer .container a:hover {
 
 .btn-custom {
     color: white; /* Cor do texto */
-    background-color: saddlebrown; /* Cor de fundo */
+    background-color: #562916; /* Cor de fundo */
     border-color: black; /* Cor da borda */
 }
+btn-custom .btn-text{
+    margin: auto;
+}
 
-    .btn-custom:hover {
+.btn-custom:hover {
         color: white;
         background-color: #6a6f4c; /* Cor de fundo mais escura */
         border-color: none; /* Cor da borda mais escura */
-    }
+ }
