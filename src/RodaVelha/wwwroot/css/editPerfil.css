@@ -1,0 +1,194 @@
+
+dialog::backdrop{
+    background-color: #ede1d2;
+    
+}
+
+dialog{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cbb89d;
+    border: #412f26;
+    border-width: 2px;
+    border-style: solid;
+
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    width: 40%;
+    
+}
+
+/*título modal*/
+dialog h2{
+    text-align: center;
+    color: #412f26;
+}
+/*end título modal*/
+
+/*imagem e alterar imagem*/
+dialog img{
+    border-radius: 50%;
+    width: 180px;
+    margin-right: 25px;
+    margin-top: 20px;
+    border: 2px solid #412f26;
+}
+dialog .alterarImagem{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    
+}
+
+dialog .alterarImagem > button{
+    background-color: #5d2510;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 20px;
+
+        
+}
+
+dialog .alterarImagem > button:hover{
+    background-color: #6a6f4c;
+    color: white;
+}
+/*end imagem e alterar imagem*/
+
+/*3 campos do perfil*/
+dialog .infoPerfil{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+/*end 3 campos do perfil*/
+
+/*nome perfil*/
+dialog .nomePerfil{
+    display: grid;
+    padding: 30px;
+}
+
+dialog .inpNome{
+    width: 300px;
+    height: 23px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    border: 2px solid #412f26;
+    transition: border-color 0.3s ease;
+
+}
+/*end nome perfil*/
+
+/*email perfil*/
+dialog .emailPerfil{
+    display: grid;
+    padding: 30px;
+}
+
+dialog .inpEmail{
+    width: 300px;
+    height: 23px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    border: 2px solid #412f26;
+    transition: border-color 0.3s ease;
+}
+/*end email perfil*/
+
+/*senha perfil*/
+dialog .senhaPerfil{
+    display: grid;
+    padding: 30px;
+}
+
+dialog .inpSenha{
+    width: 300px;
+    height: 23px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    border: 2px solid #412f26;
+    transition: border-color 0.3s ease;
+}
+
+dialog .inpSenha:focus{
+    outline: none;
+    border-color: #6a6f4c;
+}
+/*end senha perfil*/
+
+/*cancelar e salvar*/
+
+dialog .cancelSave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+dialog .cancelBtn{
+    background-color: #806044;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 95px;
+
+}
+
+dialog .cancelBtn:hover{
+    background-color: #412f26;
+    color: white;
+}
+
+dialog .saveBtn{
+    background-color: #5d2510;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+    width: 95px;
+
+
+}
+
+dialog .saveBtn:hover{
+    background-color: #6a6f4c;
+    color: white;
+    
+}
+/*end cancelar e salvar*/
+
+/*excluir perfil*/
+dialog .excluirPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+dialog .excluirBtn{
+    background-color: #cbb89d;
+    border: none;
+    cursor: pointer;
+}
+
+dialog .excluirBtn:hover{
+    color: rgb(185, 1, 1);
+    font-weight: bolder; 
+    cursor: pointer;   
+}
+/*end excluir perfil*/
+
