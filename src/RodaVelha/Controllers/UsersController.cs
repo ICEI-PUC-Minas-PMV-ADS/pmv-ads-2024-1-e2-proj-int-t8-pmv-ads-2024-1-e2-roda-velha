@@ -28,7 +28,7 @@ namespace RodaVelha.Controllers
          public async Task<IActionResult> Index()
          {
              var usuarioLogadoId = obterUsuarioLogadoId();
-             if(usuarioLogadoId == null)
+             if(usuarioLogadoId == -1)
                  return NotFound();
 
              
@@ -59,7 +59,10 @@ namespace RodaVelha.Controllers
          public int obterUsuarioLogadoId()
          {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return int.Parse(userId); 
+            if (userId == null)
+                return -1;//
+
+            return (int.Parse(userId)); 
         }
 
          public IActionResult Login()
