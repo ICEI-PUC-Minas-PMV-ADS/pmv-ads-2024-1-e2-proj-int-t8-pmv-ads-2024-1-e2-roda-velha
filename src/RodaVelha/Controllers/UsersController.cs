@@ -58,8 +58,9 @@ namespace RodaVelha.Controllers
          }
          public int obterUsuarioLogadoId()
          {
-             return 1; //Valor temporario
-         }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return int.Parse(userId); 
+        }
 
          public IActionResult Login()
          {
