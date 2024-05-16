@@ -13,7 +13,6 @@
 
     <div class="edtPerfil" id="edtPerfil">
         <h2>Editar Perfil</h2>
-        <!--Trocar Imagem-->
 
         <div class="alterarImagem" id="alterarImagem">
             <img src="imagens/velho1.jpg" alt="foto-perfil">
@@ -23,35 +22,66 @@
             <form asp-action="Edit">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                 <div class="nomePerfil" id="nomePerfil">
                     <label asp-for="Name" class="control-label"></label>                    
-                <input asp-for="Name" class="inpNome" />
-
-                </div>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="inpNome" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+
+@*                 <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="inpNome" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div> *@
+                
+                <div class="emailPerfil" id="emailPerfil">
+                    <label asp-for="Email" class="control-label"></label>                    
+                    <input asp-for="Email" class="inpEmail" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+
+@*                 <div class="form-group">
                     <label asp-for="Email" class="control-label"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
+                </div> *@
+
+                <div class="senhaPerfil" id="senhaPerfil">
+                    <label asp-for="Password" class="control-label"></label>                    
+                    <input asp-for="Password" class="inpSenha" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+
+
+@*                 <div class="form-group">
                     <label asp-for="Password" class="control-label"></label>
                     <input asp-for="Password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
+                </div> *@
+
+
+@*                 <div class="form-group">
                     <label asp-for="Photo" class="control-label"></label>
                     <input asp-for="Photo" class="form-control" />
                     <span asp-validation-for="Photo" class="text-danger"></span>
-                </div>
-                <div class="form-group">
+                </div> *@
+
+@*                 <div class="form-group">
                     <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
+                </div> *@
+
+            <div class="cancelSave" id="cancelSave">
+                <button class="cancelBtn" id="cancelBtn">CANCELAR</button>
+                <button class="saveBtn" id="saveBtn">SALVAR</button>
+            </div>
             </form>
+
+            <div class="excluirPerfil" id="excluirPerfil">
+                <a href="#"><button class="excluirBtn" id="excluirBtn">Excluir perfil</button></a>
+            </div>
+
         </div>
     </div>
 </dialog>
