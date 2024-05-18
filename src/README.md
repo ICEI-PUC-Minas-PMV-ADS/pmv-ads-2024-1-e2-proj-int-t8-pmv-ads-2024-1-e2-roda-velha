@@ -50,3 +50,53 @@ Após instalar e executar o projeto com sucesso, você pode:
 
 - Navegar pela aplicação para verificar se todas as páginas estão carregando corretamente.
 - Consultar a documentação do projeto para entender melhor a arquitetura e as funcionalidades.
+
+## Dicas para quem usa Visual Studio Code
+
+### Extensões Necessárias
+
+Certifique-se de ter as seguintes extensões instaladas no Visual Studio Code:
+
+- **C# Dev Kit**
+- **C#**
+- **.NET Install Tool**
+- **.NET Extension Pack**
+- **C# Extensions**
+- **NuGet Gallery** (A mais importante para baixar os pacotes necessários para o .NET)
+
+### Rodando o Projeto
+
+1. **Instalar as Extensões**: Certifique-se de que todas as extensões mencionadas acima estão instaladas.
+
+2. **Navegar para a Pasta do Projeto**:
+
+   - Abra o terminal no Visual Studio Code.
+   - Navegue até a pasta `RodaVelha` do seu projeto.
+
+3. **Executar os Comandos**:
+   - **Restaurar Pacotes**: Baixa os pacotes presentes no arquivo `RodaVelha.csproj`.
+     ```bash
+     dotnet restore
+     ```
+   - **Compilar o Projeto**:
+     ```bash
+     dotnet build
+     ```
+   - **Criar uma Migração**: (Atenção: Não é mais necessário, pois o banco já está na nuvem)
+     ```bash
+     dotnet ef migrations add Init
+     ```
+   - **Atualizar o Banco de Dados**: (Atenção: Não é mais necessário, pois o banco já está na nuvem)
+     ```bash
+     dotnet ef database update
+     ```
+   - **Rodar o Projeto**: Executa o projeto em modo de observação.
+     ```bash
+     dotnet watch run
+     ```
+
+### Observações
+
+- **Migrações e Atualizações do Banco de Dados**: Os comandos para criar migrações e atualizar o banco de dados não são mais necessários, pois o banco de dados já está na nuvem.
+
+Seguindo essas instruções, você deve ser capaz de configurar e rodar o projeto `RodaVelha` no Visual Studio Code.
