@@ -21,15 +21,13 @@ dialog::backdrop{
 }
 
 dialog{
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #cbb89d;
     border: #412f26;
     border-width: 2px;
-    border-style: solid;
-    border-radius: .5rem;
+    border-style: solid; 
+    border-radius: 10px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 400px;
+    width: 50%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -44,8 +42,13 @@ dialog[open] {
     opacity: 1;
 }
 
+dialog[open] ~ body::before {
+    display: block;
+}
+
 /*título modal*/
 dialog h2{
+    font-size: 28px;
     text-align: center;
     color: #412f26;
 }
@@ -54,7 +57,7 @@ dialog h2{
 /*imagem e alterar imagem*/
 dialog img{
     border-radius: 50%;
-    width: 180px;
+    width: 160px;
     margin-right: 25px;
     margin-top: 20px;
     border: 2px solid #412f26;
@@ -67,11 +70,12 @@ dialog .alterarImagem{
 }
 
 dialog .alterarImagem > button{
+    font-size: 14px;
     background-color: #5d2510;
     color: white;
     border: none;
     border-radius: 6px;
-    width: 140px;
+    width: 135px;
     height: 30px;
     cursor: pointer;
     margin-left: 25px;
@@ -102,13 +106,18 @@ dialog .nomePerfil{
 
 dialog .inpNome{
     width: 300px;
-    height: 23px;
+    height: 30px;
     border-radius: 6px;
     border: none;
     font-size: 14px;
     border: 2px solid #412f26;
     transition: border-color 0.3s ease;
 
+}
+
+dialog .inpNome:focus{
+    outline: none;
+    border-color: #6a6f4c;
 }
 /*end nome perfil*/
 
@@ -120,12 +129,17 @@ dialog .emailPerfil{
 
 dialog .inpEmail{
     width: 300px;
-    height: 23px;
+    height: 30px;
     border-radius: 6px;
     border: none;
     font-size: 14px;
     border: 2px solid #412f26;
     transition: border-color 0.3s ease;
+}
+
+dialog .inpEmail:focus{
+    outline: none;
+    border-color: #6a6f4c;
 }
 /*end email perfil*/
 
@@ -137,7 +151,7 @@ dialog .senhaPerfil{
 
 dialog .inpSenha{
     width: 300px;
-    height: 23px;
+    height: 30px;
     border-radius: 6px;
     border: none;
     font-size: 14px;
@@ -157,6 +171,7 @@ dialog .cancelSave{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 60px;
 }
 
@@ -207,14 +222,14 @@ dialog .excluirPerfil{
 }
 
 dialog .excluirBtn{
+    font-size: 12px;
     background-color: #cbb89d;
     border: none;
     cursor: pointer;
 }
 
 dialog .excluirBtn:hover{
-    color: rgb(185, 1, 1);
-    font-weight: bolder; 
+    color: rgb(150, 7, 7);
     cursor: pointer;   
 }
 /*end excluir perfil*/
