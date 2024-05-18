@@ -1,238 +1,231 @@
 ﻿* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: Graphik;
-    src: url(../fonts/GraphikMedium.otf);
+  font-family: Graphik;
+  src: url(../fonts/GraphikMedium.otf);
 }
 
 body {
-    background-color: #ede1d2;
+  background-color: #ede1d2;
 }
 
 /*menu*/
 
-.logo {
-    display: flex;
-    align-items: center;
-    float: left;
+.header-container {
+  align-items: center;
+  background-color: #412f26;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  padding: 0 100px;
+  width: 100%;
 }
 
-    .logo img {
-        height: 110px;
-        margin-top: 5px;
-    }
+.logo-image {
+  height: 7rem;
+  width: 7rem;
+}
 
-        .logo img:hover {
-            scale: 1.1;
-        }
-
-header {
-    width: 100%;
-    height: 80px;
-    background-color: #412f26;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
+.logo-image:hover {
+  scale: 1.1;
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
 
 .nav-bar ul {
-    display: flex;
+  display: flex;
 }
 
-    .nav-bar ul li a {
-        display: block;
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px 25px;
-        border-radius: 50px;
-        transition: 0.2s;
-        margin: 0 5px;
-        font-family: Graphik;
-    }
+.nav-bar ul li a {
+  display: block;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+  font-family: Graphik;
+}
 
-        .nav-bar ul li a:hover {
-            color: #fefefe;
-            background-color: #6a6f4c;
-            scale: 1.1;
-        }
+.nav-bar ul li a:hover {
+  color: #fefefe;
+  background-color: #6a6f4c;
+  scale: 1.1;
+}
 
-        .nav-bar ul li a.active {
-            color: #fefefe;
-            background-color: #6a6f4c;
-        }
+.nav-bar ul li a.active {
+  color: #fefefe;
+  background-color: #6a6f4c;
+}
 
 /*end-menu*/
-
 
 /*footer*/
 
 footer {
-    background-color: #412f26;
+  background-color: #412f26;
 }
 
-    footer .container {
-        display: flex;
-        color: white;
-    }
+footer .container {
+  display: flex;
+  color: white;
+}
 
 #ul-1 {
-    padding: 30px 40px 10px 80px;
+  padding: 30px 40px 10px 80px;
 }
 
 #ul-2 {
-    padding: 30px 40px 10px 80px;
+  padding: 30px 40px 10px 80px;
 }
 
 #ul-3 {
-    padding: 30px 40px 10px 80px;
+  padding: 30px 40px 10px 80px;
 }
 
 #ul-4 {
-    padding: 30px 40px 10px 80px;
+  padding: 30px 40px 10px 80px;
 }
 
 footer .container ul {
-    width: 25%;
+  width: 25%;
 }
 
 footer .container h3 {
-    margin-bottom: 16px;
-    font-family: Graphik;
-    font-size: 17px;
+  margin-bottom: 16px;
+  font-family: Graphik;
+  font-size: 17px;
 }
 
 footer .container .redes-sociais img {
-    margin-right: 10px;
-    width: 25px;
-    cursor: pointer;
+  margin-right: 10px;
+  width: 25px;
+  cursor: pointer;
 }
 
-    footer .container .redes-sociais img:hover {
-        scale: 1.3;
-    }
+footer .container .redes-sociais img:hover {
+  scale: 1.3;
+}
 
 footer .container ul > p {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 footer .container li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 footer .container a {
-    color: white;
-    padding: 5px 10px;
+  color: white;
+  padding: 5px 10px;
 }
 
 .links {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .suporte {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 footer .container a:hover {
-    background-color: #6a6f4c;
-    border-radius: 5px;
+  background-color: #6a6f4c;
+  border-radius: 5px;
 }
 
 /*end footer*/
 
-
 /*responsivo*/
 @media only screen and (max-width: 1320px) {
-    header {
-        padding: 0 50px;
-    }
+  header {
+    padding: 0 50px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
-    header {
-        padding: 0 30px;
-    }
+  header {
+    padding: 0 30px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
 
-        .hamburger .line {
-            width: 30px;
-            height: 3px;
-            background: #fefefe;
-            margin: 6px 0;
-        }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+  }
 
-    .nav-bar {
-        height: 0px;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100vh;
-        background: #412f26;
-        transition: 0.2s;
-        overflow: hidden;
-    }
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vh;
+    background: #412f26;
+    transition: 0.2s;
+    overflow: hidden;
+  }
 
-        .nav-bar.active {
-            height: 450px;
-        }
+  .nav-bar.active {
+    height: 450px;
+  }
 
-        .nav-bar ul {
-            display: block;
-            width: fit-content;
-            margin: 80px auto 0 auto;
-            text-align: center;
-            transition: 0.5s;
-            opacity: 0;
-        }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
 
-        .nav-bar.active ul {
-            opacity: 1;
-        }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
 
-        .nav-bar ul li a {
-            margin-bottom: 12px;
-        }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
 
-    footer .container {
-        flex-direction: column;
-    }
+  footer .container {
+    flex-direction: column;
+  }
 
-        footer .container ul {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+  footer .container ul {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 /*end-resposivo*/
 
 .btn-custom {
-    color: white; /* Cor do texto */
-    background-color: #562916; /* Cor de fundo */
-    border-color: black; /* Cor da borda */
+  color: white; /* Cor do texto */
+  background-color: #562916; /* Cor de fundo */
+  border-color: black; /* Cor da borda */
 }
-btn-custom .btn-text{
-    margin: auto;
+btn-custom .btn-text {
+  margin: auto;
 }
 
 .btn-custom:hover {
-        color: white;
-        background-color: #6a6f4c; /* Cor de fundo mais escura */
-        border-color: none; /* Cor da borda mais escura */
- }
+  color: white;
+  background-color: #6a6f4c; /* Cor de fundo mais escura */
+  border-color: none; /* Cor da borda mais escura */
+}
