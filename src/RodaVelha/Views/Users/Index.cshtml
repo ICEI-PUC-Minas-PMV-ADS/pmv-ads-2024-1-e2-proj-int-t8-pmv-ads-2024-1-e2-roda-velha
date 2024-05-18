@@ -23,7 +23,7 @@
                 @if (Model.user != null){
                 <h5 class="card-title">Nome: @name</h5>
                 <h5 class="card-title">E-mail: @email</h5>
-                <a class="btn btn-custom btn-text" asp-action="Edit" asp-route-id="1">EDITAR PERFIL</a>
+                <a class="btn btn-custom btn-text" asp-action="Edit" asp-route-id="@userId">EDITAR PERFIL</a>
                 }
                 else
                 {
