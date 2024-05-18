@@ -1,19 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RodaVelha.Data;
 using RodaVelha.Models;
+using RodaVelha.Services;
 
 namespace RodaVelha.Controllers
 {
-    public class EventsController(RodaVelhaContext context) : Controller
+    public class EventsController : Controller
     {
-        private readonly RodaVelhaContext _context = context;
+        private readonly RodaVelhaContext _context;
+        private readonly IUserService _userService;
+
+        public EventsController(RodaVelhaContext context, IUserService userService)
+        {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+            _userService = userService ?? throw new ArgumentNullException(nameof(userService));
+        }
 
         // GET: Events
         public async Task<IActionResult> Index()
@@ -44,25 +47,44 @@ namespace RodaVelha.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "Name");
             return View();
         }
 
         // POST: Events/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Likes,Photo,Phone,UserId")] Events @event)
+        public async Task<IActionResult> Create([Bind("Name,Description,StartDate,EndDate,Location,Organizer,Phone")] Events @event, IFormFile Photo)
         {
             try
             {
+                var user = _userService.GetCurrentUser();
+                if (user != null)
+                {
+                    @event.UserId = user.ID;
+                    @event.User = user;
+                }
+
+                if (Photo != null && Photo.Length > 0)
+                {
+                    var fileExtension = Path.GetExtension(Photo.FileName);
+                    var fileName = $"{Guid.NewGuid()}_{DateTime.Now:yyyyMMddHHmmssfff}{fileExtension}";
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/images/events", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await Photo.CopyToAsync(stream);
+                    }
+
+                    @event.Photo = "/wwwroot/assets/images/events/" + fileName;
+                }
+
                 _context.Add(@event);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            } catch (Exception ex) {
-                ViewData["ErrorMessage"] = "There was an error saving the event. Please try again. [" + ex.Message + "]";
-                ViewData["UserId"] = new SelectList(_context.Users, "ID", "Name", @event.UserId);
+            }
+            catch (Exception ex)
+            {
+                ViewData["ErrorMessage"] = "Houve um erro ao salvar o evento. Por favor, tente novamente. [" + ex.Message + "]";
                 return View(@event);
             }
         }
@@ -85,8 +107,6 @@ namespace RodaVelha.Controllers
         }
 
         // POST: Events/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Likes,Photo,Phone,UserId")] Events @event)
