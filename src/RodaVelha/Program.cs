@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using RodaVelha.Data;
+using RodaVelha.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
 builder.Services.AddDbContext<RodaVelhaContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("RodaVelhaContext") ?? throw new InvalidOperationException("Connection string 'RodaVelhaContext' not found."),
@@ -17,17 +20,19 @@ builder.Services.AddDbContext<RodaVelhaContext>(options =>
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
-  options.CheckConsentNeeded = context => true;
-  options.MinimumSameSitePolicy = SameSiteMode.None;
+    options.CheckConsentNeeded = context => true;
+    options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-  .AddCookie(options => {
-    options.AccessDeniedPath = "/Users/AccesDenied/";
-    options.LoginPath = "/Users/Login";
-  });
+    .AddCookie(options => {
+        options.AccessDeniedPath = "/Users/AccesDenied/";
+        options.LoginPath = "/Users/Login";
+    });
 
-// Add services to the container.
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -58,6 +63,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCookiePolicy();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
