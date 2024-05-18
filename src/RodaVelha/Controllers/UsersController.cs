@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ using RodaVelha.ViewModels;
 
 namespace RodaVelha.Controllers
 {
+    [Authorize]
     public class UsersController : Controller
     {
         private readonly RodaVelhaContext _context;
@@ -65,12 +67,14 @@ namespace RodaVelha.Controllers
             return (int.Parse(userId)); 
         }
 
+         [AllowAnonymous]
          public IActionResult Login()
          {
           return View();
          }
 
          [HttpPost]
+         [AllowAnonymous]
         public async Task<IActionResult> Login(User user)
          {
            var userData = _context.Users.FirstOrDefault(u => u.Email == user.Email);
@@ -140,6 +144,7 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -150,6 +155,7 @@ namespace RodaVelha.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("ID,Name,Email,Password,Photo")] User user)
         {
             var userData = _context.Users.FirstOrDefault(u => u.Email == user.Email);
@@ -162,6 +168,7 @@ namespace RodaVelha.Controllers
             if (ModelState.IsValid)
             {
                 user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                user.Photo = "https://i.pinimg.com/564x/77/d0/32/77d0328f9a5777f9c8fb052fea163a37.jpg";
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Login", "Users");
@@ -170,43 +177,96 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
+        public async Task<IActionResult> Edit(int id)
+          {
             var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
-            return View(user);
-        }
+
+            var model = new EditUserViewModel
+            {
+                Name = user.Name,
+                Email = user.Email,
+                Photo = user.Photo
+            };
+
+            return View(model);
+}
 
         // POST: Users/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Email,Password,Photo")] User user)
+        public async Task<IActionResult> Edit(int id, EditUserViewModel model)
         {
-            if (id != user.ID)
+            if (id != model.ID)
             {
                 return NotFound();
             }
 
+            var user = _context.Users.FirstOrDefault(u => u.ID == model.ID);
+            var userEmail = _context.Users.FirstOrDefault(u => u.Email == model.Email);
+
+            if (userEmail != null && userEmail.Email != model.Email) {
+              ViewBag.Message = "Email já cadastrado no sistema";
+             return View(model);
+            }
+
+            if (user == null) {
+              ViewBag.Message = "Algo de errado não está certo!";
+              return View(model);
+            }
+
+            bool passwordOk = BCrypt.Net.BCrypt.Verify(model.Password, user.Password);
+
+            if (!passwordOk) {
+              ViewBag.Message = "Senha atual inválida!";
+              return View(model);
+            }
+
+
+            if (model.NewPassword != null) {
+              user.Password = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
+            }
+        
             if (ModelState.IsValid)
             {
                 try
                 {
+                    user.Name = model.Name;
+                    user.Email = model.Email;
+                    user.Photo = model.Photo;
+
                     _context.Update(user);
                     await _context.SaveChangesAsync();
+
+                    var claims = new List<Claim>
+                    {
+                      new Claim(ClaimTypes.Name, model.Name),
+                      new Claim(ClaimTypes.NameIdentifier, model.ID.ToString()),
+                      new Claim(ClaimTypes.Email, model.Email),
+                    };
+
+                    var userIdentity = new ClaimsIdentity(claims, "login");
+                    ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                    var props = new AuthenticationProperties
+                    {
+                      AllowRefresh = true,
+                      ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+                      IsPersistent = true
+                    };
+
+                    await HttpContext.SignInAsync(principal, props);
+                    
+                    return RedirectToAction("Index");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UserExists(user.ID))
+                    if (!UserExists(model.ID))
                     {
                         return NotFound();
                     }
@@ -215,9 +275,8 @@ namespace RodaVelha.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(user);
+            return View(model);
         }
 
         // GET: Users/Delete/5
