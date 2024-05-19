@@ -35,15 +35,23 @@ body {
 
 @media (max-width: 920px) {
   .container-card {
-    height: 90%;
+    height: 80%;
     width: 20rem;
+  }
+
+  .container-edit {
+    height: 100vh;
   }
 }
 
 @media (min-width: 920px) {
   .container-card {
-    height: 98%;
+    height: 90%;
     width: 20rem;
+  }
+
+  .container-edit {
+    height: 120vh;
   }
 }
 
@@ -51,6 +59,10 @@ body {
   .container-card {
     height: 75%;
     width: 20rem;
+  }
+
+  .container-edit {
+    height: 100vh;
   }
 }
 
