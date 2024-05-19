@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="~/css/editPerfil.css" />
 
 <main class="container-edit">
+  <h1>Editar Perfil</h1>
   <div class="container-card">
       <img src="@Model.Photo" alt="foto-perfil" class="perfil-image">
       <button class="btn-image" id="btn-image">ALTERAR IMAGEM</button>
@@ -30,11 +31,6 @@
                 class="fa-solid fa-eye-slash eye-slash-icon"
                 id="slash-eye"
               ></i>
-          </div>
-          <div class="container-label-input">
-              <label asp-for="Password" class="label-default"></label>
-              <input asp-for="Password" class="input-default" type="password" placeholder="Digite sua senha atual" />
-              <span asp-validation-for="Password" class="text-danger"></span>
           </div>
           <h6 class="viewbag-text">@ViewBag.Message</h6>
           <div class="container-buttons">

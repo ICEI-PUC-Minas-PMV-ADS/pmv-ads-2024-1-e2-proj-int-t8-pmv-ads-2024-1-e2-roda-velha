@@ -222,20 +222,6 @@ namespace RodaVelha.Controllers
             }
 
             if (model.NewPassword != null) {
-
-              if (model.Password == null)
-              {
-                ViewBag.Message = "Digite sua senha atual";
-                return View(model);
-              }
-
-              bool passwordOk = BCrypt.Net.BCrypt.Verify(model.Password, user.Password);
-
-              if (!passwordOk) {
-                ViewBag.Message = "Digite sua senha atual";
-                return View(model);
-              }
-
               user.Password = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
             }
 

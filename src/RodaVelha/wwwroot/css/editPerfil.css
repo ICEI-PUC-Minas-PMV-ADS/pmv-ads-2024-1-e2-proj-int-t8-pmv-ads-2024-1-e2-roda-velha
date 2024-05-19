@@ -35,7 +35,7 @@ body {
 
 @media (max-width: 920px) {
   .container-card {
-    height: 80%;
+    height: 70%;
     width: 20rem;
   }
 
@@ -46,18 +46,18 @@ body {
 
 @media (min-width: 920px) {
   .container-card {
-    height: 90%;
+    height: 88%;
     width: 20rem;
   }
 
   .container-edit {
-    height: 120vh;
+    height: 110vh;
   }
 }
 
 @media (min-width: 1400px) {
   .container-card {
-    height: 75%;
+    height: 65%;
     width: 20rem;
   }
 
