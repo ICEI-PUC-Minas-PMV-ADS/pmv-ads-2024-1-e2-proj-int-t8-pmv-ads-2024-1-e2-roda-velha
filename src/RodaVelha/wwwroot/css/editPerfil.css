@@ -78,7 +78,7 @@ body {
   justify-content: space-between;
   width: 15rem;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .btn-image {
@@ -191,4 +191,11 @@ body {
   bottom: 0.6rem;
   right: 0.5rem;
   cursor: pointer;
+}
+
+.viewbag-text {
+  width: 15rem;
+  text-align: center;
+  color: #ff0000;
+  margin: 0;
 }

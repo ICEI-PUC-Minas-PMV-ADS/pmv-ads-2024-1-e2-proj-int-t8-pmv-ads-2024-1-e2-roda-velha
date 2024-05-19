@@ -18,9 +18,8 @@ namespace RodaVelha.ViewModels
         [Display(Name="Nova senha")]
         public string? NewPassword { get; set; } = null;
 
-        [Required(ErrorMessage = "A senha é obrigatória.")]
-        [Display(Name="Senha*")]
-        public string Password { get; set; } = string.Empty;
+        [Display(Name="Senha")]
+        public string? Password { get; set; } = string.Empty;
 
         [Display(Name="Foto")]
         public string? Photo { get; set; }

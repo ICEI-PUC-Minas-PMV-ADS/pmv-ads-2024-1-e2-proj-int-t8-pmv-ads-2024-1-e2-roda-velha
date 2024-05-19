@@ -33,10 +33,10 @@
           </div>
           <div class="container-label-input">
               <label asp-for="Password" class="label-default"></label>
-              <input asp-for="Password" class="input-default" required min="5" type="password" placeholder="Digite sua senha atual" />
+              <input asp-for="Password" class="input-default" type="password" placeholder="Digite sua senha atual" />
               <span asp-validation-for="Password" class="text-danger"></span>
           </div>
-          <h6 class="text-danger text-center">@ViewBag.Message</h6>
+          <h6 class="viewbag-text">@ViewBag.Message</h6>
           <div class="container-buttons">
               <a class="btn-cancel" asp-controller="Users" asp-action="Index">CANCELAR</a>
               <input type="submit" value="EDITAR" class="btn-default btn-save" />
