@@ -189,7 +189,8 @@ namespace RodaVelha.Controllers
             {
                 Name = user.Name,
                 Email = user.Email,
-                Photo = user.Photo
+                Photo = user.Photo,
+                ID = user.ID
             };
 
             return View(model);
@@ -220,18 +221,24 @@ namespace RodaVelha.Controllers
               return View(model);
             }
 
-            bool passwordOk = BCrypt.Net.BCrypt.Verify(model.Password, user.Password);
-
-            if (!passwordOk) {
-              ViewBag.Message = "Senha atual inválida!";
-              return View(model);
-            }
-
-
             if (model.NewPassword != null) {
+
+              if (model.Password == null)
+              {
+                ViewBag.Message = "Digite sua senha atual";
+                return View(model);
+              }
+
+              bool passwordOk = BCrypt.Net.BCrypt.Verify(model.Password, user.Password);
+
+              if (!passwordOk) {
+                ViewBag.Message = "Digite sua senha atual";
+                return View(model);
+              }
+
               user.Password = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
             }
-        
+
             if (ModelState.IsValid)
             {
                 try
@@ -280,36 +287,28 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [AllowAnonymous]
+        public IActionResult Deleted()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
+          return View();
         }
 
         // POST: Users/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var user = await _context.Users.FindAsync(id);
+            Console.WriteLine("AQUIIII EMAIL", user.Email);
             if (user != null)
             {
                 _context.Users.Remove(user);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Deleted");
         }
 
         private bool UserExists(int id)
