@@ -52,13 +52,14 @@
         {
             foreach(var item in Model.events)
              {
-                <div class="card-completo " >
+                <div class="card-completo" >
                     <i class="icon-remove fa-solid fa-trash-can" asp-controller="Events" asp-action="Delete" asp-route-id="0"></i>
-                    <div class="card custom-card border-secondary shadow p3 mb-5 bg-white border-0" style="width: 18rem">
-                        <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário"/>
+                    <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
+                        <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário" />
+                        <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
                     </div>
-                    <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
-                    </div>
+                    
+                </div>
             }
         }  
        </div>
@@ -72,9 +73,8 @@
             foreach (var item in Model.eventsLike)
             {
                 <div class="card-completo col-md-4">
-                    <div class="card custom-card border-secondary border-0" style="width: 18rem">
+                    <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
                         <img src="@item.Photo" class="card-img-top shadow p3 mb-5 bg-white " alt="Imagem do perfil do usuário" />
-                    <p>ID Evento: @item.Id</p>
                 </div>
                 
             </div>
