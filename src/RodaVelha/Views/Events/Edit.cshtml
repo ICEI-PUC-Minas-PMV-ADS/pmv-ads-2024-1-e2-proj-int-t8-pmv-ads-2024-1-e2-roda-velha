@@ -9,68 +9,95 @@
 @* Descobrir como linkar a biblioteca de icones abaixo com o dotnet *@
 @* <script src="https://unpkg.com/@phosphor-icons/web"></script> *@
 
-<h2 class="mt-5 mb-3 d-flex justify-content-center">Editar Evento</h2>
-<div class="card mx-3 mx-md-3 mx-lg-auto rounded-5 p-4">
-    <div class="container mt-4">
-        <form asp-action="Edit" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="mb-4">
-                <i class="ph ph-car"></i>
-                <label asp-for="Name" class="form-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+<body>
+    <main>
+        <section>
+            <h2 class="mt-5 mb-3 d-flex justify-content-center">Editar Evento</h2>
+            <div class="card mx-3 mx-md-3 mx-lg-auto rounded-5 p-4">
+                <div class="container mt-4">
+                    <form id="formulario">
+                        <div class="mb-4">
+                            <i class="ph ph-car"></i>
+                            <label for="input1" class="form-label">Nome do evento:</label>
+                            <input required type="text" class="form-control" id="nome-evento"
+                                maxlength="26">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-buildings"></i>
+                            <label for="input1" class="form-label">Organizador:</label>
+                            <input required type="text" class="form-control" id="nome-organizador"
+                                maxlength="26">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-map-pin-line"></i>
+                            <label for="input1" class="form-label">Local:</label>
+                            <input required type="text" class="form-control" id="nome-projeto"
+                                maxlength="26">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-calendar-check"></i>
+                            <label for="input1" class="form-label">Data de início:</label>
+                            <input required type="date" class="form-control" id="data-inicio">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-calendar-x"></i>
+                            <label for="input1" class="form-label">Data de término:</label>
+                            <input required type="date" class="form-control" id="data-fim"
+                                maxlength="26">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-clock"></i>
+                            <label for="input1" class="form-label">Horário:</label>
+                            <input required type="time" class="form-control" id="horario">
+                        </div>
+                        <div class="mb-4">
+                            <i class="ph ph-whatsapp-logo"></i>
+                            <label for="input1" class="form-label">Telefone / WhatsApp:</label>
+                            <input required type="tel" class="form-control" id="telefone"
+                                maxlength="14">
+                        </div>
+
+                        <div class="mb-4 d-flex justify-content-center">
+                            <label for="imagem" class="form-label">Selecione uma imagem de perfil do
+                                evento:</label>
+                            <input required type="hidden" class="form-control" id="imagem"
+                                name="imagem" accept="image/*" style="display: none">
+                        </div>
+
+                        <div id="galeria-btn" class="d-flex justify-content-center gap-4">
+                            <input type="radio" class="btn-check" name="options-radio"
+                                id="btnEscolherImagem" autocomplete="off">
+                            <label class="btn btn-outline-secondary"
+                                for="btnEscolherImagem">Galeria</label>
+                            <input type="radio" class="btn-check" name="options-radio"
+                                id="btnEscolherImagemApi" autocomplete="off">
+                            <label class="btn btn-outline-secondary"
+                                for="btnEscolherImagemApi">Web</label>
+                        </div>
+
+                        <div id="campo-busca" class="d-flex justify-content-center"></div>
+                        <div id="galeria-imagens" class="mb-2 d-flex justify-content-center"></div>
+
+                        <div class="mb-3">
+                            <label for="textoGrande" class="form-label mt-4">Descrição do
+                                projeto:</label>
+                            <textarea required class="form-control" id="descricao"
+                                name="textoGrande" rows="7" maxlength="250"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-4">
+                            <button type="submit"
+                                class="btn btn-lg mb-4 btn-secondary secondary-1">CANCELAR</button>
+                            <button type="submit"
+                                class="btn btn-lg mb-4 btn-secondary secondary-2">EDITAR</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="mb-4">
-                <i class="ph ph-buildings"></i>
-                <label asp-for="Organizer" class="form-label"></label>
-                <input asp-for="Organizer" class="form-control" />
-                <span asp-validation-for="Organizer" class="text-danger"></span>
-            </div>
-            <div class="mb-4">
-                <i class="ph ph-map-pin-line"></i>
-                <label asp-for="Location" class="form-label"></label>
-                <input asp-for="Location" class="form-control" />
-                <span asp-validation-for="Location" class="text-danger"></span>
-            </div>
-            <div class="mb-4">
-                <i class="ph ph-calendar-check"></i>
-                <label asp-for="StartDate" class="form-label"></label>
-                <input asp-for="StartDate" class="form-control" />
-                <span asp-validation-for="StartDate" class="text-danger"></span>
-            </div>
-            <div class="mb-4">
-                <i class="ph ph-calendar-x"></i>
-                <label asp-for="EndDate" class="form-label"></label>
-                <input asp-for="EndDate" class="form-control" />
-                <span asp-validation-for="EndDate" class="text-danger"></span>
-            </div>
-            @* <div class="mb-4">
-            <i class="ph ph-clock"></i>
-            <label asp-for="Horario" class="form-label"></label>
-            <input asp-for="Horario" class="form-control" />
-            <span asp-validation-for="Horario" class="text-danger"></span>
-            </div>
-            <div class="mb-4">
-            <i class="ph ph-whatsapp-logo"></i>
-            <label asp-for="Telefone" class="form-label"></label>
-            <input asp-for="Telefone" class="form-control" />
-            <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-            <label asp-for="Descricao" class="form-label mt-4"></label>
-            <textarea asp-for="Descricao" class="form-control" rows="7" maxlength="250"></textarea>
-            <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div> *@
-            <div class="d-flex justify-content-center gap-4">
-                <button type="submit" asp-action="Index"
-                    class="btn btn-lg mb-4 btn-secondary secondary-1">CANCELAR</button>
-                <button type="submit"
-                    class="btn btn-lg mb-4 btn-secondary secondary-2">EDITAR</button>
-            </div>
-        </form>
-    </div>
-</div>
+        </section>
+    </main>
+
+</body>
 
 @section Scripts {
     @{
