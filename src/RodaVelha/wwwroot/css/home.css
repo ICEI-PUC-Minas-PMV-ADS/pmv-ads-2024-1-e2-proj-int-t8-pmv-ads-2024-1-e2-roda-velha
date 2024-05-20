@@ -1,0 +1,112 @@
+:root {
+    --cor-1: #CBB89D;
+    --cor-2: #412F26;
+    --cor-3: #EDE1D2;
+    --cor-4: #6A6F4C;
+    --cor-5: #5D2510;
+}
+
+html,
+body {
+    background-color: var(--cor-3);
+    margin-right: 2%;
+    margin-left: 2%;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.section {
+    margin-top: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.section-1 {
+    margin-top: 6% !important;
+}
+
+@media (max-width: 767px) {
+    .section {
+        margin-top: 14%;
+    }
+
+    .section-1 {
+        margin-top: 14% !important;
+    }
+}
+
+.title h1,
+.title h6 {
+    color: var(--cor-5) !important;
+}
+
+.carousel-item img {
+    max-height: 350px;
+    max-width: 680px;
+    object-fit: cover;
+    margin: 0 auto;
+    filter: blur(1px);
+    border-radius: 20px;
+}
+
+@media (max-width: 376px) {
+    .carousel-inner h5 {
+        display: none !important;
+    }
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.card-QUEMSOMOS img {
+    padding: 8px;
+    background-color: var(--cor-3)
+}
+
+.card-QUEMSOMOS h5 {
+    color: #412F26 !important;
+    background-color: var(--cor-3);
+}
+
+.btn-secondary {
+    background-color: var(--cor-2);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-1);
+    scale: 1.1;
+}
+
+.section-3 img {
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.section-3 h5 {
+    color: var(--cor-5) !important;
+}
+
+.section-4 img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .section-4 img {
+        width: 60%;
+        height: auto;
+        padding-top: 14px !important;
+    }
+}
+
+.section-4 h5 {
+    color: var(--cor-2) !important;
+}
+
+.footer {
+    background-color: #1c2331;
+    width: 100%;
+}

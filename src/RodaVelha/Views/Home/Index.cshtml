@@ -2,6 +2,109 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Roda Velha</h1>
-</div>
+<link rel="stylesheet" href="~/css/home.css" />
+
+<body>
+  <main class="container" id="mainContent">
+    <div class="section section-1 mt-5">
+      <div class="card rounded-5 pb-4">
+        <div class="row title">
+          <div class="col-12 text-center mt-5">
+            <h1 class="text-white px-2">Roda Velha</h1>
+            <h6 class="text-white px-2">Encontrar seu estilo nunca foi tão fácil</h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mt-3">
+            <div id="carouselExampleCaptions" class="carousel slide px-3" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./1.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-block">
+                    <h5>blabla</h5>
+                    <p>blablablabla
+                      <br> blablabla
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./2.jpg" class="d-block w-100" alt=" ...">
+                  <div class="carousel-caption d-block">
+                    <h5>blebleble</h5>
+                    <p>blebleblebleblebleblebleble</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-block">
+                    <h5>rosarosarosa</h5>
+                    <p>rosarosarosa
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-2">
+      <div class="row text-center">
+        <h3 class="text-white">QUEM SOMOS?</h3>
+        <div class="col-lg-8 col-md-8 col-sm-12 mt-sm-2 mt-md-3">
+            <h5 class="pb-1">Bem-vindo ao mundo encantador dos carros clássicos! 
+              <br> <p> <br> Nosso site é o destino perfeito para entusiastas de automóveis antigos que procuram explorar a beleza atemporal e a nostalgia desses veículos icônicos. </p>
+              <br> <p> Aqui, você encontrará uma variedade de eventos emocionantes, reunindo apaixonados por carros antigos de todas as idades.
+                Desde encontros informais em belas paisagens até grandes exposições dedicadas aos modelos mais raros e preciosos, nossos eventos de encontro de carros antigos oferecem uma experiência única para todos os fãs de automobilismo. </p>
+                <br> <p> Você terá a oportunidade de admirar de perto uma impressionante coleção de veículos clássicos, trocar histórias e conhecimentos com outros entusiastas e mergulhar na atmosfera única dessas celebrações automotivas.  </p>
+              <br> <p>Se você é um proprietário de um carro antigo, este é o lugar perfeito para exibir sua preciosidade e compartilhar sua paixão com outros aficionados. E mesmo se você ainda não tiver um carro clássico, não se preocupe! Todos são bem-vindos para se juntar à comunidade e apreciar a beleza intemporal dessas máquinas históricas. </p>
+              <br> <p> Prepare-se para uma viagem no tempo e embarque conosco nesta jornada fascinante pelo mundo dos carros antigos. Esperamos vê-lo em nossos próximos eventos!</h5></p></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+          <div class="card rounded-5 card-QUEMSOMOS">
+            <img src="./convertible car-bro.svg" class="rounded-5 pb-2" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          <a href=".xxxxxxx" class="btn btn-secondary">+ Criar evento</a> <!-- alterar aqui o comando de criar evento-->
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-3">
+      <h3 class="text-white text-center">Eventos realizados anteriormente</h3>
+
+    @foreach (var eventItem in Model)
+    {
+        <div class="card text-center rounded-5 mt-sm-2 mt-md-3">
+            <div class="row">
+            <div class="col-12 mt-3">
+              <img src="@eventItem.Photo" alt="">
+               <h5 class="mt-4">@eventItem.Name</h5>
+               <p class="mt-2 mx-2">@eventItem.Description
+                @eventItem.StartDate
+                @eventItem.EndDate
+                @eventItem.Location
+                @eventItem.Organizer
+                @eventItem.Phone
+                </p> <!-- primeiro evento -->
+              </div>
+            </div>
+        </div>
+    }
+    </div>
+</body>
