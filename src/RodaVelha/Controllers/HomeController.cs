@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RodaVelha.Data;
 using RodaVelha.Models;
 using System.Diagnostics;
 
@@ -6,16 +8,18 @@ namespace RodaVelha.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly RodaVelhaContext _context;
+
+        public HomeController(RodaVelhaContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var events = await _context.Events.ToListAsync();
+            return View(events);
         }
 
         public IActionResult Privacy()
