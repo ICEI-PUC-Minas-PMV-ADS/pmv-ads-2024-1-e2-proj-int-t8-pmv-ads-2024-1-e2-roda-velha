@@ -1,5 +1,16 @@
+:root {
+    --background-color:#EDE1D2;
+    --button-color: #806044;
+    --pannel-color: #CBB89D;
+    --border-color: #412F26;
+}
+body{
+    background-color: var(--background-color)
+}
+
 .card-section{
     display: flex;
+    
 }
 .icon-remove{
     position: absolute;
@@ -10,7 +21,8 @@
 .card-completo{
     position: relative;
 }
-.custom-card{
+.custom-card {
+    
     border-radius: 20px;
 }
 .custom-card img{
@@ -20,10 +32,31 @@
     transform: translateY(-5px); /* Move o card para cima quando o mouse passa por cima */
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
-.card{
+.card {
+   
+    padding: 15px 15px;
+    border: solid 3px var(--border-color);
     background-color: #CBB89D;
-    border-radius: 20px;
+    border-radius: 40px;
     align-items: center;
+}
+.card-body h5{
+    font-size:1.10em;
+}
+.btn-custom {
+    
+    height: 2.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.button-edit {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    align-items: center;
+    margin-top: 1rem;
 }
 h1{
     font-size: 2rem
