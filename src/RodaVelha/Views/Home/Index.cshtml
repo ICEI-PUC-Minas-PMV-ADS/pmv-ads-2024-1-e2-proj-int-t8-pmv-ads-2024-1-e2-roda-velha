@@ -93,9 +93,15 @@
         <div class="card text-center rounded-5 mt-sm-2 mt-md-3">
             <div class="row">
             <div class="col-12 mt-3">
-              <img src=@eventItem alt="">
-               <h5 class="mt-4">André</h5>
-               <p class="mt-2 mx-2">"blablablaaaa"</p> <!-- primeiro evento -->
+              <img src="@eventItem.Photo" alt="">
+               <h5 class="mt-4">@eventItem.Name</h5>
+               <p class="mt-2 mx-2">@eventItem.Description
+                @eventItem.StartDate
+                @eventItem.EndDate
+                @eventItem.Location
+                @eventItem.Organizer
+                @eventItem.Phone
+                </p> <!-- primeiro evento -->
               </div>
             </div>
         </div>
