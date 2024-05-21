@@ -53,7 +53,7 @@
             foreach(var item in Model.events)
              {
                 <div class="card-completo" >
-                    <i class="icon-remove fa-solid fa-trash-can" asp-controller="Events" asp-action="Delete" asp-route-id="0"></i>
+                    <i class="icon-remove fa-solid fa-trash-can" asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"></i>
                     <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
                         <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário" />
                         <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
