@@ -14,14 +14,26 @@ body{
 
 }
 .card-completo{
+    width: 18rem;
     position: relative;
+    text-align:center;
+    height: 16rem;
     
 }
 .custom-card {
     border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
+.custom-card:hover {
+    border: solid 5px;
+}
+
+
 .custom-card img{
-    border-radius: 20px;
+    border-radius: 25px;
+    
 }
 .card-completo img:hover {
     transform: translateY(-5px);
@@ -67,4 +79,5 @@ img.icon_h1{
 }
 .eventos-publicados{
     width: 80%;
+
 }
