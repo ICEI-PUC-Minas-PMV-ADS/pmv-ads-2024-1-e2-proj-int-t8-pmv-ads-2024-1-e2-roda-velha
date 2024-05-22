@@ -9,15 +9,15 @@
 }
 
 
-    <h1>Perfil</h1>
+    <h1 class="mx-auto">Perfil</h1>
     <p></p>
 
     <p><a asp-action="Create">Criar novo usuário</a></p>
     <p><a asp-action="Details" asp-route-id="1">Detalhes do usuário</a></p>
 
 
-<section class="card-section d-flex justify-content-center ">
-    <div class="card " style="width:18rem">
+<section class="card-section d-flex justify-content-center">
+    <div class="card " style="width:30rem">
         @{
             String imgPhoto = Model.user.Photo;
             if (imgPhoto == null)
@@ -44,44 +44,55 @@
             </div>
         </div>
     </section>
-    <section class="eventos-publicados container text-center">
-        <h1>Eventos Publicados</h1>
-       <div class="row row-cols-2">
-        
-        @if (Model.events != null)
-        {
-            foreach(var item in Model.events)
-             {
-                <div class="card-completo" >
-                    <i class="icon-remove fa-solid fa-trash-can" asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"></i>
-                    <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
-                        <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário" />
-                        <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
-                    </div>
-                    
-                </div>
-            }
-        }  
+   <section class="eventos-publicados mx-auto">
+   <div class="d-flex mb-5 mt-2">
+        <img class="icon_h1" src="../../assets/images/Users/cronograma.png" />
+        <h1 class="mb-0">Eventos Publicados:</h1>
+   </div>
+    <div>
+        <div class="row row-cols-2 justify-content-center">
+
+            @if (Model.events != null)
+            {
+                foreach (var item in Model.events)
+                {
+                        <div class="card-completo" >
+                                   <a asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"><i class="icon-remove fa-solid fa-trash-can"></i></a>
+                            <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
+                                <img src="@item.Photo" class="card-img-top " alt="Imagem do perfil do usuário" />
+                                <a class="btn btn-custom" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
+                            </div>
+
+                        </div>
+                }
+            }  
        </div>
+    </div>
     </section>
 
-    <section class="eventos-publicados container text-center">
-        <h1>Eventos que você curtiu</h1>
-        <div class="row row-cols-2">
-        @if(Model.eventsLike != null)
-        {
-            foreach (var item in Model.eventsLike)
+    <section class="eventos-publicados align-items-center mx-auto">
+    <div class="d-flex">
+        <img class="icon_h1" src="../../assets/images/Users/carro-de-casamento.png" />
+        <h1 class="mb-0 ms-2">Eventos que você curtiu:</h1>
+    </div>
+    </br> </br> </br>
+    <div>
+         <div class="row row-2">
+            @if (Model.eventsLike != null)
             {
-                <div class="card-completo col-md-4">
-                    <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
-                        <img src="@item.Photo" class="card-img-top shadow p3 mb-5 bg-white " alt="Imagem do perfil do usuário" />
-                </div>
-                
-            </div>
+                foreach (var item in Model.eventsLike)
+                {
+                        <div class="card-completo col-md-4">
+                            <div class="card custom-card border-secondary shadow p3 mb-5 border-2" style="width: 18rem">
+                                <img src="@item.Photo" class="card-img-top shadow p3 mb-5 bg-white " alt="Imagem do perfil do usuário" />
+                        </div>
+
+                    </div>
+                }
             }
-        }
-            
+
         </div>
+    </div>   
     </section>
 
     <script src="https://kit.fontawesome.com/9e6a074965.js" crossorigin="anonymous"></script>

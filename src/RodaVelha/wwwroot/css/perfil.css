@@ -7,11 +7,6 @@
 body{
     background-color: var(--background-color)
 }
-
-.card-section{
-    display: flex;
-    
-}
 .icon-remove{
     position: absolute;
     right: -5px;
@@ -23,18 +18,16 @@ body{
     
 }
 .custom-card {
-    
-    
     border-radius: 20px;
 }
 .custom-card img{
     border-radius: 20px;
 }
 .card-completo img:hover {
-    transform: translateY(-5px); /* Move o card para cima quando o mouse passa por cima */
+    transform: translateY(-5px);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
-.card {
+.card{
    
     padding: 15px 15px;
     border: solid 3px var(--border-color);
@@ -65,4 +58,13 @@ h1{
 }
 .icon-remove{
     cursor:pointer;
+}
+
+img.icon_h1{ 
+    width: 25px;
+    height: auto;
+    /**/
+}
+.eventos-publicados{
+    width: 80%;
 }
