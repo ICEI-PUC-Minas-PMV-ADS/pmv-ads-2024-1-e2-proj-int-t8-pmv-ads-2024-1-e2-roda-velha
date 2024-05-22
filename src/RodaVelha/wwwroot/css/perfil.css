@@ -8,9 +8,13 @@ body{
     background-color: var(--background-color)
 }
 .icon-remove{
+    z-index: 1;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: white;
     position: absolute;
-    right: -5px;
-    top: -15px;
+    right: 5px;
+    top: 0px;
 
 }
 .card-completo{
