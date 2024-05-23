@@ -26,27 +26,37 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="active">INÍCIO</a>
+                    @* <a asp-area="" asp-controller="Home" asp-action="Index" class="active">INÍCIO</a> *@
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Home" && ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")" asp-controller="Home" asp-action="Index">INÍCIO</a>
+
+               </li>
+
+                <li>
+                    @* <a asp-area="" asp-controller="Users" asp-action="Index">PERFIL</a> *@
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Users" && ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")" asp-controller="Users" asp-action="Index">PERFIL</a>
+
                 </li>
 
                 <li>
-                    <a asp-area="" asp-controller="Users" asp-action="Index">PERFIL</a>
-                </li>
+                    @* <a asp-area="" asp-controller="Events" asp-action="Index">EVENTOS</a> *@
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Events" ? "active" : "")" asp-controller="Events" asp-action="Index">EVENTOS</a>
 
-                <li>
-                    <a asp-area="" asp-controller="Events" asp-action="Index">EVENTOS</a>
                 </li>
                 
                 @if (User.Identity.IsAuthenticated)
                 {
                   <li>
-                    <a asp-area="" asp-controller="Users" asp-action="Logout">SAIR</a>
+                    @* <a asp-area="" asp-controller="Users" asp-action="Logout">SAIR</a> *@
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Users" && ViewContext.RouteData.Values["action"].ToString() == "Logout" ? "active" : "")" asp-controller="Users" asp-action="Logout">SAIR</a>
+
                   </li>
                 }
                 else
                 {
                   <li>
-                    <a asp-area="" asp-controller="Users" asp-action="Login">ENTRAR</a>
+                    @* <a asp-area="" asp-controller="Users" asp-action="Login">ENTRAR</a> *@
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Users" && ViewContext.RouteData.Values["action"].ToString() == "Login" ? "active" : "")" asp-controller="Users" asp-action="Login">ENTRAR</a>
+
                   </li>
                 }
             </ul>
