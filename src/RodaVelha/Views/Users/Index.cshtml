@@ -34,16 +34,20 @@
                     <h5 class="card-title">Nome: [ Não Logado ]</h5>
                     <h5 class="card-title">E-mail: [ Não Logado ]</h5>
                     <div class="button-edit content-align-center text-center">
-                        <a class="btn btn-custom" asp-action="Edit" asp-route-id="@userId">EDITAR PERFIL</a> 
+                        <a class="btn " asp-action="Edit" asp-route-id="@userId">EDITAR PERFIL</a> 
                      </div>
                 }
             </div>
         </div>
     </section>
    <section class="eventos-publicados mx-auto">
-   <div class="d-flex mb-5 mt-2">
-        <img class="icon_h1" src="../../assets/images/Users/cronograma.png" />
-        <h1 class="mb-0">Eventos Publicados:</h1>
+    <div class="d-flex mb-5 mt-2 justify-content-between">
+   <div class="d-flex mb-0">
+            <img class="icon_h1" src="../../assets/images/Users/cronograma.png" />
+            <h1 class="mb-0">Eventos Publicados:</h1>
+   </div>
+        
+        <a class="mb-0 btn-custom btn justify-content-evenly" asp-action="Edit">Gerar Relatório</a>
    </div>
     <div>
         <div class="row row-cols-2 justify-content-center">
