@@ -151,9 +151,19 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users/Reports
-        public IActionResult Report()
+        public async Task<IActionResult> Report(int id)
         {
-            return View();
+            
+            var user = await _context.Users
+                .Include(u => u.Events)
+                .Include(u => u.Likes)
+                .FirstOrDefaultAsync(u=> u.ID == id);
+            if(user == null)
+              {
+                return NotFound();
+              }
+
+            return View(user);
         }
 
         // POST: Users/Create

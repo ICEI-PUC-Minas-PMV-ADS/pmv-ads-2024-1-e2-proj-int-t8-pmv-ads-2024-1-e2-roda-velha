@@ -22,6 +22,16 @@
 
     </div>
     <h1>Eventos Cadastrados</h1>
+    @foreach(var item in Model.Events)
+    {
+        <p>@item.Name</p>
+        <p>@item.Location</p>
+        <p>@item.Description</p>
+        <p>@item.StartDate</p>
+        <p>@item.EndDate</p>
+        <p></p>
+
+    }
     <div class="events-list">
 
     </div>
