@@ -11,15 +11,14 @@
 
 
 
-<div class="main-report">
+<div id="main-report">
     <div class="header-report">
 
     </div>
     <div class="user-information">
-        <p>@Html.DisplayNameFor(model => model.Name)</p>
-        <p>@Html.DisplayNameFor(model => model.Email)</p>
-        <p>@Html.DisplayNameFor(model => model.Likes)</p>
-
+        <p>@Model.Name</p>
+        <p>@Model.Email</p>
+        <p>@Model.Photo</p>
     </div>
     <h1>Eventos Cadastrados</h1>
     @foreach(var item in Model.Events)
@@ -33,6 +32,13 @@
 
     }
     <div class="events-list">
+        @foreach (var item in Model.Likes)
+        {
+            <p>@item.Event</p>
+            <p>@item.User</p>
+            <p>@item.UserId</p>
+            <p></p>
 
+        }
     </div>
 </div>

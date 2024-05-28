@@ -153,7 +153,6 @@ namespace RodaVelha.Controllers
         // GET: Users/Reports
         public async Task<IActionResult> Report(int id)
         {
-            
             var user = await _context.Users
                 .Include(u => u.Events)
                 .Include(u => u.Likes)
