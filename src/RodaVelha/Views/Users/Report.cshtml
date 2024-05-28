@@ -1,0 +1,28 @@
+﻿@model RodaVelha.Models.User
+
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Perfil";
+    var name = User.FindFirstValue(ClaimTypes.Name);
+    var email = User.FindFirstValue(ClaimTypes.Email);
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+
+
+
+<div class="main-report">
+    <div class="header-report">
+
+    </div>
+    <div class="user-information">
+        <p>@Html.DisplayNameFor(model => model.Name)</p>
+        <p>@Html.DisplayNameFor(model => model.Email)</p>
+        <p>@Html.DisplayNameFor(model => model.Likes)</p>
+
+    </div>
+    <h1>Eventos Cadastrados</h1>
+    <div class="events-list">
+
+    </div>
+</div>
