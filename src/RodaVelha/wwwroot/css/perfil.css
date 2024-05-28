@@ -10,6 +10,7 @@ body{
 .icon-remove{
     z-index: 1;
     padding: 5px;
+    border: solid 1px;
     border-radius: 15px;
     background-color: white;
     position: absolute;
