@@ -229,3 +229,8 @@ btn-custom .btn-text {
   background-color: #6a6f4c; /* Cor de fundo mais escura */
   border-color: none; /* Cor da borda mais escura */
 }
+@media print{
+    header, footer {
+        display: none;
+    }
+}

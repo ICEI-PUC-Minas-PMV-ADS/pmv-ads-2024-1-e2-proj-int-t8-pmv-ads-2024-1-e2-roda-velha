@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using RodaVelha.Data;
 using RodaVelha.Models;
 using RodaVelha.ViewModels;
@@ -153,7 +154,7 @@ namespace RodaVelha.Controllers
         // GET: Users/Reports
         public async Task<IActionResult> Report(int id)
         {
-            var user = await _context.Users
+            /*var user = await _context.Users
                 .Include(u => u.Events)
                 .Include(u => u.Likes)
                 .FirstOrDefaultAsync(u=> u.ID == id);
@@ -161,8 +162,35 @@ namespace RodaVelha.Controllers
               {
                 return NotFound();
               }
+            return View(user);*/
 
-            return View(user);
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if (usuarioLogadoId == -1)
+                return NotFound();
+
+
+            var events = _context.Events.Where(p => p.Id == usuarioLogadoId).ToList();
+
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+
+            var query = from eventos in _context.Events
+                        join like in _context.Likes on eventos.Id equals like.EventId
+                        where like.UserId == usuarioLogadoId
+                        select eventos;
+
+
+            var eventlist = query.ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                events = events,
+                user = user!,
+                eventsLike = eventlist,
+            };
+
+
+            return View(viewModel);
+
         }
 
         // POST: Users/Create

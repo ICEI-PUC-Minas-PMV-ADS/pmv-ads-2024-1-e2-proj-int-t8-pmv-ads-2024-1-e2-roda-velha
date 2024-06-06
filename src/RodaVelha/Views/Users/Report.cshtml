@@ -1,4 +1,4 @@
-﻿@model RodaVelha.Models.User
+﻿@model RodaVelha.ViewModels.UserPageViewModel
 
 @using System.Security.Claims
 
@@ -10,33 +10,103 @@
 }
 
 
-
 <div id="main-report">
-    <div class="header-report">
+    <header>
+        <img src="~/assets/images/logo.png" alt="Logo da Empresa" style="width:35px; ">
+        <h2>Nome do Usuário: @name</h2>
+        <p>E-mail do Usuário: @email</p>
+    </header>
 
-    </div>
-    <div class="user-information">
-        <p>@Model.Name</p>
-        <p>@Model.Email</p>
-        <p>@Model.Photo</p>
-    </div>
-    <h1>Eventos Cadastrados</h1>
-    @foreach(var item in Model.Events)
-    {
-        <p>@item.Name</p>
-        <p>@item.Location</p>
-        <p>@item.Description</p>
-        <p>@item.StartDate</p>
-        <p>@item.EndDate</p>
-        <p></p>
+    <h1 style="text-align: center;">Eventos Cadastrados</h1>
 
-    }
-    <div class="events-list">
-        @foreach (var item in Model.Likes)
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID do Evento</th>
+                <th scope ="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de Início</th>
+                <th scope="col">Data de Término</th>
+                <th scope="col">Localização</th>
+                <th scope="col">Organizador</th>
+                <th scope="col">Likes</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        @foreach (var item in Model.events)
         {
-            <p>@item.EventId</p>
-            <p></p>
-
+            <tr>
+                <td scope="row">@item.Id</td>
+                <td scope="row">@item.Name</td>
+                <td scope="row">@item.Description</td>
+                <td scope="row">@item.StartDate</td>
+                <td scope="row">@item.EndDate</td>
+                <td scope="row">@item.Location</td>
+                <td scope="row">@item.Organizer</td>
+                <td scope="row">@item.Likes</td>
+                <td scope="row">@item.Photo</td>
+            </tr>
         }
-    </div>
-</div>
+            <tr>
+                <td>1</td>
+                <td>Evento A</td>
+                <td>Descrição do Evento A</td>
+                <td>01/01/2024</td>
+                <td>03/01/2024</td>
+                <td>Local A</td>
+                <td>Organizador A</td>
+                <td>100</td>
+                <td>(XX) XXXX-XXXX</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1 style="text-align: center;">Eventos que foram curtidos por você:</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID do Evento</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de Início</th>
+                <th scope="col">Data de Término</th>
+                <th scope="col">Localização</th>
+                <th scope="col">Organizador</th>
+                <th scope="col">Likes</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.eventsLike)
+            {
+                <tr>
+                    <td scope="row">@item.Id</td>
+                    <td scope="row">@item.Name</td>
+                    <td scope="row">@item.Description</td>
+                    <td scope="row">@item.StartDate</td>
+                    <td scope="row">@item.EndDate</td>
+                    <td scope="row">@item.Location</td>
+                    <td scope="row">@item.Organizer</td>
+                    <td scope="row">@item.Likes</td>
+                    <td scope="row">@item.Photo</td>
+                </tr>
+            }
+            <tr>
+                <td>1</td>
+                <td>Evento A</td>
+                <td>Descrição do Evento A</td>
+                <td>01/01/2024</td>
+                <td>03/01/2024</td>
+                <td>Local A</td>
+                <td>Organizador A</td>
+                <td>100</td>
+                <td>(XX) XXXX-XXXX</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div><a class="btn btn-custom mt-1" onclick="window.print()">IMPRIMIR</a>
