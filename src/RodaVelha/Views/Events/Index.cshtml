@@ -50,7 +50,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                    <a class="likeButton" data-event-id="@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
@@ -88,3 +88,4 @@
 }
     </tbody>
 </table>
+<script src="~/js/like.js"></script>
