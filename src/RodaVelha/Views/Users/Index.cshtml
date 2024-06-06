@@ -57,12 +57,28 @@
                 foreach (var item in Model.events)
                 {
                     <div class="card-completo mb-5 col-md-4">
-                        <a asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"><i class="icon-remove fa-solid fa-trash-can"></i></a>
+                        <a data-toggle="modal" data-target="#modalExemplo"><i class="icon-remove fa-solid fa-trash-can"></i></a>
                             <div style="background-image:url('@item.Photo')" class="card custom-card">
                                 
                             </div>
                         <a class="btn btn-custom mt-1" asp-controller="Events" asp-action="Edit" asp-route-id="@item.Id">EDITAR</a>
                         </div>
+                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Deseja realmente apagar o evento?</h5>
+                                    <button asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"  type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button  type="button" class="btn btn-danger" >Excluir</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 }
             }  
        </div>
@@ -91,6 +107,8 @@
         </div>
     </div>   
     </section>
+
+
 
     <script src="https://kit.fontawesome.com/9e6a074965.js" crossorigin="anonymous"></script>
 
