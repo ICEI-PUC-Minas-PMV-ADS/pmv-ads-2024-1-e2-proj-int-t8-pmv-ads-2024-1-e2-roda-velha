@@ -9,6 +9,7 @@ namespace RodaVelha.Controllers
     {
         private readonly RodaVelhaContext _context;
 
+        [HttpPost]
         public JsonResult LikeEvent (int eventId)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
