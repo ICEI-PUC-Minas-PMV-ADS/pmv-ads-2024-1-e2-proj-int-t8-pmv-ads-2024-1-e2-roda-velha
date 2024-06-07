@@ -9,29 +9,44 @@ namespace RodaVelha.Controllers
     {
         private readonly RodaVelhaContext _context;
 
+        public LikeController(RodaVelhaContext context)
+        {
+            _context = context;
+        }
+
         [HttpPost]
         public JsonResult LikeEvent (int eventId)
         {
-            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            bool success = _context.Likes.Any(like => like.UserId == userId && like.EventId == eventId);
-            if (success)
+            var userLogged = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userLogged != null)
             {
-                return Json(new { success = false });
-            }
-            else 
-            {
-                var like = new Like
-                {
-                    UserId = userId,
-                    EventId = eventId,
-                    User = _context.Users.Find(userId),
-                    Event = _context.Events.Find(eventId)
-                };
-                _context.Likes.Add(like);
-                _context.SaveChanges();
+                var userId = int.Parse(userLogged);
 
-                return Json(new { success = success });
+
+                bool success = _context.Likes.Any(like => like.UserId == userId && like.EventId == eventId);
+                if (success)
+                {
+                    return Json(new { success = false });
+                }
+                else
+                {
+                    var like = new Like
+                    {
+                        UserId = userId,
+                        EventId = eventId
+                       
+                    };
+                    _context.Likes.Add(like);
+                    _context.SaveChanges();
+
+                    return Json(new { success = true });
+                }
             }
+            else
+                return Json(new { success = false });
+
+            
+            
             
         }
     }

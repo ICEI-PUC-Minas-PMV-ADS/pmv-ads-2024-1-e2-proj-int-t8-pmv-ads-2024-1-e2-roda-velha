@@ -1,12 +1,13 @@
-﻿namespace RodaVelha.Models;
-
-public class Like
+﻿namespace RodaVelha.Models
 {
-    public int Id { get; set; }
-    public required int UserId { get; set; }
-    public required int EventId { get; set; }
+    public class Like
+    {
+        public int Id { get; set; }
+        public required int UserId { get; set; }
+        public required int EventId { get; set; }
 
-    // Navigation property for the relationship
-    public virtual required User User { get; set; }
-    public virtual required Events Event { get; set; }
+        // Navigation property for the relationship
+        public virtual  User User { get; set; }
+        public virtual  Events Event { get; set; }
+    }
 }
