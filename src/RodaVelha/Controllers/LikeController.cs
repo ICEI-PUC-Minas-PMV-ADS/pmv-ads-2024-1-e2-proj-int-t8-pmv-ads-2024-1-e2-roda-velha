@@ -26,14 +26,16 @@ namespace RodaVelha.Controllers
                 bool success = _context.Likes.Any(like => like.UserId == userId && like.EventId == eventId);
                 if (success)
                 {
-                    return Json(new { success = false });
+                    return Json(new { success = false, message = "Usuário já efetuou o Like neste evento." });
                 }
                 else
                 {
+                    var createdAt = DateTime.Now;
                     var like = new Like
                     {
                         UserId = userId,
-                        EventId = eventId
+                        EventId = eventId,
+                        CreatedAt = createdAt
                        
                     };
                     _context.Likes.Add(like);
@@ -43,7 +45,7 @@ namespace RodaVelha.Controllers
                 }
             }
             else
-                return Json(new { success = false });
+                return Json(new { success = false, message = "Usuário deve se logar para dar Like" });
 
             
             

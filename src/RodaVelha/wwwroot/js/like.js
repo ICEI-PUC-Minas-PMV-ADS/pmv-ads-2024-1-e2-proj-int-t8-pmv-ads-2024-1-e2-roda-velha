@@ -15,11 +15,26 @@
                     if (req.status === 200) {
                         var response = JSON.parse(req.responseText);
                         if (response.success)
-                            alert("Curtido com sucesso!");
+                        {
+                            Swal.fire({
+                                position: "center",
+                                title: `Parabéns!`,
+                                text: "Seu like foi efetuado com sucesso!",
+                                icon: "success",
+                                showConfirmButton: false,
+                                timer: 1500,
+                            });
+                        }
                         else
                         {
-                            console.log(response);
-                            alert("Usuário já curtiu este evento!");
+                            Swal.fire({
+                                position: "center",
+                                title: `Erro!`,
+                                text: response.message,
+                                icon: "error",
+                                showConfirmButton: false,
+                                timer: 2000,
+                            });
                         }
                         
                     }

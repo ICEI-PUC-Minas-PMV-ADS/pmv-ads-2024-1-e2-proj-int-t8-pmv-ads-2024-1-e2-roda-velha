@@ -6,6 +6,8 @@
         public required int UserId { get; set; }
         public required int EventId { get; set; }
 
+        public DateTime CreatedAt { get; set; }
+
         // Navigation property for the relationship
         public virtual  User User { get; set; }
         public virtual  Events Event { get; set; }
