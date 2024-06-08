@@ -50,7 +50,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                    <a style="display : inline"class="btn likeButton" data-event-id="@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
+                    <a style="display : inline">@Html.DisplayFor(modelItem => item.Name)</a>
                     <a class="likeButton" data-event-id="@item.Id"><i class="fa-solid fa-thumbs-up"></i></a>
                     <a class="deleteButton" data-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
             </td>
@@ -73,7 +73,7 @@
                 @Html.DisplayFor(modelItem => item.Likes)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Photo)
+                    <img src="@Html.DisplayFor(modelItem => item.Photo)" style="width:60px">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Phone)
@@ -82,9 +82,9 @@
                 @Html.DisplayFor(modelItem => item.User.ID)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+               @*  <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
             </td>
         </tr>
 }
