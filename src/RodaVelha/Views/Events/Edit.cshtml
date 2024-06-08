@@ -20,24 +20,24 @@
                             <i class="ph ph-car"></i>
                             <label for="input1" class="form-label">Nome do evento:</label>
                             <input required type="text" class="form-control" id="nome-evento"
-                                maxlength="26">
+                                maxlength="26" value="@Model.Name">
                         </div>
                         <div class="mb-4">
                             <i class="ph ph-buildings"></i>
                             <label for="input1" class="form-label">Organizador:</label>
                             <input required type="text" class="form-control" id="nome-organizador"
-                                maxlength="26">
+                                   maxlength="26" value="@Model.Organizer">
                         </div>
                         <div class="mb-4">
                             <i class="ph ph-map-pin-line"></i>
                             <label for="input1" class="form-label">Local:</label>
                             <input required type="text" class="form-control" id="nome-projeto"
-                                maxlength="26">
+                                   maxlength="26" value="@Model.Location">
                         </div>
                         <div class="mb-4">
                             <i class="ph ph-calendar-check"></i>
                             <label for="input1" class="form-label">Data de início:</label>
-                            <input required type="date" class="form-control" id="data-inicio">
+                            <input required type="date" class="form-control" id="data-inicio" value=" @Model.StartDate">
                         </div>
                         <div class="mb-4">
                             <i class="ph ph-calendar-x"></i>
@@ -48,13 +48,13 @@
                         <div class="mb-4">
                             <i class="ph ph-clock"></i>
                             <label for="input1" class="form-label">Horário:</label>
-                            <input required type="time" class="form-control" id="horario">
+                            <input required type="time" class="form-control" id="horario" value="">
                         </div>
                         <div class="mb-4">
                             <i class="ph ph-whatsapp-logo"></i>
                             <label for="input1" class="form-label">Telefone / WhatsApp:</label>
                             <input required type="tel" class="form-control" id="telefone"
-                                maxlength="14">
+                                   maxlength="14" value="@Model.Phone">
                         </div>
 
                         <div class="mb-4 d-flex justify-content-center">
@@ -82,7 +82,7 @@
                             <label for="textoGrande" class="form-label mt-4">Descrição do
                                 projeto:</label>
                             <textarea required class="form-control" id="descricao"
-                                name="textoGrande" rows="7" maxlength="250"></textarea>
+                                      name="textoGrande" rows="7" maxlength="250">@Model.Description</textarea>
                         </div>
 
                         <div class="d-flex justify-content-center gap-4">
