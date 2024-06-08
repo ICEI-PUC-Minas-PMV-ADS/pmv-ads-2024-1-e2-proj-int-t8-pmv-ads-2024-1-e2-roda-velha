@@ -152,24 +152,14 @@ namespace RodaVelha.Controllers
         }
 
         // GET: Users/Reports
-        public async Task<IActionResult> Report(int id)
+        public async Task<IActionResult> Report()
         {
-            /*var user = await _context.Users
-                .Include(u => u.Events)
-                .Include(u => u.Likes)
-                .FirstOrDefaultAsync(u=> u.ID == id);
-            if(user == null)
-              {
-                return NotFound();
-              }
-            return View(user);*/
-
             var usuarioLogadoId = obterUsuarioLogadoId();
             if (usuarioLogadoId == -1)
                 return NotFound();
 
 
-            var events = _context.Events.Where(p => p.Id == usuarioLogadoId).ToList();
+            var events = _context.Events.Where(p => p.UserId == usuarioLogadoId).ToList();
 
             var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 

@@ -17,12 +17,12 @@ public class User
     public required string Password { get; set; }
     public string? Photo { get; set; }
 
-    public DateTime? CreatedDate { get; set; }
+   
 
     public virtual ICollection<Like> Likes { get; set; }
     public virtual ICollection<Events> Events { get; set; }
 
-
+    public DateTime CreatedDate { get; set; }
     // Constructor to initialize the collections
     public User()
     {
