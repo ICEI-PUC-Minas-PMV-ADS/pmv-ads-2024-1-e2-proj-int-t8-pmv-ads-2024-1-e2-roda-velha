@@ -76,7 +76,7 @@ namespace RodaVelha.Controllers
                         await Photo.CopyToAsync(stream);
                     }
 
-                    @event.Photo = "/wwwroot/assets/images/events/" + fileName;
+                    @event.Photo = "/assets/images/events/" + fileName;
                 }
 
                 _context.Add(@event);
