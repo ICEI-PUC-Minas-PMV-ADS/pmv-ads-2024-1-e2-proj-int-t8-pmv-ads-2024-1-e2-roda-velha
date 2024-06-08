@@ -212,6 +212,7 @@ namespace RodaVelha.Controllers
             {
                 user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 user.Photo = "https://i.pinimg.com/564x/77/d0/32/77d0328f9a5777f9c8fb052fea163a37.jpg";
+                user.CreatedDate = DateTime.Now;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Login", "Users");
