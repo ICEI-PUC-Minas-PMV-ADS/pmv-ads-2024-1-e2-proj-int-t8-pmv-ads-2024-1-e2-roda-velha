@@ -35,7 +35,7 @@ namespace RodaVelha.Controllers
                  return NotFound();
 
              
-             var events = _context.Events.Where( p => p.Id == usuarioLogadoId).ToList(); 
+             var events = _context.Events.Where( p => p.UserId == usuarioLogadoId).ToList(); 
             
              var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
 

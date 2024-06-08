@@ -68,13 +68,13 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Deseja realmente apagar o evento?</h5>
-                                    <button asp-controller="Events" asp-action="Delete" asp-route-id="@item.Id"  type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                  
                                 </div>
                                 <div class="modal-footer">
-                                    <button  type="button" class="btn btn-danger" >Excluir</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                        <input type="hidden" data-id="@item.Id" />
+                                    <a class="btn btn-danger deleteButton" data-id="@item.Id"> Excluir</a>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>                                  
+                                    
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,6 @@
 
     <section class="eventos-publicados align-items-center mx-auto">
     <div class="d-flex">
-        <img class="icon_h1" src="../../assets/images/Users/carro-de-casamento.png" />
         <h1 class="mb-0 ms-2">Eventos que você curtiu:</h1>
     </div>
     </br> </br> </br>

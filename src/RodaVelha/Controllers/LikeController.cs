@@ -38,6 +38,8 @@ namespace RodaVelha.Controllers
                         CreatedAt = createdAt
                        
                     };
+                    var eventToUpdate = _context.Events.FirstOrDefault(e => e.Id == eventId);
+                    eventToUpdate.Likes += 1;
                     _context.Likes.Add(like);
                     _context.SaveChanges();
 

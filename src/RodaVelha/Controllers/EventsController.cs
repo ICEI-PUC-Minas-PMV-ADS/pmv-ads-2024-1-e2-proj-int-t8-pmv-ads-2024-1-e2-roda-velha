@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using RodaVelha.Data;
 using RodaVelha.Models;
@@ -173,6 +174,30 @@ namespace RodaVelha.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [HttpPost]
+        public JsonResult DeleteEvent(int id)
+        {
+            var user = _userService.GetCurrentUser();
+            if (user != null)
+            {
+               var eventExist = _context.Events.FirstOrDefault(e => e.Id == id && user.ID == e.UserId);
+               var eventFromUser = _context.Events.FirstOrDefault(e => e.UserId == user.ID);
+                if (eventExist != null && eventFromUser !=null)
+                {
+                    _context.Remove(eventExist);
+                    _context.SaveChanges();
+                    return Json(new { success = true, message = "Registro excluído com sucesso" });
+                }
+                else if(eventFromUser != null) {
+                
+                    return Json(new { success = false, message = "Proibido apagar evento de outro usuário" });
+                }
+                  else { return Json(new { success = false, message = "Evento não existe" }); }
+            }else
+               { return Json(new { success = false, message = "Usuario nao logado" }); }
+
+        }
+
 
         private bool EventExists(int id)
         {

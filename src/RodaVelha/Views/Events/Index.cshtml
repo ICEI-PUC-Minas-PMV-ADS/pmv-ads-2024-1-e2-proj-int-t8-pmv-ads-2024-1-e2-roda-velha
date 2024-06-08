@@ -52,6 +52,7 @@
             <td>
                     <a style="display : inline"class="btn likeButton" data-event-id="@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
                     <a class="likeButton" data-event-id="@item.Id"><i class="fa-solid fa-thumbs-up"></i></a>
+                    <a class="deleteButton" data-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
