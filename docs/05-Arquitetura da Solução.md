@@ -29,12 +29,17 @@ A tecnologia de banco de dados para armazenamento será utilizado o PostgreeSQL 
 A codificação do site (front-end) será feito com as linguagens de marcação HTML5, CSS e o framework BootStrap. Para interatividade será usado o JavaScript.
 Para a manipulação dos dados do lado do servidor, ou seja o back-end, será adotado a linguagem C# que é uma linguagem fortemente tipada e orientada a objetos além de contar com excelente performance em vários cenários de aplicação.
 
-## Hospedagem
+## Hospedagem & Arquitetura de Software
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+A hospedagem do site será feita na plataforma de Cloud Azure da microsoft. O serviço/recurso utilizado é de Máquinas Virtuais na versão Linux Ubuntu 20.04, usando a Standard DS1 v2 (1 vcpu, 3.5 GiB de memória) e para armazenamento o Azure Managed Disks, com 30GB de espaço em disco.
 
-A hospedagem do site será feita na plataforma de Cloud Azure da microsoft. Será usado o serviço de Máquinas Virtuais na versão Linux, usando a instância B2ats v2, com 2 vCPU, 1GB de RAMe para armazenamento o Azure Managed DIsks, com 30GB de espaço em disco.
-O servidor integrado com o ASP.NET CORE será o Kestrel.
+Na borda está sendo utilizado o servidor Nginx configurado como proxy reverso na porta 80 e redirecionando na porta 5000 onde o servidor Kestrel recebe a solicitação e retorna com os arquivos compilados e processados dos arquivos asp.net core mvc.
+
+Para upload dos arquivos do site um webhook é acionado no servidor linux a partir de uma requisição post enviada do github para o servidor informando que o repositório foi alterado, o servidor então efetua o download dos códigos atualizados, o compila e reinicia os serviços do servidor kestrel.
+
+![Software_Architecture](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/8b421115-3e30-4ebb-8668-29671403e296)
+
+
 
 > **Links Úteis**:
 >
