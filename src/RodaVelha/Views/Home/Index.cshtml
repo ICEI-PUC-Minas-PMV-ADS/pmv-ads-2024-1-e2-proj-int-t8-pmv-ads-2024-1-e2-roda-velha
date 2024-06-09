@@ -60,9 +60,11 @@
           </div>
           <img src="@eventItem.Photo" alt="" class="img-event">
           <div class="card-info">
-            <div>
-              <span class="text-tag">Organizador: </span>
-              <span>@eventItem.Organizer</span>
+              <div class="texts-containers">
+                        <span class="text-tag">Organizador: <span class="text-result">@eventItem.Organizer</span></span>
+
+                        <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span class="text-result">  @eventItem.Likes pessoas</span></span>
+                        
             </div>
             <div class="texts-containers">
               <span class="text-tag">Data do evento: <span class="text-result">@eventItem.StartDate a @eventItem.EndDate</span></span>
