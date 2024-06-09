@@ -5,7 +5,6 @@
         button.addEventListener('click', function () {
 
             var eventId = this.getAttribute('data-event-id');
-            console.log(eventId);
 
             var req = new XMLHttpRequest();
             req.open("POST", "/Like/LikeEvent", true);
@@ -16,6 +15,13 @@
                         var response = JSON.parse(req.responseText);
                         if (response.success)
                         {
+                            
+                            var likeElement = document.getElementById(eventId);
+                            var likeQuantity = parseInt(likeElement.getAttribute('data-like'));
+                            console.log(likeQuantity);
+                            console.log(likeElement);
+                            document.getElementById(eventId).innerHTML = ((" " + (likeQuantity + 1) + " pessoas"));
+                           
                             Swal.fire({
                                 position: "center",
                                 title: `Parabéns!`,
@@ -24,6 +30,9 @@
                                 showConfirmButton: false,
                                 timer: 1500,
                             });
+                           
+
+
                         }
                         else
                         {

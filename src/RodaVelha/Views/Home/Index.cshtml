@@ -63,7 +63,7 @@
               <div class="texts-containers">
                         <span class="text-tag">Organizador: <span class="text-result">@eventItem.Organizer</span></span>
 
-                        <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span class="text-result">  @eventItem.Likes pessoas</span></span>
+                        <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span id="@eventItem.Id" data-like="@eventItem.Likes" class="text-result"> @eventItem.Likes pessoas</span></span>
                         
             </div>
             <div class="texts-containers">
