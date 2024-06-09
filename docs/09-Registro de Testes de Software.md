@@ -7,16 +7,15 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 
 
-| **Caso de Teste**  | **CT-01 – Cadastrar perfil**  |
+| **CT-01 – Cadastrar perfil**  | 
 |:---: |:---: |
 | **RF-01 - O usuário poderá se cadastrar no sistema.** |
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/4d26070c-85a2-408c-8173-082ba214fda1
 | **O cadastro do perfil foi realizado com sucesso.** |
 
-
  
 
-| **Caso de Teste**  | **CT-02 – Efetuar login**  |
+| **CT-02 – Efetuar login**  |
 |:---: |:---: |
 | **RF-02 - O usuário poderá fazer a autenticação (login).** |
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
@@ -24,10 +23,74 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-
 
 
 
+| **CT-03 – Editar perfil**  |
+|:---: |:---: |
+| **RF-03 - O usuário poderá editar seu perfil** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O perfil foi editado com sucesso.** |
+
+
+
+| **CT-04 – Apagar perfil**  |
+|:---: |:---: |
+| **RF-04 - A aplicação deve possuir opção de apagar o perfil do usuário.** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O perfil foi excluído com sucesso.** |
+
+
+
+| **CT-05 – Visualizar eventos**  |
+|:---: |:---: |
+| **RF-05 - O usuário poderá visualizar todos os eventos disponíveis ativos** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **Os eventos aparecerem para o usuário visualizar.** |
+
+
+
+| **CT-06 – Filtrar eventos.**  |
+|:---: |:---: |
+| **RF-06 - O usuário poderá buscar por eventos de forma segmentada.** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **Eventos filtrados com sucesso.** |
+
+
+
+| **CT-07 – Criar eventos**  |
+|:---: |:---: |
+| **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O evento foi criado com sucesso.** |
+
+
+
+| **CT-08 – Editar eventos**  |
+|:---: |:---: |
+| **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O evento foi editado com sucesso.** |
+
+
+
+| **CT-09 – Apagar eventos**  |
+|:---: |:---: |
+| **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O evento foi apagado com sucesso.** |
+
+
+
+| **CT-10 – Curtir evento**  |
+|:---: |:---: |
+| **RF-08 - Os usuários poderão dar “like” nos eventos.** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91
+| **O evento foi curtido com sucesso.** |
+
+
+
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os testes realizados foram bem-sucedidos, com todos os objetivos atingidos de maneira satisfatória. O planejamento e os esforços investidos trouxeram resultados positivos e promissores.
 
 > **Links Úteis**:
 >
