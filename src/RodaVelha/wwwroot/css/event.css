@@ -1,0 +1,59 @@
+:root {
+    --cor-1: #6a6f4c;
+    --cor-2: #cbb89d;
+    --cor-3: #ede1d2;
+    --cor-4: #806044;
+    --cor-5: #412f26;
+    --cor-6: #806044;
+    --cor-7: #562916;
+}
+
+.card {
+    max-width: 1200px;
+    background-color: var(--cor-2);
+}
+
+.secondary-1 {
+    background-color: #806044;
+    border: none;
+}
+
+.secondary-2 {
+    background-color: #412f26;
+    border: none;
+}
+
+.btn {
+    line-height: 0;
+    padding: 18px;
+}
+
+.btn-check {
+    background-color: var(--cor-1);
+}
+
+.btn-primary {
+    border-color: var(--cor-7);
+    background-color: var(--cor-7);
+}
+
+.btn-primary:hover {
+    border-color: var(--cor-5);
+    background-color: var(--cor-5);
+}
+
+.btn-secondary {
+    border-color: var(--cor-6);
+    background-color: var(--cor-6);
+}
+
+.btn-secondary:hover {
+    border-color: var(--cor-5);
+    background-color: var(--cor-5);
+}
+
+#formulario i {
+    font-size: 15px;
+}
+
+

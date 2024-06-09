@@ -1,67 +1,68 @@
 ﻿@model RodaVelha.Models.Events
 
 @{
-    ViewData["Title"] = "Criar";
+    ViewData["Title"] = "Criar Evento";
 }
 
-<h1 class="mb-4">Criar</h1>
+<link rel="stylesheet" href="~/css/event.css?v=3" />
 
-<h4 class="mb-3">Evento</h4>
-<hr />
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <form asp-action="Create" enctype="multipart/form-data" class="needs-validation" novalidate>
-            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-            <div class="mb-3">
-                <label asp-for="Name" class="form-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Description" class="form-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="StartDate" class="form-label"></label>
-                <input asp-for="StartDate" type="datetime-local" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
-                <span asp-validation-for="StartDate" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="EndDate" class="form-label"></label>
-                <input asp-for="EndDate" type="datetime-local" class="form-control" />
-                <span asp-validation-for="EndDate" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Location" class="form-label"></label>
-                <input asp-for="Location" class="form-control" />
-                <span asp-validation-for="Location" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Organizer" class="form-label"></label>
-                <input asp-for="Organizer" class="form-control" />
-                <span asp-validation-for="Organizer" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Phone" class="form-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Photo" class="form-label"></label>
-                <input asp-for="Photo" type="file" class="form-control" />
-                <span asp-validation-for="Photo" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <input type="submit" value="Criar" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="m-5">
+    <div class="row justify-content-center">
+        <h2 class="mt-5 mb-3 d-flex">Criar Evento</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="card col">
+            <form asp-action="Create" enctype="multipart/form-data" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="StartDate" class="form-label"></label>
+                    <input asp-for="StartDate" type="datetime-local" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="EndDate" class="form-label"></label>
+                    <input asp-for="EndDate" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Location" class="form-label"></label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Organizer" class="form-label"></label>
+                    <input asp-for="Organizer" class="form-control" />
+                    <span asp-validation-for="Organizer" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Photo" class="form-label"></label>
+                    <input asp-for="Photo" type="file" class="form-control" />
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button asp-action="Index" class="btn btn-secondary mr-2">Voltar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div class="mt-3">
-    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
