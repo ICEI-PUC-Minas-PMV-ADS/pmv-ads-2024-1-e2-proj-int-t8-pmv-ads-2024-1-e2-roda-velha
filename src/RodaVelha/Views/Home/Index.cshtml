@@ -2,109 +2,77 @@
     ViewData["Title"] = "Home Page";
 }
 
-<link rel="stylesheet" href="~/css/home.css" />
+<link rel="stylesheet" href="~/css/home.css" /> 
 
 <body>
-  <main class="container" id="mainContent">
-    <div class="section section-1 mt-5">
-      <div class="card rounded-5 pb-4">
-        <div class="row title">
-          <div class="col-12 text-center mt-5">
-            <h1 class="text-white px-2">Roda Velha</h1>
-            <h6 class="text-white px-2">Encontrar seu estilo nunca foi tão fácil</h6>
-          </div>
-        </div>
+  <main class="container mb-5" id="mainContent">
 
-        <div class="row">
-          <div class="col-12 mt-3">
-            <div id="carouselExampleCaptions" class="carousel slide px-3" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
-
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./1.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-block">
-                    <h5>blabla</h5>
-                    <p>blablablabla
-                      <br> blablabla
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./2.jpg" class="d-block w-100" alt=" ...">
-                  <div class="carousel-caption d-block">
-                    <h5>blebleble</h5>
-                    <p>blebleblebleblebleblebleble</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./3.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-block">
-                    <h5>rosarosarosa</h5>
-                    <p>rosarosarosa
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="~/assets/images/home/image-test-1.webp" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="~/assets/images/home/image-test-2.webp" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="~/assets/images/home/image-test-3.webp" alt="Third slide">
             </div>
           </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+
+    <section class="section-2">
+      <div class="section-2-container" >
+        <img src="~/assets/images/home/logo-home.png" alt="Logo roda velha" class="first-image-section-2">
+        <p>
+          Bem-vindo ao nosso site, o ponto de encontro ideal para entusiastas e colecionadores de carros antigos! Nosso objetivo é reunir apaixonados por veículos clássicos em um espaço único, onde a história automotiva ganha vida. Aqui, organizadores podem criar e divulgar eventos exclusivos, proporcionando uma experiência memorável para todos os participantes. Explore uma vasta gama de encontros e exposições, conhecendo datas, locais e detalhes de cada evento. Conecte-se com outros amantes dessa fascinante cultura, inspire-se com histórias de colecionadores e descubra eventos imperdíveis. Junte-se à nossa comunidade e celebre a beleza e a história dos carros antigos conosco! e mantenha viva a paixão pelos clássicos! 
+        </p>
       </div>
-    </div>
+      <img src="~/assets/images/home/convertible-car-bro.svg" alt="Logo roda velha" class="second-image-section-2">
+    </section>
 
-    <div class="section section-2">
-      <div class="row text-center">
-        <h3 class="text-white">QUEM SOMOS?</h3>
-        <div class="col-lg-8 col-md-8 col-sm-12 mt-sm-2 mt-md-3">
-            <h5 class="pb-1">Bem-vindo ao mundo encantador dos carros clássicos! 
-              <br> <p> <br> Nosso site é o destino perfeito para entusiastas de automóveis antigos que procuram explorar a beleza atemporal e a nostalgia desses veículos icônicos. </p>
-              <br> <p> Aqui, você encontrará uma variedade de eventos emocionantes, reunindo apaixonados por carros antigos de todas as idades.
-                Desde encontros informais em belas paisagens até grandes exposições dedicadas aos modelos mais raros e preciosos, nossos eventos de encontro de carros antigos oferecem uma experiência única para todos os fãs de automobilismo. </p>
-                <br> <p> Você terá a oportunidade de admirar de perto uma impressionante coleção de veículos clássicos, trocar histórias e conhecimentos com outros entusiastas e mergulhar na atmosfera única dessas celebrações automotivas.  </p>
-              <br> <p>Se você é um proprietário de um carro antigo, este é o lugar perfeito para exibir sua preciosidade e compartilhar sua paixão com outros aficionados. E mesmo se você ainda não tiver um carro clássico, não se preocupe! Todos são bem-vindos para se juntar à comunidade e apreciar a beleza intemporal dessas máquinas históricas. </p>
-              <br> <p> Prepare-se para uma viagem no tempo e embarque conosco nesta jornada fascinante pelo mundo dos carros antigos. Esperamos vê-lo em nossos próximos eventos!</h5></p></p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
-          <div class="card rounded-5 card-QUEMSOMOS">
-            <img src="./convertible car-bro.svg" class="rounded-5 pb-2" alt="...">
-          </div>
-        </div>
-      </div>
+    <a class="btn-default" asp-controller="Events" asp-action="Create">
+      <span>+ CRIAR EVENTO</span>
+    </a>
 
-      <div class="row mt-4">
-        <div class="col text-center">
-          <a href=".xxxxxxx" class="btn btn-secondary">+ Criar evento</a> <!-- alterar aqui o comando de criar evento-->
-        </div>
-      </div>
-    </div>
-
-    <div class="section section-3">
-      <h3 class="text-white text-center">Eventos realizados anteriormente</h3>
-
-    @foreach (var eventItem in Model)
-    {
-        <div class="card text-center rounded-5 mt-sm-2 mt-md-3">
-            <div class="row">
-            <div class="col-12 mt-3">
-              <img src="@eventItem.Photo" alt="">
-               <h5 class="mt-4">@eventItem.Name</h5>
-               <p class="mt-2 mx-2">@eventItem.Description
-                @eventItem.StartDate
-                @eventItem.EndDate
-                @eventItem.Location
-                @eventItem.Organizer
-                @eventItem.Phone
-                </p> <!-- primeiro evento -->
-              </div>
+      @foreach (var eventItem in Model)
+      {
+        <div class="card-event">
+          <div class="card-header">
+            <div class="header-perfil">
+              <img class="perfil-image" src="https://static.vecteezy.com/ti/vetor-gratis/p3/3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor.jpg" alt="Imagem de perfil" />
+              <span class="text-organize" >@eventItem.Organizer</span>
             </div>
+            <span class="text-name">@eventItem.Name</span>
+          </div>
+          <img src="@eventItem.Photo" alt="" class="img-event">
+          <div class="card-info">
+            <div>
+              <span class="text-tag">Organizador: </span>
+              <span>@eventItem.Organizer</span>
+            </div>
+            <div class="texts-containers">
+              <span class="text-tag">Data do evento: <span class="text-result">@eventItem.StartDate a @eventItem.EndDate</span></span>
+              <span class="text-tag">Hora de início: <span class="text-result">@eventItem.StartDate</span></span>
+              <span class="text-tag">Local: <span class="text-result">@eventItem.Location</span></span>
+              <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Phone</span></span>
+            </div>
+          </div>
+          <p class="text-description">@eventItem.Description</p>
         </div>
-    }
-    </div>
+      }
+      </main>
 </body>
