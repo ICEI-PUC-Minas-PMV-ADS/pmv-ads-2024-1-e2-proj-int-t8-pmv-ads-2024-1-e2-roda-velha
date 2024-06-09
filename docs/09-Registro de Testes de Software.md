@@ -6,8 +6,12 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | **Caso de Teste**  | **CT-01 – Cadastrar perfil**  |
 |:---: |:---: |
-| Requisito Associado  | RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-|Registro de evidência | <www.teste.com.br/drive/ct-01> |
+| Requisito Associado  | RF-01 - O usuário poderá se cadastrar no sistema. |
+|Registro de evidência |
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/09b00ed4-51b2-49b4-8375-70471fdd69c4
+
+  |
 
 | **Caso de Teste**  | **CT-02 – Realizar login**  |
 |:---: |:---: |
