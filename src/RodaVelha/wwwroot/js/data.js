@@ -43,7 +43,7 @@
                 }
             }
             req.send("id=" + encodeURIComponent(eventId));
-
+            $('#exampleModal').modal('hide')
         });
 
 
@@ -51,3 +51,10 @@
 
     });
 })
+function openModal(id) {
+    if (id != null) {
+        var element = document.getElementById("removeEvent");
+        element.setAttribute("data-id", id);
+        $('#exampleModal').modal('show');
+    }
+}
