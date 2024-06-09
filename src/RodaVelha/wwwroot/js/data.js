@@ -43,7 +43,7 @@
                 }
             }
             req.send("id=" + encodeURIComponent(eventId));
-            $('#exampleModal').modal('hide')
+           // $('#exampleModal').modal('hide')
         });
 
 
