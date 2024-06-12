@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using RodaVelha.Services;
 
 namespace RodaVelha.Controllers
 {
+    [Authorize]
     public class EventsController : Controller
     {
         private readonly RodaVelhaContext _context;
