@@ -83,7 +83,7 @@ namespace RodaVelha.Controllers
 
                 _context.Add(@event);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), nameof(UsersController));
             }
             catch (Exception ex)
             {

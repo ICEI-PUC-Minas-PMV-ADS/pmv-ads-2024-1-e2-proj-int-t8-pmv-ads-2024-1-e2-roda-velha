@@ -29,7 +29,7 @@ public class Events
     public string? Organizer { get; set; }
     
     public int Likes { get; set; }
-    
+    [Required(ErrorMessage ="A capa do evento é obrigatória.")]
     [Display(Name ="Capa")]    
     public required string Photo { get; set; }
     
