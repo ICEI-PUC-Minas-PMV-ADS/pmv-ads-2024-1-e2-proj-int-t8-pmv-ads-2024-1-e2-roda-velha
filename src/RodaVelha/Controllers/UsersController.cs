@@ -183,6 +183,113 @@ namespace RodaVelha.Controllers
 
         }
 
+        // GET: Users/Reports
+        public async Task<IActionResult> Report2() //Lista apenas os eventos ativos.
+        {
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if (usuarioLogadoId == -1)
+                return NotFound();
+
+
+            var events = _context.Events.Where(p => p.UserId == usuarioLogadoId).ToList();
+
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+
+            var query = from eventos in _context.Events
+                        where eventos.UserId == usuarioLogadoId
+                            && eventos.EndDate >= DateTime.UtcNow
+                        orderby eventos.EndDate descending
+                        select eventos;
+
+
+            /*var query = from eventos in _context.Events
+                        join like in _context.Likes on eventos.Id equals like.EventId
+                        where like.UserId == usuarioLogadoId
+                        orderby eventos.EndDate descending
+                        select eventos;*/
+
+            var eventlist = query.ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                events = events,
+                user = user!,
+                eventsLike = eventlist,
+            };
+
+
+            return View(viewModel);
+
+        }
+        public async Task<IActionResult> Report3() //Lista apenas os eventos ativos.
+        {
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if (usuarioLogadoId == -1)
+                return NotFound();
+
+
+            var events = _context.Events.Where(p => p.UserId == usuarioLogadoId).ToList();
+
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+
+            var query = from eventos in _context.Events
+                        where eventos.UserId == usuarioLogadoId
+                            && eventos.EndDate < DateTime.UtcNow
+                        orderby eventos.EndDate descending
+                        select eventos;
+
+
+            /*var query = from eventos in _context.Events
+                        join like in _context.Likes on eventos.Id equals like.EventId
+                        where like.UserId == usuarioLogadoId
+                        orderby eventos.EndDate descending
+                        select eventos;*/
+
+            var eventlist = query.ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                events = events,
+                user = user!,
+                eventsLike = eventlist,
+            };
+
+
+            return View(viewModel);
+
+        }
+
+        public async Task<IActionResult> Report4() //Lista apenas os eventos ativos.
+        {
+            var usuarioLogadoId = obterUsuarioLogadoId();
+            if (usuarioLogadoId == -1)
+                return NotFound();
+
+
+            var events = _context.Events.Where(p => p.UserId == usuarioLogadoId).ToList();
+
+            var user = _context.Users.FirstOrDefault(u => u.ID == usuarioLogadoId);
+
+            var query = from eventos in _context.Events
+                        where eventos.UserId == usuarioLogadoId
+                        join like in _context.Likes on eventos.Id equals like.EventId into likesGroup
+                        orderby likesGroup.Count() descending, eventos.EndDate descending
+                        select eventos;
+
+            var eventlist = query.ToList();
+
+            var viewModel = new UserPageViewModel
+            {
+                events = events,
+                user = user!,
+                eventsLike = eventlist,
+            };
+
+
+            return View(viewModel);
+
+        }
+
         // POST: Users/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.

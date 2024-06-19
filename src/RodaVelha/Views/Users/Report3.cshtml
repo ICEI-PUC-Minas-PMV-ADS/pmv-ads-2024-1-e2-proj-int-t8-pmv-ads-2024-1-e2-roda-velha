@@ -1,0 +1,63 @@
+﻿@model RodaVelha.ViewModels.UserPageViewModel
+
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Perfil";
+    var name = User.FindFirstValue(ClaimTypes.Name);
+    var email = User.FindFirstValue(ClaimTypes.Email);
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+
+
+<div id="main-report">
+    <header>
+        <div class="d-flex">
+            <img src="~/assets/images/logo.png" alt="Logo da Empresa" style="width:50px; ">
+            <h1>RodaVelha</h1>
+        </div>
+        <p>Nome do Usuário: @name</p>
+        <p>E-mail do Usuário: @email</p>
+        <p>Data de Cadastro: @Model.user.CreatedDate.ToString("dd/mm/yyyy")</p>
+    </header>
+
+    <h1 style="text-align: center;">Eventos Cadastrados Encerrados:</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID do Evento</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de Início</th>
+                <th scope="col">Data de Término</th>
+                <th scope="col">Localização</th>
+                <th scope="col">Organizador</th>
+                <th scope="col">Likes</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.eventsLike)
+            {
+                <tr>
+                    <td scope="row">@item.Id</td>
+                    <td scope="row">@item.Name</td>
+                    <td scope="row">@item.Description</td>
+                    <td scope="row">@item.StartDate</td>
+                    <td scope="row">@item.EndDate</td>
+                    <td scope="row">@item.Location</td>
+                    <td scope="row">@item.Organizer</td>
+                    <td scope="row">@item.Likes</td>
+                    <td scope="row">@item.Phone</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+
+</div><a class="btn btn-custom mt-1" onclick="window.print()">IMPRIMIR</a>
+
