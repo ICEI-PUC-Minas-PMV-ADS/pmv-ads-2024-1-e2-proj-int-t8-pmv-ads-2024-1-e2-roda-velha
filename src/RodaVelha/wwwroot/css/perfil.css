@@ -92,3 +92,10 @@ img.icon_h1{
     margin: 1%;
 }
 
+@media print{
+
+    #main-report {
+        margin:0px;
+    }
+
+}
