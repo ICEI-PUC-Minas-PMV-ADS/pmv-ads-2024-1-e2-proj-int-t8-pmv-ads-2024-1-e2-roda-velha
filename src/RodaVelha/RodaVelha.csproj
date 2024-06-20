@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\assets\images\logo.png" />
+    <Content Remove="wwwroot\js\utils.js" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlack.otf" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlackItalic.otf" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikBold.otf" />
@@ -33,6 +34,10 @@
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikSuperItalic.otf" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikThin.otf" />
     <Content Remove="wwwroot\NewFolder\Graphik-Font-Family\GraphikThinItalic.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\utils.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +61,7 @@
     <None Include="wwwroot\assets\images\winsta.png" />
     <None Include="wwwroot\assets\images\wwpp.png" />
     <None Include="wwwroot\assets\images\wx.png" />
+    <None Include="wwwroot\js\utils.js" />
     <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlack.otf" />
     <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBlackItalic.otf" />
     <None Include="wwwroot\NewFolder\Graphik-Font-Family\GraphikBold.otf" />

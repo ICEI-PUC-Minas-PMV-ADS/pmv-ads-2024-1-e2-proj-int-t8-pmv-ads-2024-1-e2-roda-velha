@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Roda Velha
+authors:
+    - family-names: Cunha Garcia Romero
+      given-names: Aleksander
+    - family-names: Silva Gomes
+      given-names: Anderson
+    - family-names: Andrade Simões
+      given-names: Arthur
+    - family-names: Eduardo de Pádua Ribeiro
+      given-names: Átila
+    - family-names: Aparecida de Araújo
+      given-names: Gabriela
+    - family-names: Santana Ballestrini de Oliveira
+      given-names: Víctor
+    - name-suffix: Professor
+      affiliation: PUC Minas
+      family-names: Paiva Tizzo
+      given-names: Neil
+keywords:
+    - Roda
+    - Velha
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha
+version: 1.0.0
+date-released: 2024-06-19

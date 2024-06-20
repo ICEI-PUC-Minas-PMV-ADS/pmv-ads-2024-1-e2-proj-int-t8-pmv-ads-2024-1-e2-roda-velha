@@ -58,7 +58,7 @@ body{
 .btn-custom {
     
     height: 2.5rem;
-    color: #ffffff;
+    color: white;
     font-weight: 500;
     border-radius: 2rem;
     cursor: pointer;
@@ -90,4 +90,9 @@ img.icon_h1{
 #main-report{
     background-color: white;
     margin: 1%;
+}
+
+#combo-report {
+    margin-top: 50px;
+
 }

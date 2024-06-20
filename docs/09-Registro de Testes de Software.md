@@ -7,55 +7,106 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 
 
-| **CT-01 – Cadastrar perfil**  | 
+| **Caso de Teste**  | **CT-01 – Cadastrar perfil**  |
 |:---: |:---: |
-| **Requisito Associado**  | **RF-01 - O usuário poderá se cadastrar no sistema.** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/4d26070c-85a2-408c-8173-082ba214fda1)  | **O cadastro do perfil foi realizado com sucesso.** |
+| Requisito Associado  | RF-01 - O usuário poderá se cadastrar no sistema. |
+| Objetivo do Teste  | Verificar se o usuário consegue se cadastrar na aplicação. |
 
-| **CT-02 – Efetuar login**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-02 - O usuário poderá fazer a autenticação (login).** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O login foi realizado com sucesso.** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/518bc1bd-36c7-4755-aac4-9a4cdcfb6dd6
 
-| **CT-03 – Editar perfil**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-03 - O usuário poderá editar seu perfil** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O perfil foi editado com sucesso.** |
+<br>
 
-| **CT-04 – Apagar perfil**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-04 - A aplicação deve possuir opção de apagar o perfil do usuário.** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O perfil foi excluído com sucesso.** |
 
-| **CT-05 – Visualizar eventos**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-05 - O usuário poderá visualizar todos os eventos disponíveis ativos** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **Os eventos aparecerem para o usuário visualizar.** |
 
-| **CT-06 – Filtrar eventos**  |
+| **Caso de Teste**  | **CT-02 – Efetuar login**  |
 |:---: |:---: |
-| **Requisito Associado**  | **RF-06 - O usuário poderá buscar por eventos de forma segmentada.** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **Eventos filtrados com sucesso.** |
+| Requisito Associado  | RF-02 - O usuário poderá fazer a autenticação (login). |
+| Objetivo do Teste  | Verificar se o usuário consegue realizar login. |
 
-| **CT-07 – Criar eventos**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O evento foi criado com sucesso.** |
 
-| **CT-08 – Editar eventos**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O evento foi editado com sucesso.** |
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/28fd92d7-8ec8-4155-b7cc-283e4ddf62d3
 
-| **CT-09 – Apagar eventos**  |
-|:---: |:---: |
-| **Requisito Associado**  | **RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O evento foi apagado com sucesso.** |
 
-| **CT-10 – Curtir evento**  |
+
+<br>
+
+| **Caso de Teste**  | **CT-03 – Editar perfil**  |
 |:---: |:---: |
-| **Requisito Associado**  | **RF-08 - Os usuários poderão dar “like” nos eventos.** |
-| [Vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/e0995d2f-89f8-4eec-b6b9-a922e60fab91)  | **O evento foi curtido com sucesso.** |
+| Requisito Associado  | RF-03 - O usuário poderá editar seu perfil |
+| Objetivo do Teste  | Verificar se o usuário consegue editar seu próprio perfil.|
+
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/39f5d3e1-299c-4966-84f8-f4568a02a0d9
+
+
+<br>
+
+| **Caso de Teste**  | **CT-04 – Apagar perfil**  |
+|:---: |:---: |
+| Requisito Associado  | RF-04 - A aplicação deve possuir opção de apagar o perfil do usuário. |
+| Objetivo do Teste  | Verificar se o usuário consegue apagar seu próprio perfil. |
+
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/137177277/1c547004-7ff0-47b6-ae59-9b05e4a7b581
+
+
+
+<br>
+
+| **Caso de Teste**  | **CT-05 – Visualizar eventos**  |
+|:---: |:---: |
+| Requisito Associado  | RF-05 - O usuário poderá visualizar todos os eventos disponíveis ativos |
+| Objetivo do Teste  | Verificar se o usuário consegue visualizar os eventos. |
+
+
+
+
+<br>
+
+| **Caso de Teste**  | **CT-06 – Filtrar eventos.**  |
+|:---: |:---: |
+| Requisito Associado  | RF-06 - O usuário poderá buscar por eventos de forma segmentada. |
+| Objetivo do Teste  | Verificar se o usuário consegue filtrar eventos por data, local e mais recentes. |
+
+
+
+<br>
+
+| **Caso de Teste**  | **CT-07 – Criar eventos**  |
+|:---: |:---: |
+| Requisito Associado  | RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos |
+| Objetivo do Teste  | Verificar se o usuário cadastrado consegue criar eventos. |
+
+
+
+<br>
+
+| **Caso de Teste**  | **CT-08 – Editar eventos**  |
+|:---: |:---: |
+| Requisito Associado  | RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos |
+| Objetivo do Teste  | Verificar se o usuário consegue editar os eventos criados por ele. |
+
+
+
+<br>
+
+| **Caso de Teste**  | **CT-09 – Apagar eventos**  |
+|:---: |:---: |
+| Requisito Associado  | RF-07 - O usuário cadastrado no sistema poderá criar, editar e excluir eventos. |
+| Objetivo do Teste  | Verificar se o usuário consegue apagar os eventos criados por ele. |
+
+
+<br>
+
+| **Caso de Teste**  | **CT-10 – Curtir evento**  |
+|:---: |:---: |
+| Requisito Associado  | RF-08 - Os usuários poderão dar “like” nos eventos. |
+| Objetivo do Teste  | Verificar se o usuário consegue curtir o evento . |
+
+
+
+<br>
+
 
 ## Avaliação
 

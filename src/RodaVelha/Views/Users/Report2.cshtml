@@ -9,6 +9,27 @@
     var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 }
 
+<link rel="stylesheet" href="~/css/perfil.css" />
+
+
+<div class="d-flex justify-content-center">
+    <h1 class="mx-auto ">Relatório</h1>
+</div>
+
+<div class="text-center d-print-none" id="combo-report">
+       <select id="pageSelect" onchange="navigateToPage()">
+        <option value="">Selecione um Relatório</option>
+        <option value="@Url.Action("Report", "Users")">Todos os eventos cadastrados e likes</option>
+        <option value="@Url.Action("Report2", "Users")">Eventos Cadastrados Ativos</option>
+        <option value="@Url.Action("Report3", "Users")">Eventos Cadastrados Encerrados</option>
+        <option value="@Url.Action("Report4", "Users")">Eventos com mais Likes</option>
+    </select>
+</div>
+
+<div class="d-flex justify-content-end" style="margin-right: 20px; cursor:pointer">
+    <a class="mt-1 d-print-none  " onclick="window.print()">IMPRIMIR</a>
+</div>
+
 
 <div id="main-report">
     <header>
@@ -59,5 +80,5 @@
 
    
 
-</div><a class="btn btn-custom mt-1" onclick="window.print()">IMPRIMIR</a>
+
 
