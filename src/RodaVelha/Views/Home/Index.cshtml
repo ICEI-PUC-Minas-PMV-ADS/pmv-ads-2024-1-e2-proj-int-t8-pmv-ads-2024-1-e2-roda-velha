@@ -75,8 +75,8 @@
             </div>
            
             <div class="texts-containers">
-                        <span class="text-tag">Data do evento: <span class="text-result">@eventItem.Event.StartDate a @eventItem.Event.EndDate</span></span>
-                        <span class="text-tag">Hora de início: <span class="text-result">@eventItem.Event.StartDate</span></span>
+                        <span class="text-tag">Data do evento: <span class="text-result">@eventItem.Event.StartDate.ToString("dd/M/yyyy") a @eventItem.Event.EndDate</span></span>
+                        <span class="text-tag">Hora de início: <span class="text-result">@eventItem.Event.StartDate.ToString("HH:mm")</span></span>
                         <span class="text-tag">Local: <span class="text-result">@eventItem.Event.Location</span></span>
             </div>
           </div>
