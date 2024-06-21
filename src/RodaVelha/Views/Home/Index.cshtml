@@ -62,6 +62,7 @@
           <div class="card-info">
               <div class="texts-containers">
                         <span class="text-tag">Organizador: <span class="text-result">@eventItem.Organizer</span></span>
+                        <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Phone</span></span>
 
                         <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span id="@eventItem.Id" data-like="@eventItem.Likes" class="text-result"> @eventItem.Likes pessoas</span></span>
                         
@@ -70,7 +71,6 @@
               <span class="text-tag">Data do evento: <span class="text-result">@eventItem.StartDate a @eventItem.EndDate</span></span>
               <span class="text-tag">Hora de início: <span class="text-result">@eventItem.StartDate</span></span>
               <span class="text-tag">Local: <span class="text-result">@eventItem.Location</span></span>
-              <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Phone</span></span>
             </div>
           </div>
           <p class="text-description">@eventItem.Description</p>
