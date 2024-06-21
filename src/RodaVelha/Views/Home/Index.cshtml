@@ -1,4 +1,5 @@
-﻿@{
+﻿@model RodaVelha.ViewModels.HomePageViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -48,13 +49,16 @@
       <span>+ CRIAR EVENTO</span>
     </a>
 
-      @foreach (var eventItem in Model)
+      @foreach (var eventItem in Model.events)
       {
         <div class="card-event">
           <div class="card-header">
             <div class="header-perfil">
-              <img class="perfil-image" src="https://static.vecteezy.com/ti/vetor-gratis/p3/3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor.jpg" alt="Imagem de perfil" />
-              <span class="text-organize" >@eventItem.Organizer</span>
+              
+               <img class="perfil-image" src="https://static.vecteezy.com/ti/vetor-gratis/p3/3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor.jpg" alt="Imagem de perfil" />
+                       
+               
+               <span class="text-organize" >@eventItem.Organizer</span>
             </div>
             <span class="text-name">@eventItem.Name</span>
           </div>

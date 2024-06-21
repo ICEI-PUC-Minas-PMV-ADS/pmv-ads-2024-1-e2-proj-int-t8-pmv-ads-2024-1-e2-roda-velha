@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RodaVelha.Data;
 using RodaVelha.Models;
+using RodaVelha.ViewModels;
 using System.Diagnostics;
 
 namespace RodaVelha.Controllers
@@ -18,8 +19,14 @@ namespace RodaVelha.Controllers
 
         public async Task<IActionResult> Index()
         {
+            var users = await _context.Users.ToListAsync();
             var events = await _context.Events.ToListAsync();
-            return View(events);
+            var viewModel = new HomePageViewModel
+            {
+                users = users,
+                events = events
+            };
+            return View(viewModel);
         }
 
         public IActionResult Privacy()
