@@ -68,8 +68,8 @@
                        
                         <span class="text-tag">Organizador: <span class="text-result">@eventItem.Event.Organizer</span></span>
                         <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Event.Phone</span></span>
-                        
-                        <span class="text-tag"><a style="cursor:pointer"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span class="text-result"> @eventItem.Event.Likes pessoas</span></span>
+
+                        <span class="text-tag "><a style="cursor:pointer"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span class="text-result" id="@eventItem.Event.Id" data-like="@eventItem.Event.Likes"> @eventItem.Event.Likes pessoas</span></span>
                         
 
             </div>
@@ -81,7 +81,7 @@
             </div>
           </div>
                 <p class="text-description">@eventItem.Event.Description</p>
-                <p class="btnLike likeButton" style="cursor:pointer" data-event-id="@eventItem.Event.Id" id="@eventItem.Event.Id" data-like="@eventItem.Event.Likes"><i class="fa-regular fa-thumbs-up"></i> Curtir</p>
+                <p class="btnLike likeButton" style="cursor:pointer" data-event-id="@eventItem.Event.Id"  ><i class="fa-regular fa-thumbs-up"></i> Curtir</p>
         </div>
       }
       </main>
