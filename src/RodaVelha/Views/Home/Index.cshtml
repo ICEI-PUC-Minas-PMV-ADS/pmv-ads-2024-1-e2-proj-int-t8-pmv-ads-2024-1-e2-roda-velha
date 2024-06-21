@@ -1,4 +1,4 @@
-﻿@model RodaVelha.ViewModels.HomePageViewModel
+﻿@model IEnumerable<RodaVelha.ViewModels.HomePageViewModel>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -49,7 +49,7 @@
       <span>+ CRIAR EVENTO</span>
     </a>
 
-      @foreach (var eventItem in Model.events)
+      @foreach (var eventItem in Model)
       {
         <div class="card-event">
           <div class="card-header">
@@ -58,26 +58,26 @@
                <img class="perfil-image" src="https://static.vecteezy.com/ti/vetor-gratis/p3/3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor.jpg" alt="Imagem de perfil" />
                        
                
-               <span class="text-organize" >@eventItem.Organizer</span>
+               <span class="text-organize" >@eventItem.Event.Organizer</span>
             </div>
-            <span class="text-name">@eventItem.Name</span>
+                    <span class="text-name">@eventItem.Event.Name</span>
           </div>
-          <img src="@eventItem.Photo" alt="" class="img-event">
+                <img src="@eventItem.Event.Photo" alt="" class="img-event">
           <div class="card-info">
               <div class="texts-containers">
-                        <span class="text-tag">Organizador: <span class="text-result">@eventItem.Organizer</span></span>
-                        <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Phone</span></span>
+                        <span class="text-tag">Organizador: <span class="text-result">@eventItem.Event.Organizer</span></span>
+                        <span class="text-tag">WhatsApp: <span class="text-result">@eventItem.Event.Phone</span></span>
 
-                        <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span id="@eventItem.Id" data-like="@eventItem.Likes" class="text-result"> @eventItem.Likes pessoas</span></span>
+                        <span class="text-tag"><a class="likeButton" style="cursor:pointer" data-event-id="@eventItem.Event.Id"><i class="fa-solid fa-thumbs-up"></i></a> Curtido por:<span id="@eventItem.Event.Id" data-like="@eventItem.Event.Likes" class="text-result"> @eventItem.Event.Likes pessoas</span></span>
                         
             </div>
             <div class="texts-containers">
-              <span class="text-tag">Data do evento: <span class="text-result">@eventItem.StartDate a @eventItem.EndDate</span></span>
-              <span class="text-tag">Hora de início: <span class="text-result">@eventItem.StartDate</span></span>
-              <span class="text-tag">Local: <span class="text-result">@eventItem.Location</span></span>
+                        <span class="text-tag">Data do evento: <span class="text-result">@eventItem.Event.StartDate a @eventItem.Event.EndDate</span></span>
+                        <span class="text-tag">Hora de início: <span class="text-result">@eventItem.Event.StartDate</span></span>
+                        <span class="text-tag">Local: <span class="text-result">@eventItem.Event.Location</span></span>
             </div>
           </div>
-          <p class="text-description">@eventItem.Description</p>
+                <p class="text-description">@eventItem.Event.Description</p>
         </div>
       }
       </main>

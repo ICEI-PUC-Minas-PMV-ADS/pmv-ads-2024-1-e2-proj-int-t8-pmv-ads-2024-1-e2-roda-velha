@@ -19,14 +19,15 @@ namespace RodaVelha.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var users = await _context.Users.ToListAsync();
-            var events = await _context.Events.ToListAsync();
-            var viewModel = new HomePageViewModel
-            {
-                users = users,
-                events = events
-            };
-            return View(viewModel);
+           var userEvents = await ( from user in _context.Users
+                                    join evt in _context.Events on user.ID equals evt.UserId
+                                     select new HomePageViewModel
+                                     {
+                                         User = user,
+                                         Event = evt
+                                     }).ToListAsync();
+
+            return View(userEvents);
         }
 
         public IActionResult Privacy()

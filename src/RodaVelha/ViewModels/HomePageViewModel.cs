@@ -4,7 +4,7 @@ namespace RodaVelha.ViewModels
 {
     public class HomePageViewModel
     {
-        public List<User> users { get; set; }
-        public List<Events> events { get; set; }
+        public User User { get; set; }
+        public Events Event { get; set; }
     }
 }
