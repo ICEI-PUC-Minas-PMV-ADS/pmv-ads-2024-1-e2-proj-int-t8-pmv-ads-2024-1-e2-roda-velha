@@ -59,20 +59,6 @@ body {
   }
 }
 
-.btnLike {
-    font-size: 1.2em !important;
-    position: absolute !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    margin-right: 10px !important;
-    width: 5em !important;
-    cursor: pointer !important;
-    border: 2px dashed !important;
-    border-color: black !important;
-    border-radius: 20px !important;
-    color: black !important;
-    padding: 0px 8px 0px 8px !important;
-}
 
 .section-2 {
   align-items: center;
@@ -229,3 +215,18 @@ body {
   margin-top: 2rem;
 }
 
+
+.btnLike {
+    font-size: 1.2em !important;
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    margin-right: 10px !important;
+    width: 5em !important;
+    cursor: pointer !important;
+    border: 2px dashed !important;
+    border-color: black !important;
+    border-radius: 20px !important;
+    color: black !important;
+    padding: 0px 8px 0px 8px !important;
+}
