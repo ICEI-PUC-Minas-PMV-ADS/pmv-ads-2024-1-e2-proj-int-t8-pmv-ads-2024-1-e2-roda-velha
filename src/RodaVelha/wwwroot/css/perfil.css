@@ -1,10 +1,11 @@
-    --background-color:#EDE1D2;
+:root {
+    --background-color: #EDE1D2;
     --button-color: #806044;
     --pannel-color: #CBB89D;
     --border-color: #412F26;
 }
 body{
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 .icon-remove{
     z-index: 1;

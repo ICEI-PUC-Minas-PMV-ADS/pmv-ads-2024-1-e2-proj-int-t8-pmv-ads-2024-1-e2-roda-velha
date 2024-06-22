@@ -14,9 +14,9 @@
 }
 
 body {
-  background-color: var(--background-color) !important;
-  overflow-x: hidden;
-  overflow-y: auto;
+    background-color: #ede1d2 !important;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .section {

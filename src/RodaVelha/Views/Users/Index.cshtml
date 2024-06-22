@@ -1,6 +1,5 @@
 ﻿@model RodaVelha.ViewModels.UserPageViewModel
 @using System.Security.Claims
-
 @{
     ViewData["Title"] = "Perfil";
     var name = User.FindFirstValue(ClaimTypes.Name);
