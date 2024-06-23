@@ -44,11 +44,24 @@
       </div>
       <img src="~/assets/images/home/convertible-car-bro.svg" alt="Logo roda velha" class="second-image-section-2">
     </section>
+        <div class="d-flex justify-content-between ">
+            <a class="btn-default left-content" asp-controller="Events" asp-action="Create">
+                <span>+ CRIAR EVENTO</span>
+            </a>
+            <form method="get" asp-action="Index" class="row align-items-end">
+                <div class="form-group col-md-7">
+                    <label for="state">Filtro: Segmentar por estado:</label>
+                    <select id="state" name="state" class="form-control" asp-items="ViewBag.States">
+                        <option value="">Todos</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <button type="submit" class="btn btn-default">Filtrar</button>
+                </div>
+            </form>
 
-    <a class="btn-default" asp-controller="Events" asp-action="Create">
-      <span>+ CRIAR EVENTO</span>
-    </a>
-
+    </div>
+    
       @foreach (var eventItem in Model)
       {
         <div class="card-event">

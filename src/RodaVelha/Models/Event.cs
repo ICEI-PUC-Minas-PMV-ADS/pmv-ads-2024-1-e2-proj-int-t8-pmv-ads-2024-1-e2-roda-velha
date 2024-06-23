@@ -28,7 +28,11 @@ public class Events
     
     [Display(Name ="Organizador")]    
     public string? Organizer { get; set; }
-    
+
+    [Required(ErrorMessage = "O Estado do evento é obrigatório.")]
+    [Display(Name = "Estado")]
+    public string State { get; set; }
+     
     public int Likes { get; set; }
 
     [Required(ErrorMessage = "A foto do evento de capa é obrigatória.")]

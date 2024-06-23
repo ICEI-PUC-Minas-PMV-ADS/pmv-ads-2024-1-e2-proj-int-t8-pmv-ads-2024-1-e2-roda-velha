@@ -36,6 +36,10 @@
   
                     <span asp-validation-for="EndDate" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <select asp-for="State" class="form-control" asp-items="ViewBag.States"></select>
+                </div>
                 <div class="mb-3">
                     <label asp-for="Location" class="form-label"></label>
                     <input asp-for="Location" class="form-control" value="@Model.Location" />

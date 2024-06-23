@@ -51,13 +51,14 @@ namespace RodaVelha.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
+            ViewBag.States = GetBrazilianStates();
             return View();
         }
 
         // POST: Events/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Description,StartDate,EndDate,Location,Organizer,Phone")] Events @event, IFormFile Photo)
+        public async Task<IActionResult> Create([Bind("Name,Description,StartDate,EndDate,Location,Organizer,Phone, State")] Events @event, IFormFile Photo)
         {
             try
             {
@@ -100,7 +101,7 @@ namespace RodaVelha.Controllers
             {
                 return NotFound();
             }
-
+            ViewBag.States = GetBrazilianStates();
             var @event = await _context.Events.FindAsync(id);
             if (@event == null)
             {
@@ -113,7 +114,7 @@ namespace RodaVelha.Controllers
         // POST: Events/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Phone, Photo, UserId, User, Likes")] Events @event, IFormFile Photo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Phone, Photo, UserId, User, Likes, State")] Events @event, IFormFile Photo)
         {
             if (id != @event.Id)
             {
@@ -218,5 +219,40 @@ namespace RodaVelha.Controllers
         {
             return _context.Events.Any(e => e.Id == id);
         }
+
+        private List<SelectListItem> GetBrazilianStates()
+        {
+            return new List<SelectListItem>
+        {
+            new SelectListItem { Value = "AC", Text = "Acre" },
+            new SelectListItem { Value = "AL", Text = "Alagoas" },
+            new SelectListItem { Value = "AP", Text = "Amapá" },
+            new SelectListItem { Value = "AM", Text = "Amazonas" },
+            new SelectListItem { Value = "BA", Text = "Bahia" },
+            new SelectListItem { Value = "CE", Text = "Ceará" },
+            new SelectListItem { Value = "DF", Text = "Distrito Federal" },
+            new SelectListItem { Value = "ES", Text = "Espírito Santo" },
+            new SelectListItem { Value = "GO", Text = "Goiás" },
+            new SelectListItem { Value = "MA", Text = "Maranhão" },
+            new SelectListItem { Value = "MT", Text = "Mato Grosso" },
+            new SelectListItem { Value = "MS", Text = "Mato Grosso do Sul" },
+            new SelectListItem { Value = "MG", Text = "Minas Gerais" },
+            new SelectListItem { Value = "PA", Text = "Pará" },
+            new SelectListItem { Value = "PB", Text = "Paraíba" },
+            new SelectListItem { Value = "PR", Text = "Paraná" },
+            new SelectListItem { Value = "PE", Text = "Pernambuco" },
+            new SelectListItem { Value = "PI", Text = "Piauí" },
+            new SelectListItem { Value = "RJ", Text = "Rio de Janeiro" },
+            new SelectListItem { Value = "RN", Text = "Rio Grande do Norte" },
+            new SelectListItem { Value = "RS", Text = "Rio Grande do Sul" },
+            new SelectListItem { Value = "RO", Text = "Rondônia" },
+            new SelectListItem { Value = "RR", Text = "Roraima" },
+            new SelectListItem { Value = "SC", Text = "Santa Catarina" },
+            new SelectListItem { Value = "SP", Text = "São Paulo" },
+            new SelectListItem { Value = "SE", Text = "Sergipe" },
+            new SelectListItem { Value = "TO", Text = "Tocantins" }
+        };
+        }
     }
+
 }

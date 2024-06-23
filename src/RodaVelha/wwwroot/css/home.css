@@ -230,3 +230,6 @@ body {
     color: black !important;
     padding: 0px 8px 0px 8px !important;
 }
+.state-select{
+    width:120px;
+}
