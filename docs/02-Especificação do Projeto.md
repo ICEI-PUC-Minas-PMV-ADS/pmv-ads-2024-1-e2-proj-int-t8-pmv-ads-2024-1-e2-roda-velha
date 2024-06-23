@@ -17,6 +17,7 @@
   </tr>
 </table>
 
+
 ### Colecionador entusiasta
 
 <table>
@@ -113,4 +114,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-<img width="600" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/9d1ca2f3-4727-4746-9fb3-9bf89f7fbd8d">
+<img width="600" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t8-pmv-ads-2024-1-e2-roda-velha/assets/59897366/5353906d-17f8-45f3-a9a4-fb77dadb7418">
