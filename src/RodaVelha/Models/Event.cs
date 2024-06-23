@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace RodaVelha.Models;
 
@@ -29,7 +30,8 @@ public class Events
     public string? Organizer { get; set; }
     
     public int Likes { get; set; }
-    [Required(ErrorMessage ="A capa do evento é obrigatória.")]
+
+    [Required(ErrorMessage = "A foto do evento de capa é obrigatória.")]
     [Display(Name ="Capa")]    
     public required string Photo { get; set; }
     
@@ -41,3 +43,4 @@ public class Events
     // Navigation property for the relationship
     public virtual required User User { get; set; }
 }
+

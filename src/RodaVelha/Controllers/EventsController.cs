@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using RodaVelha.Data;
 using RodaVelha.Models;
 using RodaVelha.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace RodaVelha.Controllers
 {
@@ -112,37 +113,49 @@ namespace RodaVelha.Controllers
         // POST: Events/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Likes,Photo,Phone,UserId")] Events @event)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,StartDate,EndDate,Location,Organizer,Phone, Photo, UserId, User, Likes")] Events @event, IFormFile Photo)
         {
             if (id != @event.Id)
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
-            {
-                try
+            
+            try
                 {
-                    _context.Update(@event);
+                    if (Photo != null && Photo.Length > 0)
+                    {
+                        var fileExtension = Path.GetExtension(Photo.FileName);
+                        var fileName = $"{Guid.NewGuid()}_{DateTime.Now:yyyyMMddHHmmssfff}{fileExtension}";
+                        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/images/events", fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await Photo.CopyToAsync(stream);
+                        }
+
+                        @event.Photo = "/assets/images/events/" + fileName;
+                }
+                else
+                {
+                    var eventOfUser = _context.Events.FirstOrDefault(e => e.Id == id);
+                    @event.Photo = eventOfUser.Photo;
+                }
+               
+
+                _context.Update(@event);
                     await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EventExists(@event.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Index", "Users");
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "ID", "ID", @event.UserId);
-            return View(@event);
-        }
+            catch (Exception ex)
+                {
+                    ViewData["ErrorMessage"] = "Houve um erro ao salvar o evento. Por favor, tente novamente. [" + ex.Message + "]";
+                    return View(@event);
+                }
 
+
+            
+        }
+        
         // GET: Events/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

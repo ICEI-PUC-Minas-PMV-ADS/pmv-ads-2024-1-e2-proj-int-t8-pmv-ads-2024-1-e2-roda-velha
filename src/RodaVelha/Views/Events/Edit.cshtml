@@ -4,103 +4,83 @@
     ViewData["Title"] = "Editar Evento";
 }
 
-<link rel="stylesheet" href="~/css/editEvent.css" />
+<link rel="stylesheet" href="~/css/event.css?v=3" />
 
-@* Descobrir como linkar a biblioteca de icones abaixo com o dotnet *@
-@* <script src="https://unpkg.com/@phosphor-icons/web"></script> *@
-
-<body>
-    <main>
-        <section>
-            <h2 class="mt-5 mb-3 d-flex justify-content-center">Editar Evento</h2>
-            <div class="card mx-3 mx-md-3 mx-lg-auto rounded-5 p-4">
-                <div class="container mt-4">
-                    <form id="formulario">
-                        <div class="mb-4">
-                            <i class="ph ph-car"></i>
-                            <label for="input1" class="form-label">Nome do evento:</label>
-                            <input required type="text" class="form-control" id="nome-evento"
-                                maxlength="26" value="@Model.Name">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-buildings"></i>
-                            <label for="input1" class="form-label">Organizador:</label>
-                            <input required type="text" class="form-control" id="nome-organizador"
-                                   maxlength="26" value="@Model.Organizer">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-map-pin-line"></i>
-                            <label for="input1" class="form-label">Local:</label>
-                            <input required type="text" class="form-control" id="nome-projeto"
-                                   maxlength="26" value="@Model.Location">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-calendar-check"></i>
-                            <label for="input1" class="form-label">Data de início:</label>
-                            <input required type="date" class="form-control" id="data-inicio" value=" @Model.StartDate">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-calendar-x"></i>
-                            <label for="input1" class="form-label">Data de término:</label>
-                            <input required type="date" class="form-control" id="data-fim"
-                                maxlength="26">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-clock"></i>
-                            <label for="input1" class="form-label">Horário:</label>
-                            <input required type="time" class="form-control" id="horario" value="">
-                        </div>
-                        <div class="mb-4">
-                            <i class="ph ph-whatsapp-logo"></i>
-                            <label for="input1" class="form-label">Telefone / WhatsApp:</label>
-                            <input required type="tel" class="form-control" id="telefone"
-                                   maxlength="14" value="@Model.Phone">
-                        </div>
-
-                        <div class="mb-4 d-flex justify-content-center">
-                            <label for="imagem" class="form-label">Selecione uma imagem de perfil do
-                                evento:</label>
-                            <input required type="hidden" class="form-control" id="imagem"
-                                name="imagem" accept="image/*" style="display: none">
-                        </div>
-
-                        <div id="galeria-btn" class="d-flex justify-content-center gap-4">
-                            <input type="radio" class="btn-check" name="options-radio"
-                                id="btnEscolherImagem" autocomplete="off">
-                            <label class="btn btn-outline-secondary"
-                                for="btnEscolherImagem">Galeria</label>
-                            <input type="radio" class="btn-check" name="options-radio"
-                                id="btnEscolherImagemApi" autocomplete="off">
-                            <label class="btn btn-outline-secondary"
-                                for="btnEscolherImagemApi">Web</label>
-                        </div>
-
-                        <div id="campo-busca" class="d-flex justify-content-center"></div>
-                        <div id="galeria-imagens" class="mb-2 d-flex justify-content-center"></div>
-
-                        <div class="mb-3">
-                            <label for="textoGrande" class="form-label mt-4">Descrição do
-                                projeto:</label>
-                            <textarea required class="form-control" id="descricao"
-                                      name="textoGrande" rows="7" maxlength="250">@Model.Description</textarea>
-                        </div>
-
-                        <div class="d-flex justify-content-center gap-4">
-                            <button type="submit"
-                                class="btn btn-lg mb-4 btn-secondary secondary-1">CANCELAR</button>
-                            <button type="submit"
-                                class="btn btn-lg mb-4 btn-secondary secondary-2">EDITAR</button>
-                        </div>
-                    </form>
+<div class="m-5">
+    <div class="row justify-content-center">
+        <h2 class="mt-5 mb-3 d-flex">Editar Evento</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="card col">
+            <form asp-action="Edit" enctype="multipart/form-data" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" value="@Model.Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-            </div>
-        </section>
-    </main>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="StartDate" class="form-label"></label>
+                    <input asp-for="StartDate" type="datetime-local" class="form-control" value="@Model.StartDate.ToString("yyyy-MM-ddTHH:mm")" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="EndDate" class="form-label"></label>
+               
+                    <input asp-for="EndDate" type="datetime-local" class="form-control" value="@Model.EndDate?.ToString("yyyy-MM-ddTHH:mm")" />
+  
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Location" class="form-label"></label>
+                    <input asp-for="Location" class="form-control" value="@Model.Location" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Organizer" class="form-label"></label>
+                    <input asp-for="Organizer" class="form-control" value="@Model.Organizer" />
+                    <span asp-validation-for="Organizer" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input asp-for="Phone" class="form-control" value="@Model.Phone" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div id="fileUpload" class="mb-3">
+                    <label asp-for="Photo" class="form-label"></label>
+                    <input asp-for="Photo" type="file" class="form-control" value="@Model.Photo"/>
+                    <span asp-validation-for="Photo" class="text-danger"></span>
 
-</body>
+                </div>
+                <div class="mb-3">
+                   
+                    <input type="hidden" asp-for="Id"/>
+                    <input type="hidden" asp-for="UserId" value="@Model.UserId" />
+                    <input type="hidden" asp-for="Likes" value="@Model.Likes" />
+                   
+               
+                    <button asp-controller="Users" asp-action="Index" class="btn btn-secondary mr-2">Voltar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[name="Phone"]').mask('(00) 00000-0000');
+        });
+    </script>
 }
