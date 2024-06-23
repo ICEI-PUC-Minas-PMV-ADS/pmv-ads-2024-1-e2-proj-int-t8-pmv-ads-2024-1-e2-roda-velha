@@ -90,7 +90,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-07| O usuário cadastrado no sistema poderá criar, editar e excluir eventos.    | ALTA |
 |RF-08| Os usuários poderão dar “like” nos eventos.    | ALTO |
 |RF-09| O usuário poderá gerar um relatório com todos os eventos que já foram publicados por ele.   | ALTA |
-|RF-10| Possuir um mecanismo de chat.  | BAIXA |
+
 
 ### Requisitos não Funcionais
 
