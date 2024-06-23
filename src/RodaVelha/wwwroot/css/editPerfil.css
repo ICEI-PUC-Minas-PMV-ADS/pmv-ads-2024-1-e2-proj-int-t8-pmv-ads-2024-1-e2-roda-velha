@@ -21,9 +21,11 @@ body {
 }
 
 .container-card {
+   
+  padding-top:20px !important;
   width: 25rem;
   border-radius: 2rem;
-  height: 80%;
+  height: 95%;
   background-color: #b3a48d;
   display: flex;
   flex-direction: column;
@@ -51,7 +53,7 @@ body {
   }
 
   .container-edit {
-    height: 110vh;
+    height: 120vh;
   }
 }
 

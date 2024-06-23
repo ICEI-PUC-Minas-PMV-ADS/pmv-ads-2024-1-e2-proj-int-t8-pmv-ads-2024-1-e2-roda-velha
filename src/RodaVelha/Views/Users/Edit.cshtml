@@ -6,117 +6,133 @@
 
 <link rel="stylesheet" href="~/css/editPerfil.css" />
 
+
 <main class="container-edit">
-  <h1>Editar Perfil</h1>
-  <div class="container-card">
-      <img src="@Model.Photo" alt="foto-perfil" class="perfil-image">
-      <button class="btn-image" id="btn-image">ALTERAR IMAGEM</button>
-      <form asp-action="Edit" class="form-container">
-          <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-          <input type="hidden" id="photo" name="photo" asp-for="Photo" /> 
-          <input type="hidden" asp-for="ID" />
-          <div class="container-label-input">
-              <label asp-for="Name" class="label-default"></label>
-              <input asp-for="Name" class="input-default" required />
-          </div>
-          <div class="container-label-input">
-              <label asp-for="Email" class="label-default"></label>
-              <input asp-for="Email" class="input-default" required type="email" />
-          </div>
-          <div class="container-label-input">
-              <label asp-for="NewPassword" class="label-default"></label>
-              <input asp-for="NewPassword" class="input-default" id="newPassword" type="password" min="5" />
-              <i class="fa-solid fa-eye eye-icon" id="eye"></i>
-              <i
-                class="fa-solid fa-eye-slash eye-slash-icon"
-                id="slash-eye"
-              ></i>
-          </div>
-          <h6 class="viewbag-text">@ViewBag.Message</h6>
-          <div class="container-buttons">
-              <a class="btn-cancel" asp-controller="Users" asp-action="Index">CANCELAR</a>
-              <input type="submit" value="EDITAR" class="btn-default btn-save" />
-          </div>
-      </form>
-      <button type="button"class="text-delete" data-toggle="modal" data-target="#exampleModal">
-        Excluir conta
-      </button>
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">⚠️ Deletar conta</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Tem certeza que deseja deletar a sua conta? 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary h-25" data-dismiss="modal">CANCELAR</button>
-          <form asp-action="Delete" method="post">
-              @Html.AntiForgeryToken()
-              <input type="hidden" name="id" value="@Model.ID" />
-              <button type="submit" class="btn btn-danger h-25">EXCLUIR</button>
-          </form>
-      </div>
-      </div>
+    <h1>Editar Perfil</h1>
+    <div class="container-card">
+        <img src="@Model.Photo" alt="foto-perfil" class="perfil-image">
+        <button class="btn-image" id="btn-image">ALTERAR IMAGEM</button>
+        <form asp-action="Edit" class="form-container">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" id="photo" name="photo" asp-for="Photo" />
+            <input type="hidden" asp-for="ID" />
+            <div class="container-label-input">
+                <label asp-for="Name" class="label-default"></label>
+                <input asp-for="Name" class="input-default" required />
+            </div>
+            <div class="container-label-input">
+                <label asp-for="Email" class="label-default"></label>
+                <input asp-for="Email" class="input-default" required type="email" />
+            </div>
+            <div class="container-label-input">
+                <label asp-for="NewPassword" class="label-default"></label>
+                <input asp-for="NewPassword" class="input-default" id="newPassword" type="password" min="5" />
+                <i class="fa-solid fa-eye eye-icon" id="eye"></i>
+                <i class="fa-solid fa-eye-slash eye-slash-icon" id="slash-eye"></i>
+            </div>
+            <div class="container-label-input">
+                <label for="confirmPassword" class="label-default">Confirme a Nova Senha</label>
+                <input id="confirmPassword" name="confirmPassword" class="input-default" type="password" min="5" />
+                <span id="passwordMismatch" class="text-danger" style="display:none;">As senhas não coincidem</span>
+            </div>
+            <h6 class="viewbag-text">@ViewBag.Message</h6>
+            <div class="container-buttons">
+                <a class="btn-cancel" asp-controller="Users" asp-action="Index">CANCELAR</a>
+                <input type="submit" value="EDITAR" class="btn-default btn-save" />
+            </div>
+        </form><br />
+        <button type="button" class="text-delete" data-toggle="modal" data-target="#exampleModal">
+            Excluir conta
+        </button>
     </div>
-  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">⚠️ Deletar conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja deletar a sua conta?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary h-25" data-dismiss="modal">CANCELAR</button>
+                    <form asp-action="Delete" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@Model.ID" />
+                        <button type="submit" class="btn btn-danger h-25">EXCLUIR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
+
 
 @section Scripts {
     <script>
-      const slashEyeLoginIcon = document.getElementById("slash-eye");
-      const perfilImage = document.querySelector(".perfil-image");
-      const newPassword = document.getElementById("newPassword");
-      const btnImage = document.querySelector(".btn-image");
-      const eyeLoginIcon = document.getElementById("eye");
-      const photo = document.getElementById("photo");
+        const slashEyeLoginIcon = document.getElementById("slash-eye");
+        const perfilImage = document.querySelector(".perfil-image");
+        const newPassword = document.getElementById("newPassword");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const btnImage = document.querySelector(".btn-image");
+        const eyeLoginIcon = document.getElementById("eye");
+        const photo = document.getElementById("photo");
+        const passwordMismatch = document.getElementById("passwordMismatch");
+        const form = document.querySelector("form.form-container");
 
-      let currIndex = 0
+        let currIndex = 0;
 
-      const perfilImages = [
-        "https://i.pinimg.com/564x/b9/c7/fe/b9c7fe45040eee9007fc24a1cf38e155.jpg",
-        "https://i.pinimg.com/564x/9e/63/78/9e637852279ead489bbc99465defbf80.jpg",
-        "https://i.pinimg.com/564x/77/d0/32/77d0328f9a5777f9c8fb052fea163a37.jpg",
-        "https://i.pinimg.com/564x/39/07/fb/3907fbfa52c31531e0a1d03235455cbc.jpg",
-        "https://i.pinimg.com/564x/72/3a/56/723a56bd86529aa1d52340cbf47d65e7.jpg",
-        "https://i.pinimg.com/564x/2f/d0/20/2fd020f3216597ab98f94f2a66bacdea.jpg",
-        "https://i.pinimg.com/564x/4b/5f/38/4b5f38ba311e6699c8a061d1ce3341cc.jpg",
-        "https://i.pinimg.com/564x/94/a4/d4/94a4d42dcda0959d8d2f8de350d56aca.jpg",
-        "https://i.pinimg.com/564x/19/ab/d5/19abd5d9cb16e211ff21e2dd2baf2f98.jpg",
-        "https://i.pinimg.com/564x/fb/40/d5/fb40d51ba37e6cbe41338be3f7239cee.jpg",
-        "https://i.pinimg.com/564x/34/0c/de/340cdef0a6ec97b7e149fd1d1a45faf4.jpg",
-      ];
+        const perfilImages = [
+            "https://i.pinimg.com/564x/b9/c7/fe/b9c7fe45040eee9007fc24a1cf38e155.jpg",
+            "https://i.pinimg.com/564x/9e/63/78/9e637852279ead489bbc99465defbf80.jpg",
+            "https://i.pinimg.com/564x/77/d0/32/77d0328f9a5777f9c8fb052fea163a37.jpg",
+            "https://i.pinimg.com/564x/39/07/fb/3907fbfa52c31531e0a1d03235455cbc.jpg",
+            "https://i.pinimg.com/564x/72/3a/56/723a56bd86529aa1d52340cbf47d65e7.jpg",
+            "https://i.pinimg.com/564x/2f/d0/20/2fd020f3216597ab98f94f2a66bacdea.jpg",
+            "https://i.pinimg.com/564x/4b/5f/38/4b5f38ba311e6699c8a061d1ce3341cc.jpg",
+            "https://i.pinimg.com/564x/94/a4/d4/94a4d42dcda0959d8d2f8de350d56aca.jpg",
+            "https://i.pinimg.com/564x/19/ab/d5/19abd5d9cb16e211ff21e2dd2baf2f98.jpg",
+            "https://i.pinimg.com/564x/fb/40/d5/fb40d51ba37e6cbe41338be3f7239cee.jpg",
+            "https://i.pinimg.com/564x/34/0c/de/340cdef0a6ec97b7e149fd1d1a45faf4.jpg",
+        ];
 
-      btnImage.addEventListener("click", () => {
-        currIndex = (currIndex + 1) % perfilImages.length;
-        perfilImage.src = perfilImages[currIndex];
-        photo.value = perfilImages[currIndex];
-         console.log(photo.value)
-      });
+        btnImage.addEventListener("click", () => {
+            currIndex = (currIndex + 1) % perfilImages.length;
+            perfilImage.src = perfilImages[currIndex];
+            photo.value = perfilImages[currIndex];
+            console.log(photo.value);
+        });
 
-      function showLoginPassword() {
-        if (newPassword.type === "password") {
-          newPassword.type = "text";
-          slashEyeLoginIcon.style.visibility = "hidden";
-          eyeLoginIcon.style.visibility = "visible";
-        } else {
-          newPassword.type = "password";
-          slashEyeLoginIcon.style.visibility = "visible";
-          eyeLoginIcon.style.visibility = "hidden";
+        function showLoginPassword() {
+            if (newPassword.type === "password") {
+                newPassword.type = "text";
+                slashEyeLoginIcon.style.visibility = "hidden";
+                eyeLoginIcon.style.visibility = "visible";
+            } else {
+                newPassword.type = "password";
+                slashEyeLoginIcon.style.visibility = "visible";
+                eyeLoginIcon.style.visibility = "hidden";
+            }
         }
-      }
 
-      eyeLoginIcon.addEventListener("click", showLoginPassword);
-      slashEyeLoginIcon.addEventListener("click", showLoginPassword);
+        eyeLoginIcon.addEventListener("click", showLoginPassword);
+        slashEyeLoginIcon.addEventListener("click", showLoginPassword);
+
+        form.addEventListener("submit", function (e) {
+            if (newPassword.value !== confirmPassword.value) {
+                e.preventDefault();
+                passwordMismatch.style.display = "block";
+            } else {
+                passwordMismatch.style.display = "none";
+            }
+        });
     </script>
 
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
+
